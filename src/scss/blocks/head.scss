@@ -1,0 +1,72 @@
+//.reviews {
+//	height: 100%;
+//} 
+
+.head {
+	background-image: url(../img/bg-blue.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	margin-bottom: 55px;
+	padding-left: 10%;
+
+	width: 100%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: space-between;
+}
+
+.head__title {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: rem(73px);
+	font-weight: 900;
+	padding: 3% 0;
+	line-height: 100%;
+}
+
+.head__title_small {
+	font-size: rem(51px);
+}
+
+.head__description {
+	width: 60%;
+	background-color: #fff;
+	height: 125px;
+	align-self: center;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	color: $blue;
+}
+
+.head__number {
+	font-family: 'Anton', arial, sans-serif;
+	font-size: rem(125px);
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: 100%;
+
+	margin-top: -10px;
+	margin-right: 10px;
+	padding-left: 10px;
+
+}
+
+.head__text {
+	font-size: rem(24px);
+	font-weight: 900;
+
+	align-self: center;
+	margin-right: 10px;
+}
+

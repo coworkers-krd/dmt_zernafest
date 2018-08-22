@@ -1,0 +1,100 @@
+.where-will {
+	background-image: url(../img/where-will/where-will-bg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	padding: 4% -0px;
+
+	min-height: 70vh;
+
+}
+
+.container_where-will {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	height: 100%;
+
+	@include tablet {
+		flex-direction: column;
+	}
+}
+
+.where-will__content {
+	margin-right: 3%;
+	width: 32%;
+
+	@include tablet {
+		width: 100%;
+	}
+}
+
+.where-will__title {
+	color: $blue;
+	font-size: rem(40px);
+	font-weight: 900;
+
+	text-align: right;
+
+	@include tablet {
+		width: 50%;
+		margin-left: 50%;
+	}
+	
+	@include tablet-a {
+		width: 70%;
+		margin-left: 30%;
+		font-size: rem(38px);
+	}
+}
+.where-will__subtitle {
+	
+	@include tablet-a {
+		
+		
+		font-size: rem(31px);
+	}
+}
+
+.where-will__text {
+	text-align: right;
+	color: #080a79;
+	font-size: rem(20px);
+
+	margin-bottom: 3%;
+
+	@include tablet {
+		font-size: rem(14px);
+	}
+	
+	@include tablet-a {
+		font-size: rem(16px);
+	}
+}
+
+.where-will__slider {
+	width: 66%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	overflow: hidden;
+
+	@include tablet {
+		width: 100%;
+	}
+}
+
+.where-will__slide {
+	margin: auto;
+	height: 100%;
+	width: 100%;
+
+	object-fit: cover;
+}

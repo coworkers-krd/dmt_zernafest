@@ -1,0 +1,124 @@
+.itwas {
+	background-image: url(../img/itwas/itwas-bg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 100%;
+	height: 100%;
+
+	color: #fff;
+
+	padding: 3% -0px;
+}
+
+.itwas__row-up {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: space-between;
+	margin-bottom: 2%;
+
+	@include tablet {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+}
+
+.itwas__video {
+	width: 32%;
+	min-height: 215px;
+
+	background-color: #000;
+
+	border-radius: 5px;
+	border: 3px solid #fff;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	@include tablet-a {
+		width: 100%;
+		margin-bottom: 2%;
+	}
+}
+
+.itwas__video_big {
+	width: 66%;
+	min-height: 393px;
+
+	@include tablet {
+		width: 100%;
+	}
+}
+
+.itwas__content {
+	width: 32%;
+
+	@include tablet {
+		width: 100%;
+
+		order: -1;
+
+		margin-bottom: 5%;
+	}
+}
+
+.itwas__title {
+	font-size: rem(40px);
+	font-weight: 900;
+	text-transform: uppercase;
+	width: 60%;
+	margin-bottom: 2%;
+
+	@include tablet {
+		width: 30%;
+	}
+	@include tablet-a {
+		width: 50%;
+	}
+
+	@include phone {
+		font-size: rem(38px);
+	}
+}
+
+.itwas__title-subtitle {
+	@include tablet-a {
+		font-size: rem(31px);
+	}
+}
+
+.itwas__text {
+	//	width: 80%;
+	font-size: rem(20px);
+
+	@include tablet {
+		font-size: rem(14px);
+	}
+	@include tablet-a {
+		font-size: rem(16px);
+	}
+}
+
+.itwas__row-down {
+	width: 100%;
+
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+
+	@include tablet-a {
+		flex-direction: column;
+	}
+}

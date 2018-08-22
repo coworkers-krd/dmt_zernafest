@@ -1,0 +1,49 @@
+section.schedule#schedule
+	.container.container_schedule
+		.schedule__days
+			ul.schedule__days-list
+				li.schedule__days-item
+					button.schedule__days-day.schedule__days-day_active(type="button") день 1
+				li.schedule__days-item
+					button.schedule__days-day(type="button") день 2
+				li.schedule__days-item
+					button.schedule__days-day(type="button") день 3
+				li.schedule__days-item
+					button.schedule__days-day(type="button") день 4
+				li.schedule__days-item
+					button.schedule__days-day(type="button") день 5
+				li.schedule__days-item
+					button.schedule__days-day(type="button") день 6
+					
+		.schedule__content
+			.schedule__content-titles
+				h2.schedule__title день первый
+				h2.schedule__title 2 ноября
+			
+			.schedule__lists
+				ul.schedule__time-list
+					li.schedule__time-item 8:00					
+					li.schedule__time-item 16:00
+					li.schedule__time-item 19:30
+				
+				ul.schedule__activity-list
+					li.schedule__activity-item
+						h3.schedule__activity-title Встреча гостей
+						.schedule__activity-time 8:00 - 15:40
+							+icon('clock', 'shedule__icon-clock')
+						.schedule__activity-types Регистрация участников.  Расселение по номерам. Знакомства.
+							
+					li.schedule__activity-item
+						h3.schedule__activity-title Обед             
+						.schedule__activity-time 16:00 - 19:00
+							+icon('clock', 'shedule__icon-clock')
+						.schedule__activity-types Прогулка по территории. Ужин для участников.
+							
+							
+					li.schedule__activity-item
+						h3.schedule__activity-title Открытие фестиваля
+						.schedule__activity-time 19:30 - 21:00
+							+icon('clock', 'shedule__icon-clock')
+						.schedule__activity-types Торжественное открытие фестиваля. Презентация спикеров.
+						
+				

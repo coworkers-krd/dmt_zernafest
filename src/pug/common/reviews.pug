@@ -1,0 +1,41 @@
+section.reviews#reviews
+	.head.head_reviews
+		.head__title-block
+			h2.head__title отзывы
+				.head__title.head__title_small участников 
+				
+		.head__description
+			.head__number 40  
+			.head__text мастер-классов
+			
+			.head__number 20
+			.head__text лекций
+			
+
+	.reviews__block
+		.reviews__slider
+			img.reviews__slide(alt="фото ВИКТОРИЯ ПРИМАКОВА" src="img/rewiews/slide-victoria.jpg")
+			img.reviews__slide(alt="фото ЛАРИСА ПАТОВА" src="img/rewiews/slide-larisa.jpg")
+			img.reviews__slide(alt="фото КАРИНА РАМАЗАНОВА" src="img/rewiews/slide-karina.jpg")
+			.reviews__pagginator
+				img.reviews__point(alt="фото ВИКТОРИЯ ПРИМАКОВА" src="img/rewiews/slide-victoria.jpg")
+				img.reviews__point(alt="фото ЛАРИСА ПАТОВА" src="img/rewiews/slide-larisa.jpg")
+				img.reviews__point(alt="фото КАРИНА РАМАЗАНОВА" src="img/rewiews/slide-karina.jpg")
+		
+		.reviews__content.reviews__content_active
+			h3.reviews__name ВИКТОРИЯ ПРИМАКОВА
+			.reviews__position мама
+			.reviews__comment Благодарим за прекрасную атмосферу и удивительные встречи!
+				+icon('clever', 'rewiews__icon-clever')
+			
+		.reviews__content
+			h3.reviews__name ЛАРИСА ПАТОВА
+			.reviews__position мама
+			.reviews__comment Эти талантливые люди учат нас добру, любви и пониманию друг друга, и относиться к своим детям, как к божественному дару.
+			
+		.reviews__content
+			h3.reviews__name КАРИНА РАМАЗАНОВА
+			.reviews__position БАБУШКА, 53 ГОДА
+			.reviews__comment Благодарю, дорогие люди за этот фестиваль! Он как солнышко светит и будет светить!!!
+				+icon('hands', 'rewiews__icon-hands')
+		

@@ -1,0 +1,142 @@
+.promo-form {
+
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	
+	@include tablet {
+		flex-direction: row;
+		justify-content: space-between;
+//		margin: 10%;
+		position: relative;
+		
+	}
+	
+	@include phone {
+		position: static;
+		
+		flex-direction: column;
+}
+}
+
+.promo-form__label {
+	text-align: center;
+	font-weight: 700;
+	font-size: rem(19px);
+	text-transform: uppercase;
+	
+	margin-bottom: 5%;
+	
+	@include tablet {
+		
+		
+		font-size: rem(16px);
+		margin-right: 3%;
+		margin-bottom: 0;
+		
+	}
+	
+	@include phone {
+		margin-bottom: 3%;
+	}
+}
+
+.promo-form__input {
+	width: 75%;
+	border-radius: 5px;
+
+	font-size: 22px;
+	color: #53586b;
+	
+	border: 0;
+
+	font-weight: 400;
+	padding: 14px;
+	
+	display: block;
+	
+	margin: auto;
+	
+	@include tablet {
+		width: 100%;
+		margin-top: 5%;
+	}
+	
+	@include phone {
+		width: 75%;
+	}
+}
+
+.promo-form__label_checkbox {
+	width: 75%;
+	margin: 0 auto;
+	margin-bottom: 3%;
+	
+	text-align: left;
+	
+	font-weight: 500;
+	
+	@include tablet {
+		position: absolute;
+		
+		top: 105%;
+		left: 5%;
+	}
+	
+	@include phone {
+		position: static;
+	}
+}
+
+.promo-form__checkbox {
+	display: inline-block;
+	margin-right: 5px;
+}
+.promo-form__btn
+{
+	font-weight: 700;
+	font-size: rem(18px);
+	color: #fff;
+	text-transform: uppercase;
+	
+	width: 75%;
+	
+	border-radius: 5px;
+	
+	margin: 0 auto;
+	padding: 7%;
+	background-color: $orange;
+	
+	letter-spacing: 3px;
+	
+	border: 1px solid $orange;
+	
+	@include tablet {
+		width: 25%;
+		height: 55px;
+		padding: 0;
+		
+		font-size: rem(12px);
+		align-self: center;
+		margin-top: 25px;
+	}
+		@include phone {
+		width: 75%;
+	}
+}
+
+.promo-form-link {
+color: #fff;	
+	text-decoration: none;
+	transition: 0.7s;
+	
+	&:hover {
+		color: $orange;
+	}
+}

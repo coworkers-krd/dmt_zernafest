@@ -1,0 +1,35 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="Ru ru")
+	head
+		meta(charset="utf-8")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		title 
+		link( rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+		link(rel="stylesheet" type="text/css" href="plugins/slick/slick.css")
+		link(rel='stylesheet' href='css/main.css')
+	
+	body
+		include common/preloader.pug
+		.wrapper.js-wrapper-preloader
+			include common/promo.pug	
+			include common/speakers.pug	
+			include common/mission.pug	
+			include common/for-whom.pug	
+			include common/itwas.pug	
+			include common/where-will.pug	
+			include common/schedule.pug	
+			include common/gallery.pug	
+			include common/reviews.pug	
+			include common/sponsors.pug	
+			include common/price.pug	
+			include common/insta-posts.pug	
+			include common/footer.pug	
+	
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script(src="plugins/slick/slick.min.js")
+	script(src='js/main.js')
+

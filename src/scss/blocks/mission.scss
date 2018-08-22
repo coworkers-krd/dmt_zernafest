@@ -1,0 +1,159 @@
+.mission {
+	background-image: url(../img/bg-blue.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	color: #fff;
+	
+	margin-bottom: 95px;
+	
+	padding: 4% 0px;
+	padding-left: 10%;
+	
+	width: 100%;
+	height: 100%;
+}
+
+.mission__row {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	margin-bottom: 3%;
+	
+	align-items: center;
+	height: 101%;
+	
+	@include tablet {
+		flex-direction: column;
+	}
+}
+
+.mission__title {
+	font-size: rem(73px);
+	
+	
+	font-weight: 900;
+	
+	text-transform: uppercase;
+	
+	margin-right: 1%;
+	
+	line-height: 100%;
+	
+	@include tablet {
+		align-self: flex-start;
+		
+	}
+	
+	@include tablet-a {
+		font-size: rem(43px);
+	}
+}
+
+.mission__title_small {
+	font-size: rem(51px);
+	display: block;
+	
+	@include tablet {
+		display: inline-block;
+		outline: 20px;
+		
+	}
+	
+	@include tablet-a {
+		font-size: rem(30px);
+	}
+}
+
+.mission__numbers {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	
+	background-color: #fff;
+	
+	color: $blue;
+	
+	@include tablet-a {
+		flex-direction: column;
+		height: 100%;
+		
+		justify-content: flex-start;
+	}
+	
+}
+
+.mission__numbers-col {
+	margin-right: 3%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	
+	@include tablet-a {
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+	
+	
+}
+
+.mission__number {
+	 font-family: 'Anton', arial, sans-serif ;
+	font-size: rem(125px);
+	font-weight: 900;
+	padding-left: 3%;
+	margin-right: 3%;
+	    line-height: 100%;
+	margin-top: -4%;
+	align-self: flex-start;
+	
+	@include tablet-a {
+		font-size: rem(65px);
+		margin-top: 0;
+	}
+
+}
+
+.mission__number_five {
+	margin-top: -7%;
+	
+}
+.mission__descr {
+	font-size: rem(24px);
+	font-weight: 900;
+	@include tablet-a {
+font-size: rem(16px);
+	}
+	
+}
+
+.mission__content-title {
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: rem(24px);
+	
+	margin-bottom: 1%;
+	
+	@include phone {
+		font-size: rem(18px);
+	}
+	
+}
+
+.mission__text {
+	width: 85%;
+	font-size: rem(20px);
+	
+	@include tablet-a {
+font-size: rem(16px);
+	}
+}
