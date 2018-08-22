@@ -25,7 +25,7 @@
 	width: 60%;
 	padding: 0 5%;
 	margin: 0 auto;
-	
+	margin-bottom: 3%;
 	@include tablet {
 		
 		margin: 0;
@@ -38,7 +38,7 @@
 	text-transform: uppercase;
 	font-size: rem(50px);
 	margin-bottom: 2%;
-	margin-top: 55%;
+	margin-top: 40%;
 	
 	@include tablet-a {
 		font-size: rem(40px);

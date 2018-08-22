@@ -20,30 +20,41 @@ section.schedule#schedule
 				h2.schedule__title день первый
 				h2.schedule__title 2 ноября
 			
-			.schedule__lists
-				ul.schedule__time-list
-					li.schedule__time-item 8:00					
-					li.schedule__time-item 16:00
-					li.schedule__time-item 19:30
-				
-				ul.schedule__activity-list
-					li.schedule__activity-item
+			ul.schedule__list
+			
+				li.schedule__item
+					
+					.schedule__time-item 8:00
+					.schedule__activity-item
 						h3.schedule__activity-title Встреча гостей
+						
 						.schedule__activity-time 8:00 - 15:40
 							+icon('clock', 'shedule__icon-clock')
 						.schedule__activity-types Регистрация участников.  Расселение по номерам. Знакомства.
-							
-					li.schedule__activity-item
-						h3.schedule__activity-title Обед             
+						
+				li.schedule__item
+					
+					.schedule__time-item 16:00
+					.schedule__activity-item
+						h3.schedule__activity-title Обед
+						
 						.schedule__activity-time 16:00 - 19:00
 							+icon('clock', 'shedule__icon-clock')
 						.schedule__activity-types Прогулка по территории. Ужин для участников.
-							
-							
-					li.schedule__activity-item
+						
+				li.schedule__item
+					
+					.schedule__time-item 19:30
+					.schedule__activity-item
 						h3.schedule__activity-title Открытие фестиваля
+						
 						.schedule__activity-time 19:30 - 21:00
 							+icon('clock', 'shedule__icon-clock')
 						.schedule__activity-types Торжественное открытие фестиваля. Презентация спикеров.
+					
+							
+											
+							
+					
 						
 				

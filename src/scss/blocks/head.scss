@@ -1,7 +1,6 @@
 //.reviews {
 //	height: 100%;
 //} 
-
 .head {
 	background-image: url(../img/bg-blue.jpeg);
 	background-repeat: no-repeat;
@@ -19,6 +18,12 @@
 	display: flex;
 
 	justify-content: space-between;
+
+	@include netbook {
+		flex-direction: column;
+		padding: 5% 0% 5% 7%;
+
+	}
 }
 
 .head__title {
@@ -28,10 +33,33 @@
 	font-weight: 900;
 	padding: 3% 0;
 	line-height: 100%;
+
+	@include netbook {
+		padding: 1% -0px;
+	}
+
+	@include tablet-a {
+		font-size: rem(43px);
+	}
 }
 
 .head__title_small {
 	font-size: rem(51px);
+
+	@include netbook {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	@include tablet {
+		display: block;
+		margin-left: 0;
+	}
+	@include tablet-a {
+		font-size: rem(31px);
+		display: inline-block;
+		margin-left: 20px;
+	}
 }
 
 .head__description {
@@ -47,6 +75,32 @@
 	display: flex;
 
 	color: $blue;
+
+	@include netbook {
+		width: 100%;
+	}
+	@include tablet-a {
+		flex-direction: column;
+
+	}
+}
+
+.head__description-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	align-items: center;
+
+
+}
+
+.head__description-block_up {
+	@include tablet-a {
+		margin-bottom: 10px;
+	}
 }
 
 .head__number {
@@ -60,6 +114,11 @@
 	margin-right: 10px;
 	padding-left: 10px;
 
+	@include tablet-a {
+		font-size: rem(65px);
+
+	}
+
 }
 
 .head__text {
@@ -68,5 +127,8 @@
 
 	align-self: center;
 	margin-right: 10px;
-}
 
+	@include tablet-a {
+		font-size: rem(16px);
+	}
+}

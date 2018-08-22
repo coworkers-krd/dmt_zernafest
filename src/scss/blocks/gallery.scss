@@ -36,6 +36,14 @@
 	&:hover .gallery__icon {
 		opacity: 1;
 	}
+	
+	@include netbook {
+		width: 49%;
+	}
+	
+	@include phone {
+		width: 100%;
+	}
 }
 
 .gallery__icon {

@@ -1,18 +1,43 @@
 .head_price {
 	background-image: none;
 	margin-bottom: 70px;
+
+
 }
 
 .head__title_price {
 	color: #080a79;
 	font-size: rem(73px);
 	font-weight: 900;
+
+	@include tablet-a {
+		font-size: rem(43px);
+	}
 }
 
 .head__title_smallprice {
 	color: #080a79;
 	font-size: rem(51px);
 
+	@include netbook {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	@include tablet {
+		display: block;
+		margin-left: 0;
+	}
+	@include tablet-a {
+		font-size: rem(31px);
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	@include phone {
+		display: block;
+		margin-left: 0;
+	}
 }
 
 .head__description_price {
@@ -20,6 +45,19 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	align-items: center;
+	justify-content: flex-start;
+
+	@include tablet-a {
+		height: 100%;
+	}
 }
 
 .head__text_price {
@@ -42,6 +80,17 @@
 			color: #fff;
 		}
 	}
+
+	@include tablet {
+		padding-left: 5%;
+		//		text-align: center;
+		//		margin-top: 5%;
+	}
+
+	@include tablet-a {
+		font-size: rem(33px);
+
+	}
 }
 
 .price__form-block {
@@ -50,10 +99,18 @@
 	background-size: cover;
 
 	padding: 5% 12%;
+	
+	@include netbook {
+		padding: 5%;
+	}
+	@include phone {
+		padding: 7% -0px;
+	}
+	
 }
 
 .price__title {
-	width: 40%;
+	width: 60%;
 
 	text-align: center;
 
@@ -76,6 +133,10 @@
 			color: #fff;
 		}
 	}
+	
+	@include tablet-a {
+		font-size: rem(24px);
+	}
 }
 
 .price__form-row {
@@ -94,10 +155,28 @@
 	font-weight: 700;
 	font-size: rem(19px);
 	text-transform: uppercase;
+	
+	@include tablet {
+		flex-direction: column;
+	}
+	
+	@include tablet-a {
+		font-size: rem(16px);
+	}
 }
 
 .price__quantity {
 	width: 30%;
+	
+	@include tablet {
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	@include tablet-a {
+		width: 90%;
+		
+	}
 }
 
 .price__quantity-row {
@@ -113,6 +192,7 @@
 
 .price__quantity-title {
 	margin-right: auto;
+	
 }
 
 .price__quantity-btn {
@@ -147,6 +227,24 @@
 
 .price__checkboxes {
 	width: 30%;
+	@include tablet {
+		width: 60%;
+		margin: 0 auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		margin-bottom: 2%;
+	}
+	
+	@include tablet-a {
+		width: 90%;
+		
+	}
 }
 
 .price__checkboxes-row {
@@ -156,11 +254,35 @@
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
+	
+	@include tablet {width: 49%;}
 }
 
+.price__checkboxes-row_first {
+	@include tablet {
+		margin-right: 2%;
+	}
+	
+}
+
+.price__checkboxes-checkbox {
+	@include tablet {
+		align-self: center;
+	}
+}
 .price__inputs {
 	width: 30%;
 	margin-bottom: 3%;
+	
+	@include tablet {
+		width: 60%;
+		margin: 0 auto;
+	}
+	
+	@include tablet-a {
+		width: 90%;
+		
+	}
 }
 
 .price__inputs-row {
@@ -194,8 +316,15 @@
 	font-weight: 500;
 	font-size: rem(16px);
 	text-transform: uppercase;
-	
+
 	margin: 0 auto;
+	
+	
+	@include tablet {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+	}
 }
 
 .price__btn {
@@ -213,8 +342,9 @@
 	border-radius: 5px;
 
 	margin: 0 auto;
-  padding: 18px 0;
-		 
+	margin-top: 2%;
+	padding: 18px 0;
+
 }
 
 .price__confid-checkbox {
@@ -224,10 +354,9 @@
 .price__confid-link {
 	color: #fff;
 	text-decoration: none;
-	
+
 	transition: 0.7s;
 	&:hover {
 		color: $orange;
 	}
 }
-
