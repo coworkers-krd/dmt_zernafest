@@ -85,6 +85,8 @@
 	display: flex;
 
 	overflow: hidden;
+	
+	position: relative;
 
 	@include tablet {
 		width: 100%;
@@ -94,7 +96,108 @@
 .where-will__slide {
 	margin: auto;
 	height: 100%;
-	width: 100%;
+	min-height: 500px;
+	width: auto;
 
 	object-fit: cover;
+}
+
+.where-will__slider {
+
+.slick-next {
+	position: absolute;
+	top: 50%;
+	left: 93%;
+	transform: translateY(-50%);
+	
+	font-size: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background-color: transparent;
+	outline: none;
+	
+	border-right: 3px solid #aaa;
+	border-top: 3px solid #aaa;
+	
+	transform: rotate(45deg);
+	
+	transition: 0.7s;
+	
+	&:hover {
+		border-right: 3px solid $orange;
+	border-top: 3px solid $orange;
+	}
+}
+
+.slick-prev {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	right: 93%;
+	transform: translateY(-50%);
+	
+	font-size: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background-color: transparent;
+	outline: none;
+	
+	border-left: 3px solid #aaa;
+	border-bottom: 3px solid #aaa;
+	
+	transform: rotate(45deg);
+	
+	transition: 0.7s;
+	
+	&:hover {
+		border-left: 3px solid $orange;
+	border-bottom: 3px solid $orange;
+	}
+}
+
+.slick-dots {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	position: absolute;
+	
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	
+}
+.slick-dots li {
+	width: 15px;
+	height: 15px;
+	
+	background-color: transparent;
+	border: 2px solid $orange;
+	border-radius: 50%;
+	
+	transition: 0.7s;
+	
+	margin-right: 10px;
+	
+	
+	&:hover {
+		background-color: $orange;
+	}
+}
+
+.slick-dots li button {
+	background-color: transparent;
+	font-size: 0;
+	
+}
+
+.slick-dots .slick-active {
+	background-color: $orange;
+}
 }
