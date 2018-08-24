@@ -16,45 +16,80 @@ section.schedule#schedule
 					button.schedule__days-day(type="button") день 6
 					
 		.schedule__content
-			.schedule__content-titles
-				h2.schedule__title день первый
-				h2.schedule__title 2 ноября
+		
+			.schedule__content-item.schedule__content-item_active
 			
-			ul.schedule__list
+				.schedule__content-titles
+					h2.schedule__title день первый
+					h2.schedule__title 2 ноября
+
+				ul.schedule__list
+
+					li.schedule__item
+
+						.schedule__time-item 8:00
+						.schedule__activity-item
+							h3.schedule__activity-title Встреча гостей
+
+							.schedule__activity-time 8:00 - 15:40
+								+icon('clock', 'shedule__icon-clock')
+							.schedule__activity-types Регистрация участников.  Расселение по номерам. Знакомства.
+
+					li.schedule__item
+
+						.schedule__time-item 16:00
+						.schedule__activity-item
+							h3.schedule__activity-title Обед
+
+							.schedule__activity-time 16:00 - 19:00
+								+icon('clock', 'shedule__icon-clock')
+							.schedule__activity-types Прогулка по территории. Ужин для участников.
+
+					li.schedule__item
+
+						.schedule__time-item 19:30
+						.schedule__activity-item
+							h3.schedule__activity-title Открытие фестиваля
+
+							.schedule__activity-time 19:30 - 21:00
+								+icon('clock', 'shedule__icon-clock')
+							.schedule__activity-types Торжественное открытие фестиваля. Презентация спикеров.
+		
+		
+			.schedule__content-item
+				.schedule__content-titles
+					h2.schedule__title день второй
+					h2.schedule__title 3 ноября
+				include shedule_list-template.pug
+
+			.schedule__content-item
+				.schedule__content-titles
+					h2.schedule__title день третий
+					h2.schedule__title 4 ноября
+				include shedule_list-template.pug
+
+			.schedule__content-item
+				.schedule__content-titles
+					h2.schedule__title день четвёртый
+					h2.schedule__title 5 ноября
+				include shedule_list-template.pug
+
+			.schedule__content-item
+				.schedule__content-titles
+					h2.schedule__title день пятый
+					h2.schedule__title 6 ноября
+				include shedule_list-template.pug
+
+			.schedule__content-item
+				.schedule__content-titles
+					h2.schedule__title день второй
+					h2.schedule__title ОСНОВЫ ОБРАЩЕНИЯ С УЧЕБНИКАМИ
+				include shedule_list-template.pug
 			
-				li.schedule__item
-					
-					.schedule__time-item 8:00
-					.schedule__activity-item
-						h3.schedule__activity-title Встреча гостей
-						
-						.schedule__activity-time 8:00 - 15:40
-							+icon('clock', 'shedule__icon-clock')
-						.schedule__activity-types Регистрация участников.  Расселение по номерам. Знакомства.
-						
-				li.schedule__item
-					
-					.schedule__time-item 16:00
-					.schedule__activity-item
-						h3.schedule__activity-title Обед
-						
-						.schedule__activity-time 16:00 - 19:00
-							+icon('clock', 'shedule__icon-clock')
-						.schedule__activity-types Прогулка по территории. Ужин для участников.
-						
-				li.schedule__item
-					
-					.schedule__time-item 19:30
-					.schedule__activity-item
-						h3.schedule__activity-title Открытие фестиваля
-						
-						.schedule__activity-time 19:30 - 21:00
-							+icon('clock', 'shedule__icon-clock')
-						.schedule__activity-types Торжественное открытие фестиваля. Презентация спикеров.
-					
-							
-											
-							
+			
+			
+
+				
 					
 						
 				

@@ -117,6 +117,14 @@
 		}
 }
 
+.schedule__content-item {
+	display: none;
+}
+
+.schedule__content-item_active {
+	display: block;
+}
+
 .schedule__content-titles {
 	margin-bottom: 4%;
 }

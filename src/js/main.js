@@ -123,15 +123,6 @@ function modalSpeakers() {
 		});
 	}
 
-	//	if( ModalSpeakers.style.display === 'block') {
-	//		
-	//		consle.log('db')
-	//		document.addEventListener('click', function()  {
-	//			ModalSpeakers.style.display = 'none';
-	//			ModalSpeakersBg.style.display = 'none';
-	//		});
-	//	}
-
 
 
 	for (let cl = 0; cl < closeModalSpeakers.length; cl++) {
@@ -158,6 +149,71 @@ function modalSpeakers() {
 }
 
 modalSpeakers();
+
+
+// СЕКЦИЯ РАСПИСАНИЕ	
+
+function sheduleSection() {
+	//	
+
+	const sheduleBtn = document.querySelectorAll(".schedule__days-day");
+	const sheduleContent = document.querySelectorAll(".schedule__content-item");
+
+	for (let i = 0; i < sheduleBtn.length; i++) {
+
+		for (let l = 0; l < sheduleBtn.length; l++) {
+
+
+
+			sheduleBtn[i].addEventListener('click', () => {
+
+
+				sheduleBtn[l].classList.remove('schedule__days-day_active');
+				sheduleBtn[i].classList.add('schedule__days-day_active');
+
+				sheduleContent[l].classList.remove('schedule__content-item_active');
+
+				sheduleContent[i].classList.add('schedule__content-item_active');
+
+
+
+
+			});
+
+		}
+	}
+
+
+};
+
+sheduleSection();
+
+//СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
+
+//function reviewsContent() {
+//	const slide = document.querySelector('.reviews__slider');
+//	const reviewSlide = document.querySelectorAll('.reviews__slide');
+//	const reviewContent = document.querySelectorAll('.reviews__content');
+//
+//	for (let i = -1; i < reviewSlide.length; i++) {
+//
+//
+//		if (reviewSlide[i].classList.contains('slick-active')) {
+//
+//			reviewContent[i].classList.add('reviews__content_active');
+//
+//
+//
+//		} else {
+//			reviewContent[i].classList.remove('reviews__content_active');
+//		}
+//
+//	}
+//
+//};
+//
+//reviewsContent();
+
 //секция prices
 
 function validFormPrice() {
