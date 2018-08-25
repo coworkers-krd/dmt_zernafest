@@ -73,18 +73,38 @@
 		border: 3px solid $orange;
 	}
 }
-.reviews__content {
+
+.reviews__content-block {
 	width: 50%;
-	display: none;
+	overflow: hidden;
+	
 	
 	@include tablet {
 		width: 100%;
 		margin-bottom: 5%;
 	}
 }
+.reviews__content {
+//	width: 50%;
+	display: none;
+	padding-right: 5%;
+	
+	transform: translateX(100%);
+	
+	
+	
+	
+	&:first-child {
+		transform: translateX(0%);
+	}
+}
 
 .reviews__content_active {
 	display: block;
+	
+	transition: .7s;
+
+	
 }
 
 .reviews__name {

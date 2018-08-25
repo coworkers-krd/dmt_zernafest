@@ -1,4 +1,4 @@
-section.reviews#reviews
+section.reviews#reviews(data-page="7")
 	.head.head_reviews
 		.head__title-block
 			h2.head__title отзывы
@@ -16,25 +16,26 @@ section.reviews#reviews
 
 	.reviews__block
 		.reviews__slider
-			img.reviews__slide(alt="фото ВИКТОРИЯ ПРИМАКОВА" src="img/rewiews/slide-victoria.jpg")
-			img.reviews__slide(alt="фото ЛАРИСА ПАТОВА" src="img/rewiews/slide-larisa.jpg")
-			img.reviews__slide(alt="фото КАРИНА РАМАЗАНОВА" src="img/rewiews/slide-karina.jpg")
+			img.reviews__slide(alt="фото ВИКТОРИЯ ПРИМАКОВА" src="img/rewiews/slide-victoria.jpg" data-slideRew="0")
+			img.reviews__slide(alt="фото ЛАРИСА ПАТОВА" src="img/rewiews/slide-larisa.jpg" data-slideRew="1")
+			img.reviews__slide(alt="фото КАРИНА РАМАЗАНОВА" src="img/rewiews/slide-karina.jpg" data-slideRew="2")
 		
 		
-		.reviews__content.reviews__content_active
-			h3.reviews__name ВИКТОРИЯ ПРИМАКОВА
-			.reviews__position мама
-			.reviews__comment Благодарим за прекрасную атмосферу и удивительные встречи!
-				
-			
-		.reviews__content
-			h3.reviews__name ЛАРИСА ПАТОВА
-			.reviews__position мама
-			.reviews__comment Эти талантливые люди учат нас добру, любви и пониманию друг друга, и относиться к своим детям, как к божественному дару.
-			
-		.reviews__content
-			h3.reviews__name КАРИНА РАМАЗАНОВА
-			.reviews__position БАБУШКА, 53 ГОДА
-			.reviews__comment Благодарю, дорогие люди за этот фестиваль! Он как солнышко светит и будет светить!!!
+		.reviews__content-block
+			.reviews__content.reviews__content_active
+				h3.reviews__name ВИКТОРИЯ ПРИМАКОВА
+				.reviews__position мама
+				.reviews__comment Благодарим за прекрасную атмосферу и удивительные встречи!
+
+
+			.reviews__content
+				h3.reviews__name ЛАРИСА ПАТОВА
+				.reviews__position мама
+				.reviews__comment Эти талантливые люди учат нас добру, любви и пониманию друг друга, и относиться к своим детям, как к божественному дару.
+
+			.reviews__content
+				h3.reviews__name КАРИНА РАМАЗАНОВА
+				.reviews__position БАБУШКА, 53 ГОДА
+				.reviews__comment Благодарю, дорогие люди за этот фестиваль! Он как солнышко светит и будет светить!!!
 				
 		

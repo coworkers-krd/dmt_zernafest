@@ -17,10 +17,14 @@ function reviewsSlider() {
 	$('.reviews__slider').slick({
 		arrows: true,
 		dots: true,
-		speed: 1000
+		speed: 1000,
+
 
 	});
+
+
 }
+
 
 reviewsSlider();
 
@@ -66,6 +70,19 @@ sponsorsSlider();
 //Видео в модальном окне
 
 $(".js-modal-video").modalVideo();
+
+//SPEAKERS OPEN BUTTON
+
+function openElseSpeakers() {
+	const elseBtn = $('.js-speakers-btn');
+
+	elseBtn.on('click', function () {
+		elseBtn.css('display', 'none');
+		$('.speakers__item_invisible').css('display', 'flex');
+	})
+}
+
+openElseSpeakers();
 
 //модальное окно в спикерах
 
@@ -190,29 +207,49 @@ sheduleSection();
 
 //СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
-//function reviewsContent() {
-//	const slide = document.querySelector('.reviews__slider');
-//	const reviewSlide = document.querySelectorAll('.reviews__slide');
-//	const reviewContent = document.querySelectorAll('.reviews__content');
-//
-//	for (let i = -1; i < reviewSlide.length; i++) {
-//
-//
-//		if (reviewSlide[i].classList.contains('slick-active')) {
-//
-//			reviewContent[i].classList.add('reviews__content_active');
-//
-//
-//
-//		} else {
-//			reviewContent[i].classList.remove('reviews__content_active');
-//		}
-//
-//	}
-//
-//};
-//
-//reviewsContent();
+function reviewsContent() {
+	const slide = document.querySelector('.reviews__slider');
+	const reviewSlide = document.querySelectorAll('.reviews__slide');
+	const reviewContent = document.querySelectorAll('.reviews__content');
+
+
+
+
+
+	slide.addEventListener('click', () => {
+
+		for (let i = 0; i < reviewSlide.length; i++) {
+
+
+			for (let l = 0; l < reviewSlide.length; l++) {
+
+				if (reviewSlide[i].classList.contains('slick-active')) {
+					let currentSlide = reviewSlide[i].getAttribute('data-slideRew');
+
+					reviewContent[l].classList.remove('reviews__content_active');
+					reviewContent[l].style.transform = 'translateX(100%)';
+					reviewContent[currentSlide].classList.add('reviews__content_active');
+
+					setTimeout(function RewTransl() {
+
+						reviewContent[currentSlide].style.transform = 'translateX(0)';
+
+					}, 700);
+
+				}
+
+			}
+
+		}
+	});
+
+
+
+
+
+};
+
+reviewsContent();
 
 //секция prices
 
@@ -293,46 +330,106 @@ function openMenu() {
 	const openNav = $('.js-menu');
 	const menuItem = $('.menu__link');
 
+
 	openBtn.on('click', function () {
 
 		openNav.slideToggle();
 
+
+
 	});
 
 	menuItem.on('click', function () {
-		if (openNav.css('display', 'block')) {
+		if ($(window).innerWidth() < '992') {
 			openNav.slideUp();
-		}
-	})
-}
 
+
+
+		}
+
+
+	});
+
+
+	$(window).on('resize', () => {
+
+		if ($(window).width() > '995') {
+
+			openNav.css('display', 'flex');
+		} else {
+			openNav.css('display', 'none');
+		};
+	});
+
+}
 openMenu();
+
+/**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
+$(".menu__link").on("click", function (e) {
+	e.preventDefault();
+	$("html, body").animate({
+		scrollTop: $($(this)
+				.attr("href"))
+			.offset().top
+	}, 300, "linear");
+
+});
+
+
 
 //ACTIVEMENU
 
 function activeMenu() {
+	const menuItem = document.querySelectorAll('.menu__link');
+	const section = document.getElementsByTagName('section');
+
+	for (let i = 0; i < menuItem.length; i++) {
+		for (let l = 0; l < menuItem.length; l++) {
+			menuItem[i].addEventListener('click', () => {
+
+				menuItem[l].classList.remove('menu__link_active');
+				
+				menuItem[i].classList.add('menu__link_active');
+
+			});
+
+			window.addEventListener('scroll', () => {
+				let posTop = section[i].getBoundingClientRect().top.toFixed();
+				//				
+				if (posTop > 10 && posTop < 150) {
+
+					let currentSection = section[i].getAttribute('data-page');
+
+
+					menuItem[l].classList.remove('menu__link_active');
+					menuItem[currentSection].classList.add('menu__link_active');
+
+				}
+
+
+			})
+		};
+	}
 
 }
 
 activeMenu();
 
-//SPEAKERS OPEN BUTTON
+//PRELOADER 
 
-function openElseSpeakers() {
-	const elseBtn = $('.js-speakers-btn');
+function preloader() {
+	document.body.onload = () => {
 
-	elseBtn.on('click', function () {
-		elseBtn.css('display', 'none');
-		$('.speakers__item_invisible').css('display', 'flex');
-	})
+		setTimeout(() => {
+			const preloader = document.querySelector('.preloader');
+			if (!preloader.classList.contains('preloader_done')) {
+				preloader.classList.add('preloader_done');
+			}
+
+		}, 2000)
+
+
+	}
 }
 
-openElseSpeakers();
-
-//SPEAKERS MODAL
-
-function speakersModal() {
-
-}
-
-speakersModal();
+preloader();

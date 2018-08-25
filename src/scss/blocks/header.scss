@@ -70,9 +70,12 @@
 }
 
 .container_header {
-	padding-left: 12%;
-	padding-right: 4%;
+	padding-left: 11%;
+	padding-right: 3%;
 
+	width: 99%;
+	margin: 0 auto;
+	
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -229,4 +232,8 @@
 		font-size: rem(16px);
 
 	}
+}
+
+.js-menu-active {
+	
 }

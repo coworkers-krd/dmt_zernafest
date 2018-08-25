@@ -9,33 +9,16 @@ const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');
 const $gp = require("gulp-load-plugins")();
 const del = require("del");
-const htmlbeautify = require('gulp-html-beautify');
+//var pretty = require('pretty');
 
-
-gulp.task('htmlbeautify', function() {
-    var options = {
-        indentSize: 2,
-        unformatted: [
-            // https://www.w3.org/TR/html5/dom.html#phrasing-content
-             'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite',
-            'code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 'keygen', 'map', 'mark', 'math', 'meter', 'noscript',
-            'object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'small',
-             'strong', 'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text',
-            'acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
-        ]
-
-    };
-gulp.src('./build/*.html')
-    .pipe(htmlbeautify(options))
-    .pipe(gulp.dest('./build'))
-});
 
 gulp.task('pug', function() {
   return gulp.src("./src/pug/*.pug")
-       .pipe(pug())
+       .pipe(pug({pretty:true}))
 	.pipe($gp.plumber())
       .pipe(gulp.dest("./build/"))
-	 .pipe(htmlbeautify());
+	
+
      
 });
 
