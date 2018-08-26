@@ -417,19 +417,19 @@ activeMenu();
 
 //PRELOADER 
 
-//function preloader() {
-//	document.body.onload = () => {
-//
-//		setTimeout(() => {
-//			const preloader = document.querySelector('.preloader');
-//			if (!preloader.classList.contains('preloader_done')) {
-//				preloader.classList.add('preloader_done');
-//			}
-//
-//		}, 2000)
-//
-//
-//	}
-//}
-//
-//preloader();
+function preloader() {
+	document.body.onload = () => {
+
+		setTimeout(() => {
+			const preloader = document.querySelector('.preloader');
+			if (!preloader.classList.contains('preloader_done')) {
+				preloader.classList.add('preloader_done');
+			}
+
+		}, 2000)
+
+
+	}
+}
+
+preloader();
