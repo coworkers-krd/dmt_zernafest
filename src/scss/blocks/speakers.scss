@@ -52,9 +52,14 @@
 
 	align-content: center;
 	margin-bottom: 2%;
+	
+	@include tablet {
+		margin-bottom: 5%;
+	}
 
 	@include tablet-a {
 		width: 75%;
+		margin-bottom: 7%;
 	}
 
 }
@@ -127,7 +132,7 @@
 	}
 
 	@include tablet-a {
-		margin-bottom: 10%;
+//		margin-bottom: 10%;
 		width: 100%;
 		white-space: nowrap;
 	}

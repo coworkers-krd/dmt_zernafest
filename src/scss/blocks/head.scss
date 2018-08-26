@@ -6,10 +6,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	
 	margin-bottom: 55px;
+	padding: 3% -0px;
 	padding-left: 10%;
 
 	width: 100%;
+	height: 100%;
 
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -32,10 +35,14 @@
 	font-size: rem(73px);
 	font-weight: 900;
 	padding: 3% 0;
-	line-height: 100%;
+	line-height: 0.8;
 
 	@include netbook {
 		padding: 1% -0px;
+	}
+	
+	@include tablet {
+		margin-bottom: 10px;
 	}
 
 	@include tablet-a {
@@ -45,7 +52,9 @@
 
 .head__title_small {
 	font-size: rem(51px);
-
+	line-height: 0.8;
+	margin-top: 10px;
+	padding: 0;
 	@include netbook {
 		display: inline-block;
 		margin-left: 20px;
@@ -60,12 +69,17 @@
 		display: inline-block;
 		margin-left: 20px;
 	}
+	
+	@include phone {
+		display: block;
+		margin-left: 0;
+}
 }
 
 .head__description {
 	width: 60%;
 	background-color: #fff;
-	height: 125px;
+	height: 95%;
 	align-self: center;
 
 	display: -webkit-flex;
@@ -76,6 +90,8 @@
 
 	color: $blue;
 
+	
+	
 	@include netbook {
 		width: 100%;
 	}
@@ -108,14 +124,16 @@
 	font-size: rem(125px);
 	font-weight: 900;
 	text-transform: uppercase;
-	line-height: 100%;
+	line-height: 1;
 
-	margin-top: -10px;
+		margin-top: -20px;
 	margin-right: 10px;
 	padding-left: 10px;
 
 	@include tablet-a {
 		font-size: rem(65px);
+		margin-top: 0;
+		margin-bottom: 3%;
 
 	}
 
