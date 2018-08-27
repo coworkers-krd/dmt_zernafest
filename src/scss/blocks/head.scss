@@ -73,7 +73,7 @@
 	@include phone {
 		display: block;
 		margin-left: 0;
-}
+	}
 }
 
 .head__description {
@@ -132,7 +132,8 @@
 	
 	@include tablet-a {
 		font-size: rem(65px);
-		margin-top: 0;
+		margin-top: -12px;
+		line-height: 4.6rem;
 	}
 
 }

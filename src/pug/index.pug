@@ -9,16 +9,17 @@ html(lang="Ru ru")
 		meta(content="width=device-width, initial-scale=1" name="viewport")
 		title 
 		link( rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
-		link(rel="stylesheet" type="text/css" href="plugins/slick/slick.css")
-		link(rel="stylesheet" type="text/css" href="plugins/modal-video/modal-video.min.css")
-		link(rel='stylesheet' href='css/main.css')
+		link(rel="stylesheet" type="text/css" href="plugins/slick/slick.css?v=1.1")
+		link(rel="stylesheet" type="text/css" href="plugins/modal-video/modal-video.min.css?v=1.1")
+		link(rel='stylesheet' href='css/main.css?v=1.1')
 	
 	body
 		include common/preloader.pug
 		.wrapper.js-wrapper-preloader
 			include common/promo.pug	
 			include common/speakers.pug	
-			include common/mission.pug	
+			include common/mission.pug
+			include common/guests.pug	
 			include common/for-whom.pug	
 			include common/itwas.pug	
 			include common/where-will.pug	

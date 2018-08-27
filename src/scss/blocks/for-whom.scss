@@ -48,7 +48,7 @@
 .for-whom__video-item {
 	width: 30%;
 
-	color: #080a79;
+	color: $blue;
 	
 	@include tablet-a {
 			width: 100%;
@@ -155,6 +155,8 @@
 	font-size: rem(20px);
 	line-height: 1.2;
 	display: inline-block;
+	color: $blue;
+	text-align: justify;
 	
 	@include tablet-a {
 			font-size: rem(16px);

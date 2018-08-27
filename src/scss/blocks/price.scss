@@ -59,6 +59,7 @@
 	justify-content: flex-start;
 
 	margin-top: -15px;
+	margin-left: 30px;
 
 	@include tablet-a {
 		height: 100%;
@@ -107,7 +108,7 @@
 }
 
 .price__form-block {
-	background-image: url(../img/price/price-bg.jpg);
+	background-image: url(../img/bg-blue.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -366,6 +367,7 @@
 	margin: 0 auto;
 	margin-top: 2%;
 	padding: 18px 0;
+	font-weight: bold;
 
 }
 

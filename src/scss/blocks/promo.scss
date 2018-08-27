@@ -18,7 +18,7 @@
 
 @include tablet {
 	flex-direction: column;
-
+	height: auto;
 }
 }
 .promo:after {
@@ -26,7 +26,7 @@
 	display: inline-block;
 	width: 70%;
 	height: 70%;
-	background-image: url('/img/pattern_1.png');
+	background-image: url('../img/pattern_1.png');
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	background-size: contain;
@@ -51,8 +51,7 @@
 	font-weight: 800;
 	text-transform: uppercase;
 	font-size: rem(48px);
-	margin-bottom: 2%;
-	margin-top: 15%;
+	margin-top: 40px;
 	font-weight: normal;
 	
 	@include tablet-a {
@@ -64,20 +63,24 @@
 	}
 }
 .promo__logo {
-	width: 70%;
-	margin-top: 15%;
-	margin-bottom: 15%;
+    width: 100%;
+    margin-top: 12%;
+    margin-bottom: 6%;
 }
 .promo__place {
 	font-size: rem(31px);
 	color: rgb(255, 255, 255);
-	line-height: 1.2;
+	line-height: 1;
 	text-align: left;
+	margin-top: 15px;
+}
+.promo__place span {
+	font-size: rem(40px);
 }
 
 .promo__text {
 	font-weight: 800;
-	font-size: rem(40px);
+	font-size: rem(42px);
 	text-transform: uppercase;
 	
 	@include netbook {
@@ -151,9 +154,9 @@ position: relative;
 }
 .promo__form {
 	width: 35%;
-	background-color: rgba(73, 90, 122, 0.45);
-
 	
+
+	background-color: rgba(102, 50, 122, 0.8);
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -162,6 +165,7 @@ position: relative;
 	
 	align-items: center;
 	z-index: 100;
+	margin-top: 55px;
 	
 	@include tablet {
 		justify-content: flex-start;

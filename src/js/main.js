@@ -2,9 +2,8 @@
 function whereWillSlider() {
 	$('.where-will__slider').slick({
 		arrows: true,
-		autoplay: true,
-		autoplaySpeed: 3000,
-		dots: true
+		dots: true,
+		speed: 1000,
 
 	});
 }
@@ -21,8 +20,6 @@ function reviewsSlider() {
 
 
 	});
-
-
 }
 
 
@@ -79,10 +76,24 @@ function openElseSpeakers() {
 	elseBtn.on('click', function () {
 		elseBtn.css('display', 'none');
 		$('.speakers__item_invisible').css('display', 'flex');
+		$('.speakers_btn_offer').fadeIn(200);
 	})
 }
 
 openElseSpeakers();
+
+//guests OPEN BUTTON
+
+function openElseGuest() {
+	const elseBtn = $('.js-guests-btn');
+
+	elseBtn.on('click', function () {
+		elseBtn.css('display', 'none');
+		$('.speakers__item_invisible').css('display', 'flex');
+	})
+}
+
+openElseGuest();
 
 //модальное окно в спикерах
 
@@ -242,14 +253,46 @@ function reviewsContent() {
 
 		}
 	});
-
-
-
-
-
 };
 
 reviewsContent();
+
+//СЕКЦИЯ Где пройдет - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
+
+function WhereWillContent() {
+	const slide = document.querySelector('.where-will__slider');
+	const reviewSlide = document.querySelectorAll('.where-will__slide');
+	const reviewContent = document.querySelectorAll('.where-will__content');
+
+	slide.addEventListener('click', () => {
+
+		for (let i = 0; i < reviewSlide.length; i++) {
+
+
+			for (let l = 0; l < reviewSlide.length; l++) {
+
+				if (reviewSlide[i].classList.contains('slick-active')) {
+					let currentSlide = reviewSlide[i].getAttribute('data-slideRew');
+
+					reviewContent[l].classList.remove('where-will__content_active');
+					reviewContent[l].style.transform = 'translateX(100%)';
+					reviewContent[currentSlide].classList.add('where-will__content_active');
+
+					setTimeout(function RewTransl() {
+
+						reviewContent[currentSlide].style.transform = 'translateX(0)';
+
+					}, 700);
+
+				}
+
+			}
+
+		}
+	});
+};
+
+WhereWillContent();
 
 //секция prices
 
@@ -426,7 +469,7 @@ function preloader() {
 				preloader.classList.add('preloader_done');
 			}
 
-		}, 2000)
+		}, 1)
 
 
 	}

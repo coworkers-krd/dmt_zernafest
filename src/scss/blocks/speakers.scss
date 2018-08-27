@@ -29,19 +29,17 @@
 	margin-bottom: 20px;
 
 	@include tablet {
-		width: 50%;
-		margin-left: 50%;
+		width: 100%;
 	}
 	
 	@include tablet-a {
-		width: 70%;
-		margin-left: 30%;
+		width: 100%;
 		font-size: rem(38px);
 	}
 }
 .speakers__subtitle {
 	font-size: 3.1875rem;
-	
+
 	@include tablet-a {
 		
 		
@@ -183,7 +181,7 @@ white-space: nowrap;
 
 	border-radius: 5px;
 	padding: 13px 40px;
-
+	font-weight: bold;
 
 	display: block;
 	margin: 0 auto;
@@ -398,4 +396,7 @@ z-index: 1000;
 
 	margin-bottom: 15px;
 	cursor: pointer;
+}
+.speakers_btn_offer {
+	display: none;
 }
