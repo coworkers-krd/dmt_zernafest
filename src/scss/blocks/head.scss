@@ -2,7 +2,7 @@
 //	height: 100%;
 //} 
 .head {
-	background-image: url(../img/bg-blue.jpeg);
+	background-image: url(../img/bg-blue.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -121,20 +121,18 @@
 
 .head__number {
 	font-family: 'Anton', arial, sans-serif;
-	font-size: rem(125px);
+	font-size: 7.1em;
 	font-weight: 900;
-	text-transform: uppercase;
-	line-height: 1;
-
-		margin-top: -20px;
-	margin-right: 10px;
-	padding-left: 10px;
-
+	padding-left: 3%;
+	margin-right: 3%;
+	line-height: 8.2rem;
+	margin-top: -23px;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	
 	@include tablet-a {
 		font-size: rem(65px);
 		margin-top: 0;
-		margin-bottom: 3%;
-
 	}
 
 }

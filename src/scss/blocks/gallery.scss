@@ -14,13 +14,14 @@
 
 .gallery__item {
 	width: 32%;
-	min-height: 300px;
+	height: 300px;
 
 	margin-bottom: 2%;
 
-	background-color: red;
+	// background-color: red;
 
 	position: relative;
+	overflow: hidden;
 	
 	transition: 0.7s;
 
@@ -44,6 +45,15 @@
 	@include phone {
 		width: 100%;
 	}
+}
+.gallery__item img {
+	height: 100%;
+	width: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+
 }
 
 .gallery__icon {
@@ -83,5 +93,4 @@
 	transform: translate(-50%, -50%);
 
 	transition: 0.7s;
-
 }

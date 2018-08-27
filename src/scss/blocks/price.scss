@@ -4,9 +4,12 @@
 
 
 }
+.price {
+	margin-bottom: 50px;
+}
 
 .head__title_price {
-	color: #080a79;
+	color: #7b4590;
 	font-size: rem(73px);
 	font-weight: 900;
 
@@ -16,7 +19,7 @@
 }
 
 .head__title_smallprice {
-	color: #080a79;
+	color: #7b4590;
 	font-size: rem(51px);
 
 	@include netbook {
@@ -41,7 +44,7 @@
 }
 
 .head__description_price {
-	background-image: url(../img/bg-blue.jpeg);
+	background-image: url(../img/bg-blue.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #fff;
@@ -55,6 +58,8 @@
 	align-items: center;
 	justify-content: flex-start;
 
+	margin-top: -15px;
+
 	@include tablet-a {
 		height: 100%;
 	}
@@ -66,6 +71,14 @@
 	text-transform: uppercase;
 	padding-left: 10%;
 	white-space: nowrap;
+	line-height: 7.2rem;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	
+	@include tablet-a {
+		font-size: rem(65px);
+		margin-top: 0;
+	}
 
 	animation: blink 1s linear infinite;
 
@@ -213,6 +226,7 @@
 	height: 30px;
 
 	color: #fff;
+	text-align: center;
 
 	font-weight: 700;
 	font-size: rem(19px);
@@ -300,12 +314,19 @@
 .price__input-text {
 	margin-right: auto;
 	align-self: center;
+	font-weight: normal;
 }
-
+.price__checkboxes-label {
+	font-weight: normal;
+}
+.price__quantity-title {
+	font-weight: normal;
+}
 .price__input-input {
 	height: 48px;
 	width: 170px;
 	padding: 5px;
+	border: none;
 
 	border-radius: 5px;
 }

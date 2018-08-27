@@ -82,7 +82,7 @@
 
 	margin-bottom: 10%;
 
-	color: #aaa;
+	color: #fff;
 }
 
 .footer__question {
@@ -108,7 +108,7 @@
 .footer__contacts-link {
 	display: block;
 	//	padding-left: 25px;
-	color: #aaa;
+	color: #fff;
 	font-size: rem(16px);
 	font-weight: 300;
 	text-transform: lowercase;
@@ -193,7 +193,7 @@
 	
 	
 	position: relative;
-		&:hover:before {
+	&:hover:before {
 		content: '';
 		display: block;
 
@@ -202,10 +202,10 @@
 		border-radius: 5px;
 		
 		background-color: rgba(#000, 0.5);
-			
-			position: absolute;
-			top: 0;
-			left: 5px;
+		
+		position: absolute;
+		top: 0;
+		left: 5px;
 	}
 
 }
@@ -242,7 +242,7 @@
 	
 	position: relative;
 	
-		&:before,
+	&:before,
 	&:after {
 		content: '';
 		display: block;
@@ -298,4 +298,11 @@
 	text-align: center;
 	
 	margin-bottom: 3px;
+}
+.footer__copyright_link {
+	text-transform: uppercase;
+	color: #787e92;
+	font-size: rem(12px);
+	font-weight: 400;
+	text-decoration: none;	
 }

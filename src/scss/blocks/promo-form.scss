@@ -30,7 +30,7 @@
 	font-weight: 700;
 	font-size: rem(19px);
 	text-transform: uppercase;
-	
+	font-weight: normal;
 	margin-bottom: 5%;
 	
 	@include tablet {
@@ -77,6 +77,7 @@
 	width: 75%;
 	margin: 0 auto;
 	margin-bottom: 3%;
+	font-size: 0.8rem;
 	
 	text-align: left;
 	
