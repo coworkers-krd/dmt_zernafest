@@ -63,6 +63,19 @@ function sponsorsSlider() {
 
 sponsorsSlider();
 
+// слайдер ГАЛЕРЕЯ
+
+function galleryImg() {
+
+$('.gallery__list').slick({
+		arrows: true,
+		dots: true,
+		speed: 1000,
+
+	});
+}
+galleryImg();
+
 //Видео в модальном окне
 
 $(".js-modal-video").modalVideo();
@@ -550,15 +563,33 @@ function preloader() {
 preloader();
 
 
-//ГАЛЕРЕЯ
+//модальное окно
 
-function galleryImg() {
-
-$('.gallery__list').slick({
-		arrows: true,
-		dots: true,
-		speed: 1000,
-
+function modalW() {
+	
+	const modal = $('.modal');
+	const modalInner = $('.modal__inner');
+	const closeBtn = $('.modal__close');
+	
+	$('.promo__logo').on('click', function() {
+		
+		modal.fadeIn(500);
+		modalInner.fadeIn(500);
 	});
+	
+	closeBtn.on('click', function() {
+		
+		modal.fadeOut(500);
+		modalInner.fadeOut(500);
+	});
+	
+	
+	modal.on('click', function() {
+		
+		modal.fadeOut(500);
+		modalInner.fadeOut(500);
+	});
+	
 }
-galleryImg();
+
+modalW();

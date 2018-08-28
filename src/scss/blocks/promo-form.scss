@@ -14,10 +14,10 @@
 		flex-direction: row;
 		justify-content: space-between;
 		position: relative;
-
+		align-items: center;
 	}
 
-	@include phone {
+	@include tablet-a {
 		position: static;
 
 		flex-direction: column;
@@ -53,8 +53,9 @@
 		
 	}
 	
-	@include phone {
+	@include tablet-a {
 		margin-bottom: 3%;
+		width: 100%;
 	}
 }
 
@@ -78,7 +79,7 @@
 		margin-top: 0%;
 	}
 	
-	@include phone {
+	@include tablet-a {
 		width: 75%;
 	}
 }
@@ -88,6 +89,14 @@
 	margin: 10px auto;
 	font-size: 2.2em;
 	text-transform: uppercase;
+	
+	@include tablet {
+		width: 50%;
+	}
+	
+	@include tablet-a {
+		text-align: center;
+	}
 }
 
 .promo-form__label_checkbox {
@@ -108,7 +117,7 @@
 		left: 5%;
 	}
 	
-	@include phone {
+	@include tablet-a {
 		position: static;
 	}
 }
@@ -143,9 +152,9 @@
 		
 		font-size: rem(12px);
 		align-self: center;
-		margin-top: 15px;
+		margin-top: -10px;
 	}
-	@include phone {
+	@include tablet-a {
 		width: 75%;
 	}
 }

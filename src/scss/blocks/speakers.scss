@@ -65,6 +65,8 @@
 	height: 270px;
 	overflow: hidden;
 	
+	transition: 0.7s;
+	
 	@include netbook {
 //		height: 250px;
 	}
