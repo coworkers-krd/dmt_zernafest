@@ -3,11 +3,11 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	
-	margin-bottom: 85px;
+	margin-bottom: -10px;
 }
 
 .where-will .head__title {
-	color: #7b4590;
+	color: #7C458f;
 }
 .where-will .head {
 	background-image: none;
@@ -42,7 +42,7 @@
 .where-will__slider{
 	width: 50%;
 	height: 560px;
-	
+	border-radius: 5px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -97,7 +97,7 @@
 //	width: 50%;
 display: none;
 padding-right: 5%;
-color: #7b4590;
+color: #7C458f;
 transform: translateX(100%);
 
 
@@ -121,21 +121,21 @@ transform: translateX(100%);
 	font-weight: 900;
 	text-transform: uppercase;
 	margin-bottom: 2%;
-	color: #7b4590;
+	color: #7C458f;
 }
 
 .where-will__position {
 	font-size: rem(16px);
 	text-transform: uppercase;
 	margin-bottom: 10%;
-	color: #7b4590;
+	color: #7C458f;
 	@include tablet {
 		margin-bottom: 5%;
 	}
 }
 
 .where-will__comment {
-	font-size: rem(18px);
+	font-size: rem(20px);
 	line-height: 1.2;
 	margin-bottom: 10px;
 
@@ -145,7 +145,7 @@ transform: translateX(100%);
 }
 
 .where-will__content-block li {
-	font-size: rem(18px);
+	font-size: rem(20px);
 	line-height: 1.2;
 	
 	@include tablet {
@@ -222,7 +222,7 @@ transform: translateX(100%);
 		bottom: 0;
 		
 		background-color: rgba(102, 50, 122, 0.8);
-		
+		border-radius: 5px;
 		width: 100%;
 		height: 20%;
 		
@@ -240,6 +240,7 @@ transform: translateX(100%);
 	.slick-dots li {
 		height: 86%;
 		width: 20%;
+		border-radius: 5px;
 		
 		margin-left: 4%;
 		
@@ -250,28 +251,28 @@ transform: translateX(100%);
 		}
 		
 		&:first-child {
-			background-image: url('../img/where-will/slide-1.jpg');
+			background-image: url('../img/where-will/slide-1.png');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
 		
 		&:nth-child(2) {
-			background-image: url('../img/where-will/slide-2.jpg');
+			background-image: url('../img/where-will/slide-2.png');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
 		
 		&:nth-child(3) {
-			background-image: url('../img/where-will/slide-3.jpg');
+			background-image: url('../img/where-will/slide-3.png');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;
 		}
 
 		&:nth-child(4) {
-			background-image: url('../img/where-will/slide-4.jpg');
+			background-image: url('../img/where-will/slide-4.png');
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center;

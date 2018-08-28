@@ -8,7 +8,9 @@ section.price#price(data-page="8")
 			.head__text.head__text_price все включено
 			
 	.price__form-block
-		h3.price__title Мы оплатим часть билета семьям с детьми и учителям
+		h3.price__title Мы оплатим часть билета 
+		h3.price__title семьям с детьми 
+		h3.price__title и учителям
 		form.price__form
 			.price__form-row
 				.price__quantity
@@ -54,27 +56,30 @@ section.price#price(data-page="8")
 				
 				.price__inputs
 					.price__inputs-row
-						label.price__input-text фио
-						input.price__input-input(type='text')
+						label.price__input-text Фамилия
+						input.price__input-input(type='text' required)
+
+					.price__inputs-row
+						label.price__input-text Имя
+						input.price__input-input(type='text' required)
 						
 					.price__inputs-row
 						label.price__input-text e-mail
-						input.price__input-input(type='text')
+						input.price__input-input(type='text' required)
 						
 					.price__inputs-row
 						label.price__input-text телефон
-						input.price__input-input(type='text')
+						input.price__input-input(type='text' required)
 						
 					.price__inputs-row
 						label.price__input-text промокод
 						input.price__input-input(type='text')
 						
+			button.price__btn узнать скидку
 			label.price__confid
-				input.price__confid-checkbox(type="checkbox")
 				span.price__confid-text Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с 
 				a.price__confid-link(href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank") политикой конфиденциальности 
 				span.price__confid-text  и	
 				a.price__confid-link(href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank") пользовательским соглашением.
-			button.price__btn узнать скидку
 			
 			

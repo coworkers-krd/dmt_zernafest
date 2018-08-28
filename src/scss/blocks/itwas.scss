@@ -135,11 +135,12 @@
 }
 
 .itwas__title {
-	font-size: rem(40px);
+	font-size: rem(73px);
 	font-weight: 900;
 	text-transform: uppercase;
-	width: 60%;
+	width: 100%;
 	margin-bottom: 2%;
+	margin-top: -13px;
 
 	@include tablet {
 		width: 30%;
@@ -154,6 +155,7 @@
 }
 
 .itwas__title-subtitle {
+	font-size: rem(51px);
 	@include tablet-a {
 		font-size: rem(31px);
 	}

@@ -1,5 +1,5 @@
 .container_gallery {
-	padding: 0 3%;
+	padding: 0 10%;
 	
 	
 	@include tablet-a {
@@ -7,6 +7,9 @@
 	}
 }
 
+.slick-slider .slick-track, .slick-slider .slick-list {
+	border-radius: 5px;
+}
 .gallery__list {
 //	display: -webkit-flex;
 //	display: -moz-flex;
@@ -24,7 +27,7 @@
 
 .gallery__item {
 	width: 100%;
-	height: 900px;
+	height: 600px;
 	
 
 //	margin-bottom: 2%;
@@ -66,8 +69,7 @@
 	}
 }
 .gallery__img {
-//	min-height: 900px;
-	height: 100%;
+	height: auto;
 	width: 100%;
 	position: absolute;
 	top: 50%;

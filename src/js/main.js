@@ -26,7 +26,7 @@ whereWillSlider();
 ///Слайдер секции sponsors
 
 function sponsorsSlider() {
-	$('.sponsors__list').slick({
+	$('.friends__list').slick({
 		arrows: false,
 		autoplay: true,
 		autoplaySpeed: 3000,

@@ -115,8 +115,8 @@
 }
 
 .menu__item {
-	margin-right: 2%;
-	padding: 3% 0px;
+    margin-right: 5%;
+    padding: 3.5% 0px;
 
 	@include tablet {
 		border-bottom: 1px solid #aaa;
@@ -125,7 +125,7 @@
 
 .menu__link {
 	font-family: 'proxima_nova', arial, sans-serif;
-	font-size: rem(16px);
+	font-size: rem(20px);
 	color: #fff;
 	text-transform: uppercase;
 	text-decoration: none;

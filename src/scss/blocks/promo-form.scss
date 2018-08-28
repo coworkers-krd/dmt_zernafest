@@ -28,7 +28,7 @@
 	display: inline-block;
 	vertical-align: top;
 	font-size: 0.8rem;
-	text-align: left;
+	text-align: center;
 	font-weight: 500;
 }
 .promo-form__wrapper {
@@ -61,7 +61,7 @@
 
 .promo-form__input {
 	width: 75%;
-
+	border-radius: 5px;
 	font-size: 22px;
 	color: #53586b;
 	
@@ -106,7 +106,8 @@
 	font-size: 0.8rem;
 	padding-left: 18px;
 	
-	text-align: left;
+	text-align: center;
+	margin-top: 20px;
 	
 	font-weight: 500;
 	
@@ -129,7 +130,7 @@
 .promo-form__btn
 {
 	font-weight: 700;
-	font-size: rem(18px);
+	font-size: rem(20px);
 	color: #fff;
 	text-transform: uppercase;
 	

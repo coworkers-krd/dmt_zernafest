@@ -1,15 +1,15 @@
-.sponsors {
+.friends {
 	background-image: url(../img/bg-blue.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	margin-bottom: 100px;
+	margin-bottom: 20px;
 
 	height: 100%;
 
 }
 
-.sponsors__title {
+.friends__title {
 	text-align: center;
 
 	color: #fff;
@@ -41,7 +41,7 @@
 
 }
 
-.sponsors__list {
+.friends__list {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -73,7 +73,7 @@
 	}
 }
 
-.sponsors__item {
+.friends__item {
 	height: 80%;
 	width: 18%;
 	margin-right: 2%;
@@ -94,7 +94,7 @@
 }
 
 
-.sponsors__logo {
+.friends__logo {
 
 	width: 100%;
 	height: auto;
