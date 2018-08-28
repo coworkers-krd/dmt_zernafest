@@ -65,7 +65,11 @@
 	}
 
 	@include phone {
-		justify-content: center;
+//		justify-content: center;
+	}
+	
+	.slick-list {
+		height: 100%;
 	}
 }
 
@@ -82,9 +86,9 @@
 
 
 	@include phone {
-		margin: 0 auto;
-
-		width: 60%;
+		margin: 0 2%;
+	min-height: 100px;
+		width: 100%;
 	}
 
 }
@@ -99,7 +103,10 @@
 	@include phone {
 
 		margin: 0 auto;
-		width: 60%;
+		width: 100%;
+		min-height: 80px;
+		height: 100%;
+		object-fit: contain;
 	}
 
 }

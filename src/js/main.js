@@ -31,6 +31,7 @@ function sponsorsSlider() {
 		autoplay: true,
 		autoplaySpeed: 3000,
 		slidesToShow: 5,
+		adaptiveHeight: true,
 		//		draggable: true
 		responsive: [{
 			breakpoint: 1450,
@@ -50,7 +51,7 @@ function sponsorsSlider() {
 			}
     }, {
 
-			breakpoint: 450,
+			breakpoint: 550,
 			settings: {
 				slidesToShow: 1
 			}
@@ -231,7 +232,18 @@ $('.reviews__slider').slick({
 //  asNavFor: '.rewiews__img',
   dots: false,
   centerMode: true,
-  focusOnSelect: true
+  focusOnSelect: true,
+	responsive: [{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 4
+			}
+    }, {
+			breakpoint: 520,
+			settings: {
+				slidesToShow: 3
+			}
+	}]
 });
 	}
 

@@ -61,10 +61,14 @@
 			transform: scaleY(2)
 		}
 
-		30% {
+		25% {
 			transform: scaleY(16)
 		}
-		70% {
+		
+		50% {
+			transform: scaleY(8)
+		}
+		75% {
 			transform: scaleY(1)
 		}
 
@@ -87,6 +91,10 @@
 			30% {
 				transform: scaleY(14)
 			}
+			
+			50% {
+			transform: scaleY(7)
+		}
 
 			70% {
 				transform: scaleY(2)
@@ -113,7 +121,9 @@
 			30% {
 				transform: scaleY(12)
 			}
-
+50% {
+			transform: scaleY(6)
+		}
 			70% {
 				transform: scaleY(4)
 			}
@@ -139,9 +149,12 @@
 			30% {
 				transform: scaleY(10)
 			}
+			50% {
+			transform: scaleY(5)
+		}
 
 			70% {
-				transform: scaleY(8)
+				transform: scaleY(6)
 			}
 			100% {
 				transform: scaleY(8)
@@ -163,8 +176,12 @@
 			30% {
 				transform: scaleY(8)
 			}
+			
+			50% {
+			transform: scaleY(4)
+		}
 			70% {
-				transform: scaleY(6)
+				transform: scaleY(8)
 			}
 
 			100% {
@@ -186,9 +203,11 @@
 			30% {
 				transform: scaleY(6)
 			}
-
+50% {
+			transform: scaleY(3)
+		}
 			70% {
-				transform: scaleY(4)
+				transform: scaleY(10)
 			}
 
 			100% {
@@ -211,8 +230,11 @@
 			30% {
 				transform: scaleY(4)
 			}
+			50% {
+			transform: scaleY(2)
+		}
 			70% {
-				transform: scaleY(2)
+				transform: scaleY(12)
 			}
 
 			100% {
@@ -234,8 +256,11 @@
 			30% {
 				transform: scaleY(2)
 			}
+			50% {
+			transform: scaleY(1)
+		}
 			70% {
-				transform: scaleY(1)
+				transform: scaleY(14)
 			}
 
 			100% {
