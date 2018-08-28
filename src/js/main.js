@@ -10,20 +10,18 @@ function whereWillSlider() {
 
 whereWillSlider();
 
-///Слайдер секции reviews
 
-function reviewsSlider() {
-	$('.reviews__slider').slick({
-		arrows: true,
-		dots: true,
-		speed: 1000,
+	
+//	$('.reviews__slider').slick({
+//		arrows: true,
+//		dots: false,
+//		speed: 1000,
+//		slidesToShow: 5,
+//		autoplay: false,
+//		appendDots: $('.reviews__slide')
+//
+//	});
 
-
-	});
-}
-
-
-reviewsSlider();
 
 ///Слайдер секции sponsors
 
@@ -216,12 +214,37 @@ function sheduleSection() {
 
 sheduleSection();
 
+
+///Слайдер секции reviews
+
+function reviewsSlider() {
+//	 $('.rewiews__img').slick({
+//  slidesToShow: 1,
+//  slidesToScroll: 1,
+//  arrows: false,
+//  fade: true,
+//  asNavFor: '.reviews__slider'
+//});
+$('.reviews__slider').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+//  asNavFor: '.rewiews__img',
+  dots: false,
+  centerMode: true,
+  focusOnSelect: true
+});
+	}
+
+
+reviewsSlider();
+	
 //СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
 function reviewsContent() {
 	const slide = document.querySelector('.reviews__slider');
 	const reviewSlide = document.querySelectorAll('.reviews__slide');
 	const reviewContent = document.querySelectorAll('.reviews__content');
+	const bigImg = document.querySelector('.rewiews__big-img');
 
 
 
@@ -234,12 +257,19 @@ function reviewsContent() {
 
 			for (let l = 0; l < reviewSlide.length; l++) {
 
-				if (reviewSlide[i].classList.contains('slick-active')) {
+				if (reviewSlide[i].classList.contains('slick-center')) {
+					
+					
 					let currentSlide = reviewSlide[i].getAttribute('data-slideRew');
-
+					
+					let currentImg = reviewSlide[i].getAttribute('src');
+					
+					
 					reviewContent[l].classList.remove('reviews__content_active');
 					reviewContent[l].style.transform = 'translateX(100%)';
 					reviewContent[currentSlide].classList.add('reviews__content_active');
+					
+					bigImg.setAttribute('src', currentImg);
 
 					setTimeout(function RewTransl() {
 
@@ -431,7 +461,7 @@ function activeMenu() {
 			menuItem[i].addEventListener('click', () => {
 
 				menuItem[l].classList.remove('menu__link_active');
-				
+
 				menuItem[i].classList.add('menu__link_active');
 
 			});

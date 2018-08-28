@@ -2,13 +2,13 @@
 	background-image: url(../img/bg-blue.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+
 	margin-bottom: 85px;
 }
 
 .head_reviews {
 	background-image: none;
-	
+
 	@include tablet {
 		margin-bottom: 0;
 	}
@@ -20,45 +20,85 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
+
 	padding-left: 10%;
+
 	
+
+	overflow: hidden;
+
 	@include tablet {
 		flex-direction: column;
 		padding: 0 5%;
 	}
 }
+
 .slick-track {
 	// width: 100% !important;
 }
-.reviews__slider{
+
+.reviews__img-block {
 	width: 50%;
-	height: 559px;
+	margin-right: 20px;
 	
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.rewiews__img {
+	width: 100%;
+//	height: 80%;
+	height: 500px;
+	overflow: hidden;
+}
+
+.rewiews__big-img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+
+.reviews__slider {
+	width: 100%;
+	height: 20%;
+	background-color: #fff;
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	position: relative;
-	
+	align-items: center;
+
+	background-color: rgba(#000, 0.7);
+
+
 	overflow: hidden;
-	
+
 	margin-bottom: 55px;
-	margin-right: 4%;
-	
+	padding: 0 5px;
+
 	@include tablet {
 		width: 100%;
 	}
 }
 
 .reviews__slide {
-	// width: 100% !important;
-	height: 560px;
+	margin: 0 5px;
+align-self: center;
+		height: 70px;
+	width: 18%;
 //	height: 60%;
-object-fit: cover;
 
+	overflow: hidden;
+	object-fit: cover;
+
+	transition: 0.7s;
+	box-sizing: border-box;
+
+	&:hover {
+		border: 3px solid $orange;
+	}
 }
 
 
@@ -66,11 +106,11 @@ object-fit: cover;
 .reviews__point {
 	height: 86%;
 	width: 20%;
-	
+
 	margin-left: 4%;
-	
+
 	transition: 0.7s;
-	
+
 	&:hover {
 		border: 3px solid $orange;
 	}
@@ -79,34 +119,35 @@ object-fit: cover;
 .reviews__content-block {
 	width: 50%;
 	overflow: hidden;
-	
-	
+
+
 	@include tablet {
 		width: 100%;
 		margin-bottom: 5%;
 	}
 }
+
 .reviews__content {
-//	width: 50%;
-display: none;
-padding-right: 5%;
+	//	width: 50%;
+	display: none;
+	padding-right: 5%;
 
-transform: translateX(100%);
-
-
+	transform: translateX(100%);
 
 
-&:first-child {
-	transform: translateX(0%);
-}
+
+
+	&:first-child {
+		transform: translateX(0%);
+	}
 }
 
 .reviews__content_active {
 	display: block;
-	
+
 	transition: .7s;
 
-	
+
 }
 
 .reviews__name {
@@ -115,7 +156,7 @@ transform: translateX(100%);
 	text-transform: uppercase;
 	margin-bottom: 2%;
 	color: #fff;
-	
+
 }
 
 .reviews__position {
@@ -123,7 +164,7 @@ transform: translateX(100%);
 	font-size: rem(16px);
 	text-transform: uppercase;
 	margin-bottom: 10%;
-	
+
 	@include tablet {
 		margin-bottom: 5%;
 	}
@@ -133,7 +174,7 @@ transform: translateX(100%);
 	color: #fff;
 	font-size: rem(18px);
 	line-height: 1.2;
-	
+
 	@include tablet {
 		font-size: rem(16px);
 	}
@@ -146,29 +187,29 @@ transform: translateX(100%);
 }
 
 .reviews__slider {
-	position: relative;
-	
+
+
 	.slick-next {
 		position: absolute;
 		top: 50%;
 		left: 93%;
 		transform: translateY(-50%);
-		
+
 		font-size: 0;
-		
+
 		width: 20px;
 		height: 20px;
-		
+
 		background-color: transparent;
 		outline: none;
-		
+
 		border-right: 3px solid #aaa;
 		border-top: 3px solid #aaa;
-		
+
 		transform: rotate(45deg);
-		
+
 		transition: 0.7s;
-		
+
 		&:hover {
 			border-right: 3px solid $orange;
 			border-top: 3px solid $orange;
@@ -181,95 +222,94 @@ transform: translateX(100%);
 		top: 50%;
 		right: 93%;
 		transform: translateY(-50%);
-		
+
 		font-size: 0;
-		
+
 		width: 20px;
 		height: 20px;
-		
+
 		background-color: transparent;
 		outline: none;
-		
+
 		border-left: 3px solid #aaa;
 		border-bottom: 3px solid #aaa;
-		
+
 		transform: rotate(45deg);
-		
+
 		transition: 0.7s;
-		
+
 		&:hover {
 			border-left: 3px solid $orange;
 			border-bottom: 3px solid $orange;
 		}
 	}
 
-	.slick-dots {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		
-		background-color: rgba(#000, 0.7);
-		
-		width: 100%;
-		height: 20%;
-		
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		
-		align-items: center;
-		
-		padding: 2% 0;
-		
-	}
-	.slick-dots li {
-		height: 86%;
-		width: 20%;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		min-width: 100px;
-		
-		margin-left: 4%;
-		
-		transition: 0.7s;
-		
-		&:hover {
-			border: 3px solid $orange;
-		}
-		
-		&:first-child { background-image: url('../img/rewiews/review_3.jpeg');}
-		&:nth-child(2) { background-image: url('../img/rewiews/review_18.jpg');}
-		&:nth-child(3) { background-image: url('../img/rewiews/review_5.jpeg');}
-		&:nth-child(4) { background-image: url('../img/rewiews/review_21.png');}
-		&:nth-child(5) { background-image: url('../img/rewiews/review_1.jpeg');}
-		&:nth-child(6) { background-image: url('../img/rewiews/review_4.jpeg');}
-		&:nth-child(7) { background-image: url('../img/rewiews/review_20.jpg');}
-		&:nth-child(8) { background-image: url('../img/rewiews/review_22.png');}
-		&:nth-child(9) { background-image: url('../img/rewiews/review_6.jpeg');}
-		&:nth-child(10) { background-image: url('../img/rewiews/review_8.jpeg');}
-		&:nth-child(11) { background-image: url('../img/rewiews/review_7.jpeg');}
-		&:nth-child(12) { background-image: url('../img/rewiews/review_9.jpeg');}
-		&:nth-child(13) { background-image: url('../img/rewiews/review_16.jpeg');}
-		&:nth-child(14) { background-image: url('../img/rewiews/review_2.jpeg');}
-		&:nth-child(15) { background-image: url('../img/rewiews/review_17.jpeg');}
-		&:nth-child(16) { background-image: url('../img/rewiews/review_19.jpg');}
-
-
-	}
-
-	.slick-dots li button {
-		background-color: transparent;
-		font-size: 0;
-		
-	}
-
-	.slick-dots .slick-active {
-		
-		&:hover {
-			border: 3px solid $orange;
-		}
-	}
+	//	.slick-dots {
+	//		position: absolute;
+	//		left: 0;
+	//		bottom: 0;
+	//		
+	//		background-color: rgba(#000, 0.7);
+	//		
+	//		width: 100%;
+	//		height: 20%;
+	//		
+	//		display: -webkit-flex;
+	//		display: -moz-flex;
+	//		display: -ms-flex;
+	//		display: -o-flex;
+	//		display: flex;
+	//		
+	//		align-items: center;
+	//		
+	//		padding: 2% 0;
+	//		
+	//	}
+	//	.slick-dots li {
+	//		height: 86%;
+	//		width: 20%;
+	//		background-repeat: no-repeat;
+	//		background-size: cover;
+	//		background-position: center;
+	//		min-width: 100px;
+	//		
+	//		margin-left: 4%;
+	//		
+	//		transition: 0.7s;
+	//		
+	//		&:hover {
+	//			border: 3px solid $orange;
+	//		}
+	//		
+	//		&:first-child { background-image: url('../img/rewiews/review_3.jpeg');}
+	//		&:nth-child(2) { background-image: url('../img/rewiews/review_18.jpg');}
+	//		&:nth-child(3) { background-image: url('../img/rewiews/review_5.jpeg');}
+	//		&:nth-child(4) { background-image: url('../img/rewiews/review_21.png');}
+	//		&:nth-child(5) { background-image: url('../img/rewiews/review_1.jpeg');}
+	//		&:nth-child(6) { background-image: url('../img/rewiews/review_4.jpeg');}
+	//		&:nth-child(7) { background-image: url('../img/rewiews/review_20.jpg');}
+	//		&:nth-child(8) { background-image: url('../img/rewiews/review_22.png');}
+	//		&:nth-child(9) { background-image: url('../img/rewiews/review_6.jpeg');}
+	//		&:nth-child(10) { background-image: url('../img/rewiews/review_8.jpeg');}
+	//		&:nth-child(11) { background-image: url('../img/rewiews/review_7.jpeg');}
+	//		&:nth-child(12) { background-image: url('../img/rewiews/review_9.jpeg');}
+	//		&:nth-child(13) { background-image: url('../img/rewiews/review_16.jpeg');}
+	//		&:nth-child(14) { background-image: url('../img/rewiews/review_2.jpeg');}
+	//		&:nth-child(15) { background-image: url('../img/rewiews/review_17.jpeg');}
+	//		&:nth-child(16) { background-image: url('../img/rewiews/review_19.jpg');}
+	//
+	//
+	//	}
+	//	.slick-dots li button {
+	//		background-color: transparent;
+	//		font-size: 0;
+	//		
+	//	}
+	//
+	//	.slick-dots .slick-active {
+	//		
+	//		&:hover {
+	//			border: 3px solid $orange;
+	//		}
+	//	}
 }
