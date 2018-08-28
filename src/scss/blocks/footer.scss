@@ -1,0 +1,308 @@
+.footer {
+	background-image: url(../img/promo/promo_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 100%;
+	
+	overflow: hidden;
+}
+
+.footer__row-up {
+	height: 70%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: space-between;
+	
+	@include tablet-a {
+		flex-direction: column;
+	}
+}
+
+.footer__content {
+	width: 50%;
+	padding: 5%;
+	color: #fff;
+	font-family: Roboto, arial, sans-serif;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	@include tablet {
+		flex-direction: column;
+	}
+	
+	@include tablet-a {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+.footer__col {
+	width: 48%;
+	margin-right: 2%;
+	
+	@include tablet {
+		width: 95%;
+		margin: 0 auto;
+	}
+}
+
+.footer__title {
+
+	font-weight: 300;
+	font-size: rem(24px);
+
+	text-transform: uppercase;
+	margin-bottom: 10%;
+}
+
+.footer__title-bold {
+	font-weight: 700;
+}
+
+.footer__subtitle {
+
+	font-weight: 700;
+
+	font-size: rem(20px);
+}
+
+.footer__subtitle-description {
+	font-size: rem(16px);
+	font-weight: 300;
+	line-height: 2em;
+
+	margin-bottom: 10%;
+
+	color: #fff;
+}
+
+.footer__question {
+	font-weight: 300;
+
+	font-size: rem(24px);
+	line-height: 1.2em;
+
+	margin-bottom: 10%;
+}
+
+.footer__question-bold {
+	font-weight: 700;
+}
+
+.footer__contacts {
+	font-weight: 700;
+	font-size: rem(20px);
+	text-transform: uppercase;
+	margin-bottom: 5%;
+}
+
+.footer__contacts-link {
+	display: block;
+	//	padding-left: 25px;
+	color: #fff;
+	font-size: rem(16px);
+	font-weight: 300;
+	text-transform: lowercase;
+	text-decoration: none;
+
+	margin-bottom: 3%;
+
+
+
+
+	&:before {
+		content: '';
+		display: inline-block;
+
+		width: 18px;
+		height: 16px;
+		text-align: center;
+		background: #e45914;
+
+		border-radius: 3px;
+		margin-right: 5px;
+
+		position: relative;
+	}
+}
+
+.footer__contacts-link_mail {
+	&:before {
+		background-image: url(../img/icons/envelope.svg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 80%;
+	}
+}
+
+.footer__contacts-link_tel {
+	&:before {
+		background-image: url(../img/icons/tel.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 65%;
+	}
+}
+
+.map {
+	align-self: center;
+	width: 50%;
+	min-height: 500px;
+	height: 100%;
+	
+	@include tablet-a {
+		width: 100%;
+	}
+}
+
+.footer__row-down {
+	height: 30%;
+
+	background-color: #242732;
+}
+
+.footer__socials {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+
+
+	padding: 2% -0px;
+
+	border-bottom: 1px solid #787e92;
+	margin-bottom: 5px;
+
+}
+
+.footer__social-link {
+	display: inline-block;
+	
+	
+	
+	position: relative;
+	&:hover:before {
+		content: '';
+		display: block;
+
+		width: 32px;
+		height: 32px;
+		border-radius: 5px;
+		
+		background-color: rgba(#000, 0.5);
+		
+		position: absolute;
+		top: 0;
+		left: 5px;
+	}
+
+}
+
+.footer__social-icon {
+	width: 32px;
+	height: 32px;
+	margin: 0 auto;
+
+	border-radius: 5px;
+	margin: 0 5px;
+
+
+}
+
+.footer__social-icon_fb {
+	background-color: #3F51B5;
+}
+
+.footer__social-icon_vk {
+	background-color: #0288D1;
+}
+
+.footer__facebook {
+	display: block;
+	width: 100%;
+}
+
+.footer__facebook-icon {
+	
+	width: 20px;
+	margin: 0 auto;
+	text-align: center;
+	
+	position: relative;
+	
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+
+		height: 1px;
+		width: 60px;
+		background-color: #787e92;
+
+		position: absolute;
+
+		top: 50%;
+		transform: translateY(-50%);
+		
+		
+
+	}
+	
+	&:before {
+		left: 105%;
+	}
+	
+	&:after {
+		right: 105%;
+	}
+}
+
+.footer__icon-facebook {
+	position: relative;
+
+	width: 20px;
+	height: 32px;
+	fill: #787e92;
+
+	transition: 0.5s;
+
+	&:hover {
+		fill: $orange;
+	}
+
+
+}
+
+.footer__social-icon_odn {
+	background-color: #FF9800;
+}
+
+.footer__copyright {
+	text-transform: uppercase;
+	color: #787e92;
+	font-size: rem(12px);
+	font-weight: 400;
+	
+	text-align: center;
+	
+	margin-bottom: 3px;
+}
+.footer__copyright_link {
+	text-transform: uppercase;
+	color: #787e92;
+	font-size: rem(12px);
+	font-weight: 400;
+	text-decoration: none;	
+}

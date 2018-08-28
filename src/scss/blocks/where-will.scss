@@ -1,0 +1,293 @@
+.where-will {
+	background-image: url(../img/where-will/where-will-bg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	margin-bottom: 85px;
+}
+
+.where-will .head__title {
+	color: #7b4590;
+}
+.where-will .head {
+	background-image: none;
+	margin-bottom: 0;
+}
+
+.head_where-will {
+	background-image: none;
+	
+	@include tablet {
+		margin-bottom: 0;
+	}
+}
+
+.where-will__block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	padding-left: 10%;
+	
+	@include tablet {
+		flex-direction: column;
+		padding: 0 5%;
+	}
+}
+.slick-track {
+	// width: 100% !important;
+}
+.where-will__slider{
+	width: 50%;
+	height: 560px;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	position: relative;
+	
+	overflow: hidden;
+	
+	margin-bottom: 55px;
+	margin-right: 4%;
+	
+	@include tablet {
+		width: 100%;
+	}
+}
+
+.where-will__slide {
+	height: 560px;
+
+	object-fit: cover;
+
+}
+
+
+
+.where-will__point {
+	height: 86%;
+	width: 20%;
+	
+	margin-left: 4%;
+	
+	transition: 0.7s;
+	
+	&:hover {
+		border: 3px solid $orange;
+	}
+}
+
+.where-will__content-block {
+	width: 50%;
+	overflow: hidden;
+	
+	
+	@include tablet {
+		width: 100%;
+		margin-bottom: 5%;
+	}
+}
+.where-will__content {
+//	width: 50%;
+display: none;
+padding-right: 5%;
+color: #7b4590;
+transform: translateX(100%);
+
+
+
+
+&:first-child {
+	transform: translateX(0%);
+}
+}
+
+.where-will__content_active {
+	display: block;
+	
+	transition: .7s;
+
+	
+}
+
+.where-will__name {
+	font-size: rem(26px);
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 2%;
+	color: #7b4590;
+}
+
+.where-will__position {
+	font-size: rem(16px);
+	text-transform: uppercase;
+	margin-bottom: 10%;
+	color: #7b4590;
+	@include tablet {
+		margin-bottom: 5%;
+	}
+}
+
+.where-will__comment {
+	font-size: rem(18px);
+	line-height: 1.2;
+	margin-bottom: 10px;
+
+	@include tablet {
+		font-size: rem(16px);
+	}
+}
+
+.where-will__content-block li {
+	font-size: rem(18px);
+	line-height: 1.2;
+	
+	@include tablet {
+		font-size: rem(16px);
+	}
+}
+.rewiews__icon-clever {
+	width: 15px;
+	height: 15px;
+	fill: green;
+}
+
+.where-will__slider {
+	position: relative;
+	
+	.slick-next {
+		position: absolute;
+		top: 50%;
+		left: 93%;
+		transform: translateY(-50%);
+		
+		font-size: 0;
+		
+		width: 20px;
+		height: 20px;
+		
+		background-color: transparent;
+		outline: none;
+		
+		border-right: 3px solid #aaa;
+		border-top: 3px solid #aaa;
+		
+		transform: rotate(45deg);
+		
+		transition: 0.7s;
+		
+		&:hover {
+			border-right: 3px solid $orange;
+			border-top: 3px solid $orange;
+		}
+	}
+
+	.slick-prev {
+		z-index: 2;
+		position: absolute;
+		top: 50%;
+		right: 93%;
+		transform: translateY(-50%);
+		
+		font-size: 0;
+		
+		width: 20px;
+		height: 20px;
+		
+		background-color: transparent;
+		outline: none;
+		
+		border-left: 3px solid #aaa;
+		border-bottom: 3px solid #aaa;
+		
+		transform: rotate(45deg);
+		
+		transition: 0.7s;
+		
+		&:hover {
+			border-left: 3px solid $orange;
+			border-bottom: 3px solid $orange;
+		}
+	}
+
+	.slick-dots {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		
+		background-color: rgba(102, 50, 122, 0.8);
+		
+		width: 100%;
+		height: 20%;
+		
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		
+		align-items: center;
+		
+		padding: 2% 0;
+		
+	}
+	.slick-dots li {
+		height: 86%;
+		width: 20%;
+		
+		margin-left: 4%;
+		
+		transition: 0.7s;
+		
+		&:hover {
+			border: 3px solid $orange;
+		}
+		
+		&:first-child {
+			background-image: url('../img/where-will/slide-1.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		
+		&:nth-child(2) {
+			background-image: url('../img/where-will/slide-2.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		
+		&:nth-child(3) {
+			background-image: url('../img/where-will/slide-3.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+		&:nth-child(4) {
+			background-image: url('../img/where-will/slide-4.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	.slick-dots li button {
+		background-color: transparent;
+		font-size: 0;
+		
+	}
+
+	.slick-dots .slick-active {
+		
+		&:hover {
+			border: 3px solid $orange;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+section.price#price(data-page="8")
+	.head.head_price
+		.head__title-block 
+			h2.head__title.head__title_price СТОИМОСТЬ
+				.head__title.head__title_smallprice участия 31000 
+				
+		.head__description.head__description_price
+			.head__text.head__text_price все включено
+			
+	.price__form-block
+		h3.price__title Мы оплатим часть билета семьям с детьми и учителям
+		form.price__form
+			.price__form-row
+				.price__quantity
+					.price__quantity-row
+						.price__quantity-title Взрослые
+						button.price__quantity-btn.js-quantity-minus(type="button") -
+						input.price__quantity-number(type="text" placeholder='0')
+						button.price__quantity-btn.js-quantity-plus(type="button") +
+					
+					.price__quantity-row
+						.price__quantity-title Дети до 3 лет
+						button.price__quantity-btn.js-quantity-minus(type="button") -
+						input.price__quantity-number(type="text" placeholder='0')
+						button.price__quantity-btn.js-quantity-plus(type="button") +
+
+					.price__quantity-row
+						.price__quantity-title Дети до 11 лет
+						button.price__quantity-btn.js-quantity-minus(type="button") -
+						input.price__quantity-number(type="text" placeholder='0')
+						button.price__quantity-btn.js-quantity-plus(type="button") +
+
+					.price__quantity-row
+						.price__quantity-title Дети до 18 лет
+						button.price__quantity-btn.js-quantity-minus(type="button") -
+						input.price__quantity-number(type="text" placeholder='0')
+						button.price__quantity-btn.js-quantity-plus(type="button") +
+					
+					.price__quantity-row
+						.price__quantity-title Учителя
+						button.price__quantity-btn.js-quantity-minus(type="button") -
+						input.price__quantity-number(type="text" placeholder='0')
+						button.price__quantity-btn.js-quantity-plus(type="button") +
+				
+				.price__checkboxes
+					.price__checkboxes-row.price__checkboxes-row_first
+						label.price__checkboxes-label постоянный участник
+						input.price__checkboxes-checkbox(type="checkbox" name="first-not" value="not-first")
+						
+					.price__checkboxes-row
+						label.price__checkboxes-label впервые
+						input.price__checkboxes-checkbox(type="checkbox" name="first-not" value="first")
+						
+				
+				.price__inputs
+					.price__inputs-row
+						label.price__input-text фио
+						input.price__input-input(type='text')
+						
+					.price__inputs-row
+						label.price__input-text e-mail
+						input.price__input-input(type='text')
+						
+					.price__inputs-row
+						label.price__input-text телефон
+						input.price__input-input(type='text')
+						
+					.price__inputs-row
+						label.price__input-text промокод
+						input.price__input-input(type='text')
+						
+			label.price__confid
+				input.price__confid-checkbox(type="checkbox")
+				span.price__confid-text Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с 
+				a.price__confid-link(href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank") политикой конфиденциальности 
+				span.price__confid-text  и	
+				a.price__confid-link(href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank") пользовательским соглашением.
+			button.price__btn узнать скидку
+			
+			

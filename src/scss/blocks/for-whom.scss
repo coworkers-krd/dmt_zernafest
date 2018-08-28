@@ -1,0 +1,170 @@
+.for-whom {
+	color: #080a79;
+	margin-bottom: 3%;
+		margin-top: 95px;
+}
+
+.for-whom__title {
+	font-size: rem(73px);
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: right;
+
+	color: $blue;
+
+	margin-bottom: 5%;
+
+	@include tablet-a {
+		font-size: rem(43px);
+		text-align: center;
+	}
+}
+
+.for-whom__title-small {
+	font-size: rem(51px);
+
+	@include tablet {
+		display: inline-block;
+
+	}
+	@include tablet-a {
+		font-size: rem(31px);
+	}
+}
+
+.for-whom__video-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+
+	@include tablet-a {
+		flex-direction: column;
+	}
+}
+
+.for-whom__video-item {
+	width: 30%;
+
+	color: $blue;
+	
+	@include tablet-a {
+			width: 100%;
+		margin-bottom: 5%;
+	}
+	
+	&:first-child .for-whom__video {
+		background-image: url(../img/for-whom/video-1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	&:nth-child(2) .for-whom__video {
+		background-image: url(../img/for-whom/video-2.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	
+	&:last-child .for-whom__video {
+		background-image: url(../img/for-whom/video-3.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.for-whom__video-title {
+	text-align: center;
+	font-size: rem(26px);
+	font-weight: 500;
+
+	margin-bottom: 4%;
+	overflow: hidden;
+	white-space: nowrap;
+
+}
+
+.for-whom__video {
+	min-height: 215px;
+	width: 100%;
+	margin-bottom: 3%;
+
+	background-color: #000;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+		
+		background-color: rgba(#000, 0.6);
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+}
+
+.for-whom__video-link {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-color: rgba(#fff, 0.4);
+
+	border-radius: 50%;
+
+	box-sizing: border-box;
+	border: 3px solid rgba(#fff, 0.7);
+
+
+	margin: auto;
+
+	position: relative;
+	
+	cursor: pointer;
+
+	&:before {
+		content: '';
+		display: block;
+
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10.5px 0 10.5px 21px;
+		border-color: transparent transparent transparent #ffffff;
+
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-45%, -50%);
+
+	}
+}
+
+
+.for-whom__video-text {
+	font-size: rem(20px);
+	line-height: 1.2;
+	display: inline-block;
+	color: $blue;
+	text-align: justify;
+	
+	@include tablet-a {
+			font-size: rem(16px);
+	}
+
+}
+
+.for-whom__video-text_bold {
+	font-weight: 700;
+	display: inline-block;
+}

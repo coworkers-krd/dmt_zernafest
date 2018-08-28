@@ -1,0 +1,151 @@
+//.reviews {
+//	height: 100%;
+//} 
+.head {
+	background-image: url(../img/bg-blue.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	
+	margin-bottom: 55px;
+	padding: 3% -0px;
+	padding-left: 10%;
+
+	width: 100%;
+	height: 100%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	justify-content: space-between;
+
+	@include netbook {
+		flex-direction: column;
+		padding: 5% 0% 5% 7%;
+
+	}
+}
+
+.head__title {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: rem(73px);
+	font-weight: 900;
+	padding: 3% 0;
+	line-height: 0.8;
+
+	@include netbook {
+		padding: 1% -0px;
+	}
+	
+	@include tablet {
+		margin-bottom: 10px;
+	}
+
+	@include tablet-a {
+		font-size: rem(43px);
+	}
+}
+
+.head__title_small {
+	font-size: rem(51px);
+	line-height: 0.8;
+	margin-top: 10px;
+	padding: 0;
+	@include netbook {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+	@include tablet {
+		display: block;
+		margin-left: 0;
+	}
+	@include tablet-a {
+		font-size: rem(31px);
+		display: inline-block;
+		margin-left: 20px;
+	}
+	
+	@include phone {
+		display: block;
+		margin-left: 0;
+	}
+}
+
+.head__description {
+	width: 60%;
+	background-color: #fff;
+	height: 95%;
+	align-self: center;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	color: $blue;
+
+	
+	
+	@include netbook {
+		width: 100%;
+	}
+	@include tablet-a {
+		flex-direction: column;
+
+	}
+}
+
+.head__description-block {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+	align-items: center;
+
+
+}
+
+.head__description-block_up {
+	@include tablet-a {
+		margin-bottom: 10px;
+	}
+}
+
+.head__number {
+	font-family: 'Anton', arial, sans-serif;
+	font-size: 7.1em;
+	font-weight: 900;
+	padding-left: 3%;
+	margin-right: 3%;
+	line-height: 8.2rem;
+	margin-top: -23px;
+	-ms-flex-item-align: start;
+	align-self: flex-start;
+	
+	@include tablet-a {
+		font-size: rem(65px);
+		margin-top: -12px;
+		line-height: 4.6rem;
+	}
+
+}
+
+.head__text {
+	font-size: rem(24px);
+	font-weight: 900;
+
+	align-self: center;
+	margin-right: 10px;
+
+	@include tablet-a {
+		font-size: rem(16px);
+	}
+}

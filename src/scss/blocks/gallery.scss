@@ -1,0 +1,235 @@
+.container_gallery {
+	padding: 0 3%;
+	
+	
+	@include tablet-a {
+		padding: 0 5px;
+	}
+}
+
+.gallery__list {
+//	display: -webkit-flex;
+//	display: -moz-flex;
+//	display: -ms-flex;
+//	display: -o-flex;
+//	display: flex;
+//
+//	flex-wrap: wrap;
+//
+//	justify-content: space-between;
+	
+	margin-bottom: 55px;
+	height: 100%;
+}
+
+.gallery__item {
+	width: 100%;
+	height: 900px;
+	
+
+//	margin-bottom: 2%;
+
+	// background-color: red;
+
+	position: relative;
+	overflow: hidden;
+	
+	transition: 0.7s;
+
+	&:hover:before {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		background-color: rgba(#000, 0.7);
+	}
+	
+	&:hover .gallery__icon {
+		opacity: 1;
+	}
+	
+	@include netbook {
+		height: 700px;
+	}
+	
+	@include tablet-a {
+		height: 500px;
+	}
+	@include tablet-a {
+		height: 400px;
+	}
+
+	
+	@include phone {
+		height: 380px;
+	}
+}
+.gallery__img {
+//	min-height: 900px;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	
+	@include netbook {
+//		height: 500px;
+	}
+	
+	@include tablet-a {
+//		height: 400px;
+	}
+
+	
+	@include phone {
+//		height: 380px;
+	}
+
+}
+
+//.gallery__icon {
+//
+//	width: 50px;
+//	height: 50px;
+//
+//	border-radius: 50%;
+//	border: 1px solid #fff;
+//	
+//
+//	position: absolute;
+//	top: 50%;
+//	left: 50%;
+//	transform: translate(-50%, -50%);
+//	
+//	opacity: 0;
+//	
+//	transition: 0.7s;
+//	
+//	&:hover {
+//		background-color: #fff;
+//	}
+//	
+//	&:hover .gallery__icon-loupe {
+//		fill: $blue;
+//	}
+//}
+//
+//.gallery__icon-loupe {
+//	fill: #fff;
+//	width: 20px;
+//	height: 20px;
+//	position: absolute;
+//	top: 50%;
+//	left: 50%;
+//	transform: translate(-50%, -50%);
+//
+//	transition: 0.7s;
+//}
+
+.gallery__list {
+position: relative;
+	.slick-next {
+	position: absolute;
+	top: 50%;
+	left: 93%;
+	transform: translateY(-50%);
+	
+	font-size: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background-color: transparent;
+	outline: none;
+	
+	border-right: 3px solid #aaa;
+	border-top: 3px solid #aaa;
+	
+	transform: rotate(45deg);
+	
+	transition: 0.7s;
+	
+	&:hover {
+		border-right: 3px solid $orange;
+	border-top: 3px solid $orange;
+	}
+}
+
+.slick-prev {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	right: 93%;
+	transform: translateY(-50%);
+	
+	font-size: 0;
+	
+	width: 20px;
+	height: 20px;
+	
+	background-color: transparent;
+	outline: none;
+	
+	border-left: 3px solid #aaa;
+	border-bottom: 3px solid #aaa;
+	
+	transform: rotate(45deg);
+	
+	transition: 0.7s;
+	
+	&:hover {
+		border-left: 3px solid $orange;
+	border-bottom: 3px solid $orange;
+	}
+}
+
+.slick-dots {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	position: absolute;
+	
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	
+}
+.slick-dots li {
+	width: 15px;
+	height: 15px;
+	
+	background-color: transparent;
+	border: 2px solid $orange;
+	border-radius: 50%;
+	
+	transition: 0.7s;
+	
+	margin-right: 10px;
+	
+	
+	&:hover {
+		background-color: $orange;
+	}
+	
+	@include phone {
+		width: 10px;
+		height: 10px;
+		margin-right: 5px;
+	}
+}
+
+.slick-dots li button {
+	background-color: transparent;
+	font-size: 0;
+	
+}
+
+.slick-dots .slick-active {
+	background-color: $orange;
+}
+}
