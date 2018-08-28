@@ -71,10 +71,15 @@ $(".js-modal-video").modalVideo();
 
 function openElseSpeakers() {
 	const elseBtn = $('.js-speakers-btn');
+	const speakersList = $('.speakers__list');
 
+	
+	
+	
 	elseBtn.on('click', function () {
+				console.log($(this));
 		elseBtn.css('display', 'none');
-		$('.speakers__item_invisible').css('display', 'flex');
+		$(this).siblings(speakersList).css('height', '100%');
 		$('.speakers_btn_offer').fadeIn(200);
 	})
 }
@@ -83,16 +88,41 @@ openElseSpeakers();
 
 //guests OPEN BUTTON
 
-function openElseGuest() {
-	const elseBtn = $('.js-guests-btn');
 
+
+function openElseGuest() {
+	
+	
+	const elseBtn = $('.js-guests-btn');
+	const speakersList = $('.speakers__list');
+
+	
 	elseBtn.on('click', function () {
 		elseBtn.css('display', 'none');
-		$('.speakers__item_invisible').css('display', 'flex');
+		$(this).siblings(speakersList).css('height', '100%');
+	
 	})
 }
 
 openElseGuest();
+
+//ПОЯВЛЕНИЕ КНОПКИ ГОСТЕЙ
+
+
+if ($(window).width() > '992') {
+	$('.js-guests-btn').css('display', 'none')	
+	} else {
+		$('.js-guests-btn').css('display', 'block')	
+	}
+
+$(window).on('resize', () => {
+	
+	if ($(window).width() > '992') {
+	$('.js-guests-btn').css('display', 'none')	
+	} else {
+		$('.js-guests-btn').css('display', 'block')	
+	}
+});
 
 //модальное окно в спикерах
 
@@ -518,3 +548,17 @@ function preloader() {
 }
 
 preloader();
+
+
+//ГАЛЕРЕЯ
+
+function galleryImg() {
+
+$('.gallery__list').slick({
+		arrows: true,
+		dots: true,
+		speed: 1000,
+
+	});
+}
+galleryImg();
