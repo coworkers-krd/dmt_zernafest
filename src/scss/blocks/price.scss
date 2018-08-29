@@ -67,6 +67,7 @@
 
 	@include tablet-a {
 		height: 100%;
+		display: none;
 	}
 }
 
@@ -154,7 +155,11 @@
 	
 	@include tablet-a {
 		font-size: rem(24px);
+		white-space: nowrap;
 	}
+}
+.price__title:first-of-type {
+	white-space: normal;
 }
 
 .price__form-row {
@@ -178,7 +183,7 @@
 	}
 	
 	@include tablet-a {
-		font-size: rem(16px);
+		font-size: rem(22px);
 	}
 }
 

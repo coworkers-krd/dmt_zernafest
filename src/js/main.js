@@ -11,7 +11,7 @@ function whereWillSlider() {
 whereWillSlider();
 
 
-	
+
 //	$('.reviews__slider').slick({
 //		arrows: true,
 //		dots: false,
@@ -38,24 +38,24 @@ function sponsorsSlider() {
 			settings: {
 				slidesToShow: 4
 			}
-    }, {
+		}, {
 			breakpoint: 1200,
 			settings: {
 				slidesToShow: 3
 			}
-        }, {
+		}, {
 
 			breakpoint: 750,
 			settings: {
 				slidesToShow: 2
 			}
-    }, {
+		}, {
 
 			breakpoint: 550,
 			settings: {
 				slidesToShow: 1
 			}
-    }]
+		}]
 
 
 	});
@@ -67,7 +67,7 @@ sponsorsSlider();
 
 function galleryImg() {
 
-$('.gallery__list').slick({
+	$('.gallery__list').slick({
 		arrows: true,
 		dots: true,
 		speed: 1000,
@@ -90,7 +90,7 @@ function openElseSpeakers() {
 	
 	
 	elseBtn.on('click', function () {
-				console.log($(this));
+		console.log($(this));
 		elseBtn.css('display', 'none');
 		$(this).siblings(speakersList).css('height', '100%');
 		$('.speakers_btn_offer').fadeIn(200);
@@ -113,7 +113,7 @@ function openElseGuest() {
 	elseBtn.on('click', function () {
 		elseBtn.css('display', 'none');
 		$(this).siblings(speakersList).css('height', '100%');
-	
+
 	})
 }
 
@@ -124,14 +124,14 @@ openElseGuest();
 
 if ($(window).width() > '992') {
 	$('.js-guests-btn').css('display', 'none')	
-	} else {
-		$('.js-guests-btn').css('display', 'block')	
-	}
+} else {
+	$('.js-guests-btn').css('display', 'block')	
+}
 
 $(window).on('resize', () => {
 	
 	if ($(window).width() > '992') {
-	$('.js-guests-btn').css('display', 'none')	
+		$('.js-guests-btn').css('display', 'none')	
 	} else {
 		$('.js-guests-btn').css('display', 'block')	
 	}
@@ -270,29 +270,29 @@ function reviewsSlider() {
 //  asNavFor: '.reviews__slider'
 //});
 $('.reviews__slider').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
+	slidesToShow: 5,
+	slidesToScroll: 1,
 //  asNavFor: '.rewiews__img',
-  dots: false,
-  centerMode: true,
-  focusOnSelect: true,
-	responsive: [{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 4
-			}
-    }, {
-			breakpoint: 520,
-			settings: {
-				slidesToShow: 3
-			}
-	}]
-});
+dots: false,
+centerMode: true,
+focusOnSelect: true,
+responsive: [{
+	breakpoint: 768,
+	settings: {
+		slidesToShow: 4
 	}
+}, {
+	breakpoint: 520,
+	settings: {
+		slidesToShow: 3
+	}
+}]
+});
+}
 
 
 reviewsSlider();
-	
+
 //СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
 function reviewsContent() {
@@ -308,32 +308,32 @@ function reviewsContent() {
 	const comment = document.querySelector('.reviews__comment');
 
 
-		const nameSlide = document.querySelectorAll('.reviews__slide-name ');
+	const nameSlide = document.querySelectorAll('.reviews__slide-name ');
 	const positionSlide = document.querySelectorAll('.reviews__slide-position');
 	const commentSlide = document.querySelectorAll('.reviews__slide-comment');
 
 	let tr; 
 
-		
-			
+
+
 	for (let l = 0; l < reviewSlide.length; l++) {
 
 
-			
 
-				if (reviewSlide[l].classList.contains('slick-current')) {
-									
 
-										
-					let currentImg = reviewSlide[l].firstChild.getAttribute('src');
-					
-					bigImg.setAttribute('src', currentImg);
-					
-					name.textContent = reviewSlide[l].children[1].innerHTML;
-					position.textContent = reviewSlide[l].children[2].innerHTML;
-					comment.textContent = reviewSlide[l].children[3].innerHTML;
-					
-				}
+		if (reviewSlide[l].classList.contains('slick-current')) {
+
+
+
+			let currentImg = reviewSlide[l].firstChild.getAttribute('src');
+
+			bigImg.setAttribute('src', currentImg);
+
+			name.textContent = reviewSlide[l].children[1].innerHTML;
+			position.textContent = reviewSlide[l].children[2].innerHTML;
+			comment.textContent = reviewSlide[l].children[3].innerHTML;
+
+		}
 	}
 	
 	
@@ -344,46 +344,46 @@ function reviewsContent() {
 
 			
 
-				if (reviewSlide[i].classList.contains('slick-current')) {
-				
-					
-				
-										
-					let currentImg = reviewSlide[i].firstChild.getAttribute('src');
-					
-					bigImg.setAttribute('src', currentImg);
-					
-					name.textContent = reviewSlide[i].children[1].innerHTML;
-					position.textContent = reviewSlide[i].children[2].innerHTML;
-					comment.textContent = reviewSlide[i].children[3].innerHTML;
-					
-					
-
-					reviewContent.style.transform = 'translateX(100%)';
-					tr = 100;
-					
+			if (reviewSlide[i].classList.contains('slick-current')) {
 				
 
-					setTimeout(function RewTransl() {
-						
-						if(tr > 0 ) {
-							tr -= 10;
+				
+
+				let currentImg = reviewSlide[i].firstChild.getAttribute('src');
+
+				bigImg.setAttribute('src', currentImg);
+
+				name.textContent = reviewSlide[i].children[1].innerHTML;
+				position.textContent = reviewSlide[i].children[2].innerHTML;
+				comment.textContent = reviewSlide[i].children[3].innerHTML;
+
+
+
+				reviewContent.style.transform = 'translateX(100%)';
+				tr = 100;
+
+				
+
+				setTimeout(function RewTransl() {
+
+					if(tr > 0 ) {
+						tr -= 10;
 						reviewContent.style.transform = `translateX(${tr}%)`;
-							
-							setTimeout(RewTransl, 50)
-						}
 
-					}, 200);
+						setTimeout(RewTransl, 50)
+					}
 
-				}
+				}, 200);
 
-		
+			}
+
+
 
 		}
 	});
 	
 
-		
+
 	
 	
 };
@@ -545,8 +545,8 @@ $(".menu__link").on("click", function (e) {
 	e.preventDefault();
 	$("html, body").animate({
 		scrollTop: $($(this)
-				.attr("href"))
-			.offset().top
+			.attr("href"))
+		.offset().top
 	}, 300, "linear");
 
 });
@@ -616,13 +616,23 @@ activeMenu();
 function modalW() {
 	
 	const modal = $('.modal');
+	const modalOffer = $('.speakerOffer');
+	const modalGetProg = $('.getProgram');
 	const modalInner = $('.modal__inner');
+	const modalOfferInner = $('.speakerOffer__inner');
+	const modalGetProgInner = $('.getProgram__inner');
 	const closeBtn = $('.modal__close');
 	
-	$('.promo__logo').on('click', function() {
+	$('.js-offer-speaker-btn').on('click', function() {
 		
-		modal.fadeIn(500);
-		modalInner.fadeIn(500);
+		modalOffer.fadeIn(500);
+		modalOfferInner.fadeIn(500);
+	});
+
+	$('.js-schedule-btn').on('click', function() {
+		
+		modalGetProg.fadeIn(500);
+		modalGetProgInner.fadeIn(500);
 	});
 	
 	closeBtn.on('click', function() {
@@ -641,3 +651,65 @@ function modalW() {
 }
 
 modalW();
+
+// Отправка формы AJAX
+
+$(function(){
+	$('#speakerOffer-form').submit(function(e){
+		e.preventDefault();
+		var m_data=$(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: '/php/speakersend.php',
+			data: m_data,
+			success: function(){
+				jQuery('.speakerOffer').fadeIn(200);
+				jQuery('.speakerOffer__inner').fadeIn(200);
+				jQuery('.speakerOffer__text').fadeIn(200);
+				jQuery('.speakerOffer-form').fadeOut(200);
+				jQuery('.speakerOffer__text').text('Ваша заявка успешно отправлена!');
+
+				document.getElementById('form_send').reset();
+			},
+			error: function(){
+				jQuery('.speakerOffer').fadeIn(200);
+				jQuery('.speakerOffer__inner').fadeIn(200);
+				jQuery('.speakerOffer__text').fadeIn(200);
+				jQuery('.speakerOffer-form').fadeOut(200);
+				jQuery('.speakerOffer__text').text('Заявка не отправлена!');
+
+				document.getElementById('form_send').reset();
+			}
+		});
+	});
+});
+
+$(function(){
+	$('#getProgram-form').submit(function(e){
+		e.preventDefault();
+		var m_data=$(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: '/getprogsend.php',
+			data: m_data,
+			success: function(){
+				jQuery('.getProgram').fadeIn(200);
+				jQuery('.getProgram__inner').fadeIn(200);
+				jQuery('.getProgram__text').fadeIn(200);
+				jQuery('.getProgram-form').fadeOut(200);
+				jQuery('.getProgram__text').text('Ваша заявка успешно отправлена!');
+
+				document.getElementById('form_send').reset();
+			},
+			error: function(){
+				jQuery('.getProgram').fadeIn(200);
+				jQuery('.getProgram__inner').fadeIn(200);
+				jQuery('.getProgram__text').fadeIn(200);
+				jQuery('.getProgram-form').fadeOut(200);
+				jQuery('.getProgram__text').text('Заявка не отправлена!');
+
+				document.getElementById('form_send').reset();
+			}
+		});
+	});
+});

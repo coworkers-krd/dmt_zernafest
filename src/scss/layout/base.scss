@@ -19,7 +19,9 @@ margin: 0;
 		font-size: 14px;
 	}
 }
-
+button, input {
+	outline: none;
+}
 .wrapper {
 	width: 100%;
 }

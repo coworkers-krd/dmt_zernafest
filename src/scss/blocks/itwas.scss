@@ -9,6 +9,10 @@
 	color: #fff;
 
 	padding: 3% -0px;
+
+	@include phone {
+		padding-top: 7%;
+	}
 }
 
 .itwas__row-up {

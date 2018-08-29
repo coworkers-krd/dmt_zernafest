@@ -1,9 +1,24 @@
 .modal.speakerOffer
-.modal__inner
+.modal__inner.speakerOffer__inner
 	button.modal__close(type="button")
-	form.speakerOffer-form#speakerOffer-form
-		input.promo-form__input(type="text" placeholder="Ваше ФИО" name="promo-form-name" id="promo-form-name")
-		input.promo-form__input(type="text" placeholder="Ваш e-mail" name="promo-form-mail" id="promo-form-mail")
-		input.promo-form__input(type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel")
+	p.speakerOffer__text.modal__text
+	form.modal__form.speakerOffer-form#speakerOffer-form
+		input.modal__input(type="text" placeholder="Ваше имя" name="offer-speaker-name" id="offer-speaker-name")
+		input.modal__input(type="text" placeholder="Ваш e-mail" name="offer-speaker-mail" id="offer-speaker-mail")
+		input.modal__input(type="text" placeholder="Ваш телефон" name="offer-speaker-tel" id="offer-speaker-tel")
+		input.modal__input(type="text" placeholder="Имя спикера" name="offer-speaker-speaker-name" id="offer-speaker-speaker-name")
+		input.modal__input(type="text" placeholder="Ссылка на социальные сети спикера" name="offer-speaker-speaker-social" id="offer-speaker-speaker-social")
 
-		button.speakerOffer_btn(type="submit") оставить заявку
+		button.modal__btn(type="submit") оставить заявку
+
+.modal.getProgram
+.modal__inner.getProgram__inner
+	button.modal__close(type="button")
+	p.getProgram__text.modal__text
+	form.modal__form.getProgram-form#getProgram-form
+		input.modal__input(type="text" placeholder="Ваша фамилия" name="get-program-surname" id="get-program-surname")
+		input.modal__input(type="text" placeholder="Ваше имя" name="get-program-name" id="get-program-name")
+		input.modal__input(type="text" placeholder="Ваш e-mail" name="get-program-mail" id="get-program-mail")
+		input.modal__input(type="text" placeholder="Ваш телефон" name="get-program-tel" id="get-program-tel")
+
+		button.modal__btn(type="submit") оставить заявку
