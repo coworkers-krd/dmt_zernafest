@@ -1,11 +1,13 @@
 .footer {
-	background-image: url(../img/promo/promo_bg.jpg);
+//	background-image: url(../img/promo/promo_bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 
 	height: 100%;
 	
 	overflow: hidden;
+	color: $blue;
+	
 }
 
 .footer__row-up {
@@ -26,7 +28,7 @@
 .footer__content {
 	width: 50%;
 	padding: 5%;
-	color: #fff;
+
 	font-family: Roboto, arial, sans-serif;
 
 	display: -webkit-flex;
@@ -82,7 +84,7 @@
 
 	margin-bottom: 10%;
 
-	color: #fff;
+
 }
 
 .footer__question {
@@ -107,8 +109,7 @@
 
 .footer__contacts-link {
 	display: block;
-	//	padding-left: 25px;
-	color: #fff;
+	color: $blue;
 	font-size: rem(16px);
 	font-weight: 300;
 	text-transform: lowercase;
