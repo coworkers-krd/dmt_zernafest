@@ -62,13 +62,13 @@
 
 	justify-content: flex-start;
 
-	height: 280px;
+	
 	overflow: hidden;
 	
 	transition: 0.7s;
 	
 	@include netbook {
-//		height: 250px;
+
 	}
 	@include tablet-a {
 		flex-direction: column;
@@ -78,6 +78,7 @@
 }
 
 .speakers__item {
+
 	width: 25%;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -168,6 +169,7 @@
 	font-weight: 700;
 	font-size: rem(18px);
 	color: #242732;
+	margin-bottom: 5px;
 
 	@include netbook {
 		width: 75%;
@@ -175,7 +177,7 @@
 	}
 
 	@include tablet-a {
-//		margin-bottom: 10%;
+
 width: 100%;
 white-space: nowrap;
 }

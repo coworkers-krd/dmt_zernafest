@@ -213,9 +213,15 @@ border-radius: 5px;
 	.slick-list {
 		height: 100%;
 	}
-	.slick-next {
+	
+}
+
+.rewiews__img { 
+	
+	position: relative;
+	.rewiews__arrow-left {
 		position: absolute;
-		top: 50%;
+		top: 40%;
 		left: 93%;
 		transform: translateY(-50%);
 
@@ -240,10 +246,10 @@ border-radius: 5px;
 		}
 	}
 
-	.slick-prev {
+	.rewiews__arrow-right {
 		z-index: 2;
 		position: absolute;
-		top: 50%;
+		top: 40%;
 		right: 93%;
 		transform: translateY(-50%);
 
@@ -268,72 +274,5 @@ border-radius: 5px;
 		}
 	}
 
-	//	.slick-dots {
-	//		position: absolute;
-	//		left: 0;
-	//		bottom: 0;
-	//		
-	//		background-color: rgba(#000, 0.7);
-	//		
-	//		width: 100%;
-	//		height: 20%;
-	//		
-	//		display: -webkit-flex;
-	//		display: -moz-flex;
-	//		display: -ms-flex;
-	//		display: -o-flex;
-	//		display: flex;
-	//		
-	//		align-items: center;
-	//		
-	//		padding: 2% 0;
-	//		
-	//	}
-	//	.slick-dots li {
-	//		height: 86%;
-	//		width: 20%;
-	//		background-repeat: no-repeat;
-	//		background-size: cover;
-	//		background-position: center;
-	//		min-width: 100px;
-	//		
-	//		margin-left: 4%;
-	//		
-	//		transition: 0.7s;
-	//		
-	//		&:hover {
-	//			border: 3px solid $orange;
-	//		}
-	//		
-	//		&:first-child { background-image: url('../img/rewiews/review_3.jpeg');}
-	//		&:nth-child(2) { background-image: url('../img/rewiews/review_18.jpg');}
-	//		&:nth-child(3) { background-image: url('../img/rewiews/review_5.jpeg');}
-	//		&:nth-child(4) { background-image: url('../img/rewiews/review_21.png');}
-	//		&:nth-child(5) { background-image: url('../img/rewiews/review_1.jpeg');}
-	//		&:nth-child(6) { background-image: url('../img/rewiews/review_4.jpeg');}
-	//		&:nth-child(7) { background-image: url('../img/rewiews/review_20.jpg');}
-	//		&:nth-child(8) { background-image: url('../img/rewiews/review_22.png');}
-	//		&:nth-child(9) { background-image: url('../img/rewiews/review_6.jpeg');}
-	//		&:nth-child(10) { background-image: url('../img/rewiews/review_8.jpeg');}
-	//		&:nth-child(11) { background-image: url('../img/rewiews/review_7.jpeg');}
-	//		&:nth-child(12) { background-image: url('../img/rewiews/review_9.jpeg');}
-	//		&:nth-child(13) { background-image: url('../img/rewiews/review_16.jpeg');}
-	//		&:nth-child(14) { background-image: url('../img/rewiews/review_2.jpeg');}
-	//		&:nth-child(15) { background-image: url('../img/rewiews/review_17.jpeg');}
-	//		&:nth-child(16) { background-image: url('../img/rewiews/review_19.jpg');}
-	//
-	//
-	//	}
-	//	.slick-dots li button {
-	//		background-color: transparent;
-	//		font-size: 0;
-	//		
-	//	}
-	//
-	//	.slick-dots .slick-active {
-	//		
-	//		&:hover {
-	//			border: 3px solid $orange;
-	//		}
-	//	}
+
 }
