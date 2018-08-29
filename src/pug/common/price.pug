@@ -11,7 +11,7 @@ section.price#price(data-page="8")
 		h3.price__title Мы оплатим часть билета 
 		h3.price__title семьям с детьми 
 		h3.price__title и учителям
-		form.price__form
+		form.price__form#price__form
 			.price__form-row
 				.price__quantity
 					.price__quantity-row
@@ -57,23 +57,22 @@ section.price#price(data-page="8")
 				.price__inputs
 					.price__inputs-row
 						label.price__input-text Фамилия
-						input.price__input-input(type='text' required)
+						input.price__input-input(type='text' required name="price-form-lastname" id="price-form-lastname")
 
 					.price__inputs-row
 						label.price__input-text Имя
-						input.price__input-input(type='text' required)
+						input.price__input-input(type='text' required name="price-form-name" id="price-form-name")
 						
 					.price__inputs-row
 						label.price__input-text e-mail
-						input.price__input-input(type='text' required)
+						input.price__input-input(type='text' required name="price-form-mail" id="price-form-mail")
 						
 					.price__inputs-row
 						label.price__input-text телефон
-						input.price__input-input(type='text' required)
-						
+						input.price__input-input(type='text' required name="price-form-tel" id="price-form-tel")
 					.price__inputs-row
 						label.price__input-text промокод
-						input.price__input-input(type='text')
+						input.price__input-input(type='text' name="price-form-promocode" id="price-form-promocode")
 						
 			button.price__btn узнать скидку
 			label.price__confid

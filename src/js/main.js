@@ -314,6 +314,29 @@ function reviewsContent() {
 
 	let tr; 
 
+		
+			
+	for (let l = 0; l < reviewSlide.length; l++) {
+
+
+			
+
+				if (reviewSlide[l].classList.contains('slick-current')) {
+									
+
+										
+					let currentImg = reviewSlide[l].firstChild.getAttribute('src');
+					
+					bigImg.setAttribute('src', currentImg);
+					
+					name.textContent = reviewSlide[l].children[1].innerHTML;
+					position.textContent = reviewSlide[l].children[2].innerHTML;
+					comment.textContent = reviewSlide[l].children[3].innerHTML;
+					
+				}
+	}
+	
+	
 	slide.addEventListener('click', () => {
 
 		for (let i = 0; i < reviewSlide.length; i++) {
@@ -321,19 +344,18 @@ function reviewsContent() {
 
 			
 
-				if (reviewSlide[i].classList.contains('slick-center')) {
+				if (reviewSlide[i].classList.contains('slick-current')) {
+				
 					
-					
-					let currentSlide = reviewSlide[i].firstChild.getAttribute('data-slideRew');
-					
+				
 										
 					let currentImg = reviewSlide[i].firstChild.getAttribute('src');
 					
 					bigImg.setAttribute('src', currentImg);
 					
-					name.textContent = nameSlide[currentSlide].innerHTML;
-					position.textContent = positionSlide[currentSlide].innerHTML;
-					comment.textContent = commentSlide[currentSlide].innerHTML;
+					name.textContent = reviewSlide[i].children[1].innerHTML;
+					position.textContent = reviewSlide[i].children[2].innerHTML;
+					comment.textContent = reviewSlide[i].children[3].innerHTML;
 					
 					
 
@@ -359,6 +381,11 @@ function reviewsContent() {
 
 		}
 	});
+	
+
+		
+	
+	
 };
 
 reviewsContent();
@@ -566,22 +593,22 @@ activeMenu();
 
 //PRELOADER 
 
-function preloader() {
-	document.body.onload = () => {
-
-		setTimeout(() => {
-			const preloader = document.querySelector('.preloader');
-			if (!preloader.classList.contains('preloader_done')) {
-				preloader.classList.add('preloader_done');
-			}
-
-		}, 1)
-
-
-	}
-}
-
-preloader();
+//function preloader() {
+//	document.body.onload = () => {
+//
+//		setTimeout(() => {
+//			const preloader = document.querySelector('.preloader');
+//			if (!preloader.classList.contains('preloader_done')) {
+//				preloader.classList.add('preloader_done');
+//			}
+//
+//		}, 1)
+//
+//
+//	}
+//}
+//
+//preloader();
 
 
 //модальное окно
