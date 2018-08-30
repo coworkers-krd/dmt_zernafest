@@ -1,6 +1,6 @@
 .promo-form {
 
-color: #fff;
+	color: #fff;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -135,12 +135,13 @@ color: #fff;
 	color: #fff;
 	text-transform: uppercase;
 	
-	width: 75%;
+	width: 65%;
 	
 	border-radius: 5px;
 	
 	margin: 0 auto;
-	padding: 7%;
+	padding: 4%;
+	margin-top: 25px;
 	background-color: $orange;
 	
 	letter-spacing: 3px;
@@ -154,15 +155,19 @@ color: #fff;
 		
 		font-size: rem(12px);
 		align-self: center;
-		margin-top: -10px;
+		margin-top: 50px;
 	}
 	@include tablet-a {
 		width: 75%;
 	}
+	@include phone {
+		margin-top: 15vh;
+	}
 }
 
 .promo-form-link {
-	color: #fff;	
+	display: inline-block;
+	color: #7C458f;	
 	text-decoration: none;
 	transition: 0.7s;
 	

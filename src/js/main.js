@@ -77,13 +77,13 @@ function openElseSpeakers() {
 
 	$(window).on('resize', () => {
 
-			const speakersItemHeight = speakersItem.css('height');
-			speakersList.css('height', speakersItemHeight);
-		});
+		const speakersItemHeight = speakersItem.css('height');
+		speakersList.css('height', speakersItemHeight);
+	});
 
-	}
+}
 
-	openElseSpeakers();
+openElseSpeakers();
 
 	//guests OPEN BUTTON
 
@@ -255,32 +255,32 @@ function openElseSpeakers() {
 //			fade: true,
 //			asNavFor: '.reviews__slider'
 //		});
-		$('.reviews__slider').slick({
-			slidesToShow: 5,
-			slidesToScroll: 1,
+$('.reviews__slider').slick({
+	slidesToShow: 5,
+	slidesToScroll: 1,
 //			asNavFor: '.rewiews__img',
-			prevArrow: '.rewiews__arrow-left',
-			nextArrow: '.rewiews__arrow-right',
+prevArrow: '.rewiews__arrow-left',
+nextArrow: '.rewiews__arrow-right',
 //			
-			dots: false,
-			centerMode: true,
-			focusOnSelect: true,
-			responsive: [{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 4
-				}
-}, {
-				breakpoint: 520,
-				settings: {
-					slidesToShow: 3
-				}
-}]
-		});
+dots: false,
+centerMode: true,
+focusOnSelect: true,
+responsive: [{
+	breakpoint: 768,
+	settings: {
+		slidesToShow: 4
 	}
+}, {
+	breakpoint: 520,
+	settings: {
+		slidesToShow: 3
+	}
+}]
+});
+}
 
 
-	reviewsSlider();
+reviewsSlider();
 
 	//СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
@@ -382,23 +382,23 @@ function openElseSpeakers() {
 			slidesToShow: 4,
 			slidesToScroll: 1,
 //			arrows: true,
-			prevArrow: '.where-will__arrow-left',
-			nextArrow: '.where-will__arrow-right',
-			dots: false,
-			centerMode: true,
-			focusOnSelect: true,
-			responsive: [{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 4
-				}
+prevArrow: '.where-will__arrow-left',
+nextArrow: '.where-will__arrow-right',
+dots: false,
+centerMode: true,
+focusOnSelect: true,
+responsive: [{
+	breakpoint: 768,
+	settings: {
+		slidesToShow: 4
+	}
 }, {
-				breakpoint: 520,
-				settings: {
-					slidesToShow: 3
-				}
+	breakpoint: 520,
+	settings: {
+		slidesToShow: 3
+	}
 }]
-		});
+});
 	}
 
 	whereWillSlider();
@@ -487,7 +487,7 @@ function openElseSpeakers() {
 			}
 		});
 
-	
+
 	};
 
 	WhereWillContent();
@@ -610,8 +610,8 @@ function openElseSpeakers() {
 		e.preventDefault();
 		$("html, body").animate({
 			scrollTop: $($(this)
-					.attr("href"))
-				.offset().top
+				.attr("href"))
+			.offset().top
 		}, 300, "linear");
 
 	});
@@ -674,16 +674,20 @@ function openElseSpeakers() {
 	//}
 	//
 	//preloader();
-
+	$('#offer-speaker-tel').mask("+7 (999) 999-9999");
+	$('#get-program-tel').mask("+7 (999) 999-9999");
+	$('#registration-tel').mask("+7 (999) 999-9999");
 
 	//модальное окно
 
 	function modalW() {
 
 		const modal = $('.modal');
+		const registration = $('.registration');
 		const modalOffer = $('.speakerOffer');
 		const modalGetProg = $('.getProgram');
 		const modalInner = $('.modal__inner');
+		const registrationInner = $('.registration__inner');
 		const modalOfferInner = $('.speakerOffer__inner');
 		const modalGetProgInner = $('.getProgram__inner');
 		const closeBtn = $('.modal__close');
@@ -698,6 +702,12 @@ function openElseSpeakers() {
 
 			modalGetProg.fadeIn(500);
 			modalGetProgInner.fadeIn(500);
+		});
+
+		$('.js-registration-btn').on('click', function () {
+
+			registration.fadeIn(500);
+			registrationInner.fadeIn(500);
 		});
 
 		closeBtn.on('click', function () {
@@ -734,7 +744,7 @@ function openElseSpeakers() {
 					jQuery('.speakerOffer-form').fadeOut(200);
 					jQuery('.speakerOffer__text').text('Ваша заявка успешно отправлена!');
 
-					document.getElementById('form_send').reset();
+					document.getElementById('speakerOffer-form').reset();
 				},
 				error: function () {
 					jQuery('.speakerOffer').fadeIn(200);
@@ -743,7 +753,7 @@ function openElseSpeakers() {
 					jQuery('.speakerOffer-form').fadeOut(200);
 					jQuery('.speakerOffer__text').text('Заявка не отправлена!');
 
-					document.getElementById('form_send').reset();
+					document.getElementById('speakerOffer-form').reset();
 				}
 			});
 		});
@@ -764,7 +774,7 @@ function openElseSpeakers() {
 					jQuery('.getProgram-form').fadeOut(200);
 					jQuery('.getProgram__text').text('Ваша заявка успешно отправлена!');
 
-					document.getElementById('form_send').reset();
+					document.getElementById('getProgram-form').reset();
 				},
 				error: function () {
 					jQuery('.getProgram').fadeIn(200);
@@ -773,7 +783,37 @@ function openElseSpeakers() {
 					jQuery('.getProgram-form').fadeOut(200);
 					jQuery('.getProgram__text').text('Заявка не отправлена!');
 
-					document.getElementById('form_send').reset();
+					document.getElementById('getProgram-form').reset();
+				}
+			});
+		});
+	});
+
+	$(function () {
+		$('#registration-form').submit(function (e) {
+			e.preventDefault();
+			var m_data = $(this).serialize();
+			$.ajax({
+				type: "POST",
+				url: '/registration.php',
+				data: m_data,
+				success: function () {
+					jQuery('.registration').fadeIn(200);
+					jQuery('.registration__inner').fadeIn(200);
+					jQuery('.registration__text').fadeIn(200);
+					jQuery('.registration-form').fadeOut(200);
+					jQuery('.registration__text').text('Ваша заявка успешно отправлена!');
+
+					document.getElementById('registration-form').reset();
+				},
+				error: function () {
+					jQuery('.registration').fadeIn(200);
+					jQuery('.registration__inner').fadeIn(200);
+					jQuery('.registration__text').fadeIn(200);
+					jQuery('.registration-form').fadeOut(200);
+					jQuery('.registration__text').text('Заявка не отправлена! Пожалуйства, попробуйте еще или свяжитесь с нами по телефону.');
+
+					document.getElementById('registration-form').reset();
 				}
 			});
 		});

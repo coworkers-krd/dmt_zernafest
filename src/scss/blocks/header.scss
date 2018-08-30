@@ -7,6 +7,10 @@
 	height: 55px;
 
 	z-index: 200;
+	@include phone {
+		padding-top: 5px;
+		padding-right: 20px;
+	}
 }
 
 
@@ -115,8 +119,8 @@
 }
 
 .menu__item {
-    margin-right: 5%;
-    padding: 3.5% 0px;
+	margin-right: 5%;
+	padding: 3.5% 0px;
 
 	@include tablet {
 		border-bottom: 1px solid #aaa;

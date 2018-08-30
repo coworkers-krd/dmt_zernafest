@@ -1,9 +1,9 @@
 <?php
 
-if (isset($_POST["get-program-surname"])) { $person_surname = $_POST["get-program-surname"];}
-if (isset($_POST["get-program-name"])) { $person_name = $_POST["get-program-name"];}
-if (isset($_POST["get-program-tel"])) { $person_phone = $_POST["get-program-tel"];}
-if (isset($_POST["get-program-mail"])) { $person_mail = $_POST["get-program-mail"];}
+if (isset($_POST["registration-surname"])) { $person_surname = $_POST["registration-surname"];}
+if (isset($_POST["registration-name"])) { $person_name = $_POST["registration-name"];}
+if (isset($_POST["registration-tel"])) { $person_phone = $_POST["registration-tel"];}
+if (isset($_POST["registration-mail"])) { $person_mail = $_POST["registration-mail"];}
 
 
 $mail_to = "syd.phoenix@gmail.com"; 
@@ -12,7 +12,7 @@ $mail_from = "Новая заявка на zernafest.ru" . "\n";
 $mail_body = '<html>  
 <head>  
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">  
-	<title>Запрос полной прогруммы фестиваля на zernafest.ru</title>  
+	<title>Новая регистрация на zernafest.ru</title>  
 </head>
 <body>  
 	<table width="100%" cellpadding="0" cellspacing="0"><tr><td>  
