@@ -36,7 +36,7 @@
 .promo__logo-rozetka {
 	width: 15vw;
 	margin-right: 30px;
-	animation: rotate 10s linear infinite;
+	animation: rotate 15s linear infinite;
 
 	@include phone {
 		width: 25vw;
@@ -74,6 +74,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 1;
+	display: none;
 	@include tablet {
 		width: 50%;
 		height: 50%;

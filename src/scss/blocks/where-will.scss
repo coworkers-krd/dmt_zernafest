@@ -22,13 +22,16 @@
 		margin-bottom: 0;
 	}
 }
-
+.where-will__slide-name {
+	font-size: 2em;
+	margin-top: -9px;
+}
 .where-will__block {
-display: -webkit-flex;
-display: -moz-flex;
-display: -ms-flex;
-display: -o-flex;
-display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
 
 	padding-left: 10%;
 
@@ -55,7 +58,7 @@ display: flex;
 .where-will__bigimg {
 	width: 100%;
 	//	height: 80%;
-	height: 550px;
+	height: 450px;
 	overflow: hidden;
 	border-radius: 5px;
 	@include phone {
@@ -65,7 +68,7 @@ display: flex;
 
 .where-will__slide-bigimg {
 	width: 100%;
-	height: 550px;
+	height: 450px;
 	object-fit: cover;
 
 	@include phone {
@@ -199,13 +202,13 @@ display: flex;
 	color: #7C458f;
 //	transform: translateX(100%);
 
-	font-size: rem(20px);
-	line-height: 1.2;
-	margin-bottom: 10px;
+font-size: rem(20px);
+line-height: 1.2;
+margin-bottom: 10px;
 
-	@include tablet {
-		font-size: rem(16px);
-	}
+@include tablet {
+	font-size: rem(16px);
+}
 
 }
 
@@ -272,8 +275,8 @@ display: flex;
 		}
 	}
 
-		.where-will__arrow-left
- {
+	.where-will__arrow-left
+	{
 		z-index: 2;
 		position: absolute;
 		top: 50%;
@@ -302,7 +305,7 @@ display: flex;
 	}
 	
 
-	 .slick-hidden {
+	.slick-hidden {
 		display: block;
 	}
 
