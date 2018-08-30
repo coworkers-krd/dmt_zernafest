@@ -379,7 +379,7 @@ reviewsSlider();
 	function whereWillSlider() {
 
 		$('.where-will__slider').slick({
-			slidesToShow: 4,
+			slidesToShow: 3,
 			slidesToScroll: 1,
 //			arrows: true,
 prevArrow: '.where-will__arrow-left',
