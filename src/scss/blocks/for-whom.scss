@@ -1,7 +1,12 @@
 .for-whom {
 	color: #080a79;
-	margin-bottom: 3%;
-		margin-top: 5%;
+	padding-bottom: 3%;
+	padding-top: 8%;
+
+		background-image: url(../img/bgr/3-02.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left top;
 }
 
 .for-whom__title {
@@ -51,7 +56,7 @@
 	color: $blue;
 	
 	@include tablet-a {
-			width: 100%;
+		width: 100%;
 		margin-bottom: 5%;
 	}
 	
@@ -163,7 +168,7 @@
 	text-align: justify;
 	
 	@include tablet-a {
-			font-size: rem(16px);
+		font-size: rem(16px);
 	}
 
 }

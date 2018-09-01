@@ -24,11 +24,16 @@
 		margin: 1%;
 		margin-left: 95%;
 		display: flex;
+		background-image: url('../img/burger.png');
 
+		padding: 5px;
+		border-radius: 5px;
+		background-repeat: no-repeat;
+		background-size: 30px 30px;
+		background-position: center;
 
-
-		width: 35px;
-		height: 35px;
+		width: 40px;
+		height: 40px;
 
 		background-color: $orange;
 	}
@@ -37,7 +42,7 @@
 		margin-left: 90%;
 	}
 	.hamburger__item {
-
+		display: none;
 		width: 20px;
 		height: 4px;
 
@@ -80,7 +85,7 @@
 
 	width: 99%;
 	margin: 0 auto;
-	
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -100,7 +105,7 @@
 		background-color: #fff;
 
 		padding: 0;
-		
+
 		display: none;
 	}
 }
@@ -227,18 +232,18 @@
 	}
 
 	@include tablet {
-		
+
 		display: block;
 		width: 100%;
 
 		padding: 15px 20px;
 		color: #454545;
-		
+
 		font-size: rem(16px);
 
 	}
 }
 
 .js-menu-active {
-	
+
 }

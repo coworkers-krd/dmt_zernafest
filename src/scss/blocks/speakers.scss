@@ -1,5 +1,10 @@
 .speakers {
 	padding-top: 75px;
+	background-image: url(../img/bgr/1-02.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right bottom;
+	padding-bottom: 100px;
 }
 .container_speakers {
 	padding: 0 7%;
@@ -95,7 +100,7 @@
 	
 	@include tablet {
 		width: 80%	;
-	
+
 		margin: 1% auto 5%;
 	}
 
@@ -103,7 +108,7 @@
 		width: 100%;
 		margin: 1% auto 5%;
 //		margin-bottom: 7%;
-	}
+}
 
 }
 
@@ -178,9 +183,9 @@
 
 	@include tablet-a {
 
-width: 100%;
-white-space: nowrap;
-}
+		width: 100%;
+		white-space: nowrap;
+	}
 
 }
 

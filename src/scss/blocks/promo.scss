@@ -14,12 +14,13 @@
 	position: relative;
 	justify-content: flex-start;
 	color: #7b4590;
-	
+
 //	margin-bottom: 75px;
 
 @include tablet {
 	flex-direction: column;
 	padding-top: 20px;
+	background-position: center;
 }
 }
 
@@ -58,7 +59,7 @@
 .promo__logo-text {
 	width: 30vw;
 	@include phone {
-		width: 40vw;
+		width: 55vw;
 	}
 }
 .promo:after {
@@ -82,11 +83,15 @@
 }
 
 .promo__content {
-	width: 60%;
+	width: 100%;
 	padding: 0 5%;
 	// margin: 0 auto;
 	margin-bottom: 3%;
 	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
 	@include tablet {
 		margin-top: 50px;
 		margin: 0;
@@ -105,11 +110,11 @@
 	margin-top: 25px;
 	font-weight: normal;
 	z-index: 100;
-	
+
 	@include tablet-a {
 		font-size: rem(40px);
 	}
-	
+
 	@include phone {
 		font-size: rem(32px);
 	}
@@ -122,7 +127,7 @@ margin-bottom: 6%;
 }
 .promo__place {
 	font-size: rem(31px);
-	
+
 	line-height: 1;
 	text-align: left;
 	margin-top: 15px;
@@ -142,15 +147,15 @@ margin-bottom: 6%;
 	font-weight: 800;
 	font-size: rem(42px);
 	text-transform: uppercase;
-	
+
 	@include netbook {
 		font-size: rem(30px);
 	}
-	
+
 	@include tablet-a {
 		font-size: rem(34px);
 	}
-	
+
 	@include phone {
 		font-size: rem(28px);
 	}
@@ -167,7 +172,7 @@ margin-bottom: 6%;
 	font-size: rem(120px);
 	margin-bottom: 2%;
 	text-transform: uppercase;
-	
+
 	display: inline-block;
 	margin: 0 auto;
 
@@ -205,7 +210,7 @@ margin-bottom: 6%;
 	font-size: rem(26px);
 	font-weight: 300;
 	margin-bottom: 5%;
-	
+
 	@include tablet-a {
 		font-size: rem(20px);
 	}
@@ -219,12 +224,12 @@ margin-bottom: 6%;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
+
 	align-items: center;
 	z-index: 100;
 	display: none;
 	margin-top: 55px;
-	
+
 	@include tablet {
 		justify-content: flex-start;
 		padding: 3%;
