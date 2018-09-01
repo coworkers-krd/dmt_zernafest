@@ -96,32 +96,33 @@
 	align-content: center;
 	
 	margin-bottom: 2%;
-	margin-top: 5px;
+
 	
 	@include tablet {
 		width: 80%	;
-
-		margin: 1% auto 5%;
+	
+		margin: 0 auto 5%;
 	}
 
 	@include tablet-a {
 		width: 100%;
-		margin: 1% auto 5%;
-//		margin-bottom: 7%;
-}
+		margin: 0 auto 5%;
+
+	}
 
 }
 
 
 
 .speakers__avatar {
+//	margin-top: 5px;
 	width: 213.4px;
 	height: 213.4px;
 	border-radius: 50%;
 
 	transition: 0.5s;
 
-	transform: scale(1.03);
+	
 
 	display: block;
 	margin: auto;
@@ -132,7 +133,7 @@
 
 
 	&:hover {
-		transform: scale(1);
+		
 		border: 6.6px solid $orange;
 	}
 
@@ -148,6 +149,7 @@
 	}
 
 	@include tablet-a {
+//		margin-top: 5px;
 		margin-bottom: 5%;
 	}
 }
@@ -194,22 +196,8 @@
 
 }
 
-.speakers_btn {
-	background-color: $orange;
-	color: #fff;
-	font-weight: 500;
-	font-size: rem(16px);
-	letter-spacing: 3px;
-
-	border-radius: 5px;
-	padding: 13px 40px;
-	font-weight: bold;
-
-	display: block;
-	margin: 0 auto;
-
-	margin-bottom: 5%;
-
+.speakers__btn {
+@include btn;
 
 
 
@@ -416,4 +404,14 @@ z-index: 1000;
 }
 .speakers_btn_offer {
 	display: none;
+}
+.guests__list {
+	@extend .speakers__list
+}
+.guests__item {
+	@extend .speakers__item
+}
+
+.guests__btn {
+	@include btn;
 }

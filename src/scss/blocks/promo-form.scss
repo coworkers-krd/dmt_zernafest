@@ -130,6 +130,8 @@
 }
 .promo-form__btn
 {
+	
+	
 	font-weight: 700;
 	font-size: rem(20px);
 	color: #fff;
@@ -149,9 +151,9 @@
 	border: 1px solid $orange;
 	
 	@include tablet {
-		width: 25%;
-		height: 55px;
-		padding: 0;
+	
+//		height: 55px;
+	
 		
 		font-size: rem(12px);
 		align-self: center;

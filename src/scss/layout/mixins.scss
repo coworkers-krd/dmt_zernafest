@@ -25,5 +25,27 @@
 	}
 }
 
+@mixin btn {
+width: 300px;
+
+	text-align: center;
+
+	color: #fff;
+	letter-spacing: 3px;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	background-color: $orange;
+	border: none;
+	border-radius: 5px;
+
+	display: block;
+	margin: 0 auto;
+	margin-top: 2%;
+	padding: 18px 0;
+	font-weight: bold;
+	margin-bottom: 30px;	
+}
+
 $orange: #e45914;
 $blue: #7C458f;
