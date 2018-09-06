@@ -746,7 +746,7 @@ jQuery(function () {
 		var m_data = jQuery(this).serialize();
 		jQuery.ajax({
 			type: "POST",
-			url: '/php/speakersend.php',
+			url: '/wp-content/themes/zernafest/requests/speakersend.php',
 			data: m_data,
 			success: function () {
 				jQuery('.speakerOffer').fadeIn(200);
@@ -776,7 +776,7 @@ jQuery(function () {
 		var m_data = jQuery(this).serialize();
 		jQuery.ajax({
 			type: "POST",
-			url: '/getprogsend.php',
+			url: '/wp-content/themes/zernafest/requests/getprogsend.php',
 			data: m_data,
 			success: function () {
 				jQuery('.getProgram').fadeIn(200);
@@ -806,7 +806,7 @@ jQuery(function () {
 		var m_data = jQuery(this).serialize();
 		jQuery.ajax({
 			type: "POST",
-			url: '/registration.php',
+			url: '/wp-content/themes/zernafest/requests/registration.php',
 			data: m_data,
 			success: function () {
 				jQuery('.registration').fadeIn(200);
