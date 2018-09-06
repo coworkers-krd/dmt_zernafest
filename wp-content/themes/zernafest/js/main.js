@@ -1,7 +1,7 @@
 ///Слайдер секции sponsors
 
 function sponsorsSlider() {
-	$('.friends__list').slick({
+	jQuery('.friends__list').slick({
 		arrows: false,
 		autoplay: true,
 		autoplaySpeed: 3000,
@@ -42,7 +42,7 @@ sponsorsSlider();
 
 function galleryImg() {
 
-	$('.gallery__list').slick({
+	jQuery('.gallery__list').slick({
 		arrows: true,
 		dots: true,
 		speed: 1000,
@@ -53,15 +53,15 @@ galleryImg();
 
 //Видео в модальном окне
 
-$(".js-modal-video").modalVideo();
+jQuery(".js-modal-video").modalVideo();
 
 //SPEAKERS OPEN BUTTON
 
 function openElseSpeakers() {
-	const elseBtn = $('.js-speakers-btn');
-	const elseBtnClose = $('.js-speakers-btn-close');
-	const speakersList = $('.speakers__list');
-	const speakersItem = $('.speakers__item');
+	const elseBtn = jQuery('.js-speakers-btn');
+	const elseBtnClose = jQuery('.js-speakers-btn-close');
+	const speakersList = jQuery('.speakers__list');
+	const speakersItem = jQuery('.speakers__item');
 	const speakersItemHeight = speakersItem.css('height');
 
 
@@ -72,8 +72,8 @@ function openElseSpeakers() {
 	elseBtn.on('click', function () {
 
 		elseBtn.css('display', 'none');
-		$(this).siblings(speakersList).css('height', '100%');
-		$('.speakers_btn_offer').fadeIn(200);
+		jQuery(this).siblings(speakersList).css('height', '100%');
+		jQuery('.speakers_btn_offer').fadeIn(200);
 		elseBtnClose.fadeIn();
 	});
 
@@ -82,13 +82,13 @@ function openElseSpeakers() {
 
 
 		elseBtn.fadeIn();
-		$('.speakers_btn_offer').fadeOut(200);
-		$(this).fadeOut();
+		jQuery('.speakers_btn_offer').fadeOut(200);
+		jQuery(this).fadeOut();
 
 
 	});
 
-	$(window).on('resize', () => {
+	jQuery(window).on('resize', () => {
 
 		const speakersItemHeight = speakersItem.css('height');
 		speakersList.css('height', speakersItemHeight);
@@ -105,11 +105,11 @@ openElseSpeakers();
 function openElseGuest() {
 
 
-	const elseBtn = $('.js-guests-btn');
+	const elseBtn = jQuery('.js-guests-btn');
 	
-	const elseBtnClose = $('.js-guests-btn-close');
-	const guestsList = $('.guests__list');
-	const guestsItem = $('.guests__item');
+	const elseBtnClose = jQuery('.js-guests-btn-close');
+	const guestsList = jQuery('.guests__list');
+	const guestsItem = jQuery('.guests__item');
 	const guestsItemHeight = guestsItem.css('height');
 	
 	elseBtnClose.css('display', 'none');
@@ -127,7 +127,7 @@ function openElseGuest() {
 		elseBtn.fadeIn();
 		guestsList.css('height', guestsItemHeight);
 
-		$(this).fadeOut();
+		jQuery(this).fadeOut();
 	})
 }
 
@@ -136,18 +136,18 @@ openElseGuest();
 //ПОЯВЛЕНИЕ КНОПКИ ГОСТЕЙ
 
 
-if ($(window).width() > '992') {
-	$('.js-guests-btn').css('display', 'none')
+if (jQuery(window).width() > '992') {
+	jQuery('.js-guests-btn').css('display', 'none')
 } else {
-	$('.js-guests-btn').css('display', 'block')
+	jQuery('.js-guests-btn').css('display', 'block')
 }
 
-$(window).on('resize', () => {
+jQuery(window).on('resize', () => {
 
-	if ($(window).width() > '992') {
-		$('.js-guests-btn').css('display', 'none')
+	if (jQuery(window).width() > '992') {
+		jQuery('.js-guests-btn').css('display', 'none')
 	} else {
-		$('.js-guests-btn').css('display', 'block')
+		jQuery('.js-guests-btn').css('display', 'block')
 	}
 });
 
@@ -276,14 +276,14 @@ sheduleSection();
 ///Слайдер секции reviews
 
 function reviewsSlider() {
-	//		$('.rewiews__img').slick({
+	//		jQuery('.rewiews__img').slick({
 	//			autoplay: false,
 	//			slidesToShow: 1,
 	//			slidesToScroll: 1,
 	//			fade: true,
 	//			asNavFor: '.reviews__slider'
 	//		});
-	$('.reviews__slider').slick({
+	jQuery('.reviews__slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		//			asNavFor: '.rewiews__img',
@@ -372,7 +372,7 @@ function reviewsContent() {
 
 
 
-				reviewContent.style.transform = 'translateX(100%)';
+				reviewContent.style.transform = 'translateX(0%)';
 				tr = 100;
 
 
@@ -381,7 +381,7 @@ function reviewsContent() {
 
 					if (tr > 0) {
 						tr -= 10;
-						reviewContent.style.transform = `translateX(${tr}%)`;
+						reviewContent.style.transform = `translateX(jQuery{tr}%)`;
 
 						setTimeout(RewTransl, 50)
 					}
@@ -406,7 +406,7 @@ reviewsContent();
 //Слайдер секции where-will
 function whereWillSlider() {
 
-	$('.where-will__slider').slick({
+	jQuery('.where-will__slider').slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		//			arrows: true,
@@ -492,7 +492,7 @@ function WhereWillContent() {
 
 
 
-				reviewContent.style.transform = 'translateX(100%)';
+				reviewContent.style.transform = 'translateX(0%)';
 				trw = 100;
 
 
@@ -501,7 +501,7 @@ function WhereWillContent() {
 
 					if (trw > 0) {
 						trw -= 10;
-						reviewContent.style.transform = `translateX(${trw}%)`;
+						reviewContent.style.transform = `translateX(jQuery{trw}%)`;
 
 						setTimeout(WhereTransl, 50)
 					}
@@ -575,29 +575,12 @@ function priceButtons() {
 jQuery(document).ready(priceButtons);
 
 
-
-// initMap() - функция инициализации карты
-function initMap() {
-
-	var centerLatLng = new google.maps.LatLng(55.659573, 36.815790);
-
-	var mapOptions = {
-		center: centerLatLng,
-		zoom: 17
-	};
-
-	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-}
-// Ждем полной загрузки страницы, после этого запускаем initMap()
-google.maps.event.addDomListener(window, "load", initMap);
-
-
 //OPEN HAMBURGER MENU
 
 function openMenu() {
-	const openBtn = $('.js-hamburger');
-	const openNav = $('.js-menu');
-	const menuItem = $('.menu__link');
+	const openBtn = jQuery('.js-hamburger');
+	const openNav = jQuery('.js-menu');
+	const menuItem = jQuery('.menu__link');
 
 
 	openBtn.on('click', function () {
@@ -609,7 +592,7 @@ function openMenu() {
 	});
 
 	menuItem.on('click', function () {
-		if ($(window).innerWidth() < '992') {
+		if (jQuery(window).innerWidth() < '992') {
 			openNav.slideUp();
 
 
@@ -620,9 +603,9 @@ function openMenu() {
 	});
 
 
-	$(window).on('resize', () => {
+	jQuery(window).on('resize', () => {
 
-		if ($(window).width() > '995') {
+		if (jQuery(window).width() > '995') {
 
 			openNav.css('display', 'flex');
 		} else {
@@ -634,12 +617,12 @@ function openMenu() {
 openMenu();
 
 /**ПЛАВНАЯ ПРОКРУТКА ДО ЯКОРЯ**/
-$(".menu__link").on("click", function (e) {
+jQuery(".menu__link").on("click", function (e) {
 	e.preventDefault();
-	$("html, body").animate({
-		scrollTop: $($(this)
+	jQuery("html, body").animate({
+		scrollTop: jQuery(jQuery(this)
 				.attr("href"))
-			.offset().top
+			.offset().top - 100
 	}, 300, "linear");
 
 });
@@ -702,37 +685,37 @@ activeMenu();
 //}
 //
 //preloader();
-$('#offer-speaker-tel').mask("+7 (999) 999-9999");
-$('#get-program-tel').mask("+7 (999) 999-9999");
-$('#registration-tel').mask("+7 (999) 999-9999");
+jQuery('#offer-speaker-tel').mask("+7 (999) 999-9999");
+jQuery('#get-program-tel').mask("+7 (999) 999-9999");
+jQuery('#registration-tel').mask("+7 (999) 999-9999");
 
 //модальное окно
 
 function modalW() {
 
-	const modal = $('.modal');
-	const registration = $('.registration');
-	const modalOffer = $('.speakerOffer');
-	const modalGetProg = $('.getProgram');
-	const modalInner = $('.modal__inner');
-	const registrationInner = $('.registration__inner');
-	const modalOfferInner = $('.speakerOffer__inner');
-	const modalGetProgInner = $('.getProgram__inner');
-	const closeBtn = $('.modal__close');
+	const modal = jQuery('.modal');
+	const registration = jQuery('.registration');
+	const modalOffer = jQuery('.speakerOffer');
+	const modalGetProg = jQuery('.getProgram');
+	const modalInner = jQuery('.modal__inner');
+	const registrationInner = jQuery('.registration__inner');
+	const modalOfferInner = jQuery('.speakerOffer__inner');
+	const modalGetProgInner = jQuery('.getProgram__inner');
+	const closeBtn = jQuery('.modal__close');
 
-	$('.js-offer-speaker-btn').on('click', function () {
+	jQuery('.js-offer-speaker-btn').on('click', function () {
 
 		modalOffer.fadeIn(500);
 		modalOfferInner.fadeIn(500);
 	});
 
-	$('.js-schedule-btn').on('click', function () {
+	jQuery('.js-schedule-btn').on('click', function () {
 
 		modalGetProg.fadeIn(500);
 		modalGetProgInner.fadeIn(500);
 	});
 
-	$('.js-registration-btn').on('click', function () {
+	jQuery('.js-registration-btn').on('click', function () {
 
 		registration.fadeIn(500);
 		registrationInner.fadeIn(500);
@@ -757,11 +740,11 @@ modalW();
 
 // Отправка формы AJAX
 
-$(function () {
-	$('#speakerOffer-form').submit(function (e) {
+jQuery(function () {
+	jQuery('#speakerOffer-form').submit(function (e) {
 		e.preventDefault();
-		var m_data = $(this).serialize();
-		$.ajax({
+		var m_data = jQuery(this).serialize();
+		jQuery.ajax({
 			type: "POST",
 			url: '/php/speakersend.php',
 			data: m_data,
@@ -787,11 +770,11 @@ $(function () {
 	});
 });
 
-$(function () {
-	$('#getProgram-form').submit(function (e) {
+jQuery(function () {
+	jQuery('#getProgram-form').submit(function (e) {
 		e.preventDefault();
-		var m_data = $(this).serialize();
-		$.ajax({
+		var m_data = jQuery(this).serialize();
+		jQuery.ajax({
 			type: "POST",
 			url: '/getprogsend.php',
 			data: m_data,
@@ -817,11 +800,11 @@ $(function () {
 	});
 });
 
-$(function () {
-	$('#registration-form').submit(function (e) {
+jQuery(function () {
+	jQuery('#registration-form').submit(function (e) {
 		e.preventDefault();
-		var m_data = $(this).serialize();
-		$.ajax({
+		var m_data = jQuery(this).serialize();
+		jQuery.ajax({
 			type: "POST",
 			url: '/registration.php',
 			data: m_data,

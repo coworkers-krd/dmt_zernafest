@@ -310,62 +310,62 @@
   </div>
 </section>
 <section class="where-will" id="where-will" data-page="4">
-  <div class="head head_where-will">
-    <div class="head__title-block">
-      <h2 class="head__title">ГДЕ ПРОЙДЕТ
-        <div class="head__title head__title_small">ФЕСТИВАЛЬ </div>
-      </h2>
-    </div>
-  </div>
-  <div class="where-will__block">
-    <div class="where-will__img-block">
-      <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
-        <div class="where-will__arrow-left" id="left"></div>
-        <div class="where-will__arrow-right" id="right"></div>
-      </div>
-      <div class="where-will__slider">
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
-          <div class="where-will__comment-slide"> 
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
-            <ul class="where-will__list-slide">
-              <li>• 379 номеров, включая 44 люкса</li>
-              <li>• 7 бунгало</li>
-              <li>• 2 ресторана и 4 бара</li>
-              <li>• Конгресс-центр</li>
-              <li>• Спа-центр «Кемпински Спа», Фито-бар</li>
-              <li>• Фитнес – центр и тренажерный зал</li>
-              <li>• Открытые и крытый бассейны</li>
-              <li>• Спортивная площадка</li>
-              <li>• Теннисные корты</li>
-              <li>• Благоустроенная территория</li>
-              <li>• Парковка</li>
-            </ul>
-          </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
-          </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
-          </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
-          </div>
+      <div class="head head_where-will">
+        <div class="head__title-block">
+          <h2 class="head__title">ГДЕ ПРОЙДЕТ
+            <div class="head__title head__title_small">ФЕСТИВАЛЬ </div>
+          </h2>
         </div>
       </div>
-    </div>
-    <div class="where-will__content-block">
-      <div class="where-will__content">
-        <div class="where-will__comment"></div>
+      <div class="where-will__block">
+        <div class="where-will__img-block">
+          <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
+            <div class="where-will__arrow-left" id="left"></div>
+            <div class="where-will__arrow-right" id="right"></div>
+          </div>
+          <div class="where-will__slider">
+            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
+              <div class="where-will__comment-slide">
+                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
+                <ul class="where-will__list-slide">
+                  <li>• 379 номеров, включая 44 люкса</li>
+                  <li>• 7 бунгало</li>
+                  <li>• 2 ресторана и 4 бара</li>
+                  <li>• Конгресс-центр</li>
+                  <li>• Спа-центр «Кемпински Спа», Фито-бар</li>
+                  <li>• Фитнес – центр и тренажерный зал</li>
+                  <li>• Открытые и крытый бассейны</li>
+                  <li>• Спортивная площадка</li>
+                  <li>• Теннисные корты</li>
+                  <li>• Благоустроенная территория</li>
+                  <li>• Парковка</li>
+                </ul>
+              </div>
+            </div>
+            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
+              <div class="where-will__comment-slide">
+                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
+              </div>
+            </div>
+            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
+              <div class="where-will__comment-slide">
+                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
+              </div>
+            </div>
+            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
+              <div class="where-will__comment-slide">
+                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="where-will__content-block">
+          <div class="where-will__content">
+            <div class="where-will__comment"></div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 <section class="schedule" id="schedule" data-page="5">
   <div class="container container_schedule">
     <div class="schedule__days">
@@ -389,8 +389,6 @@
           <button class="schedule__days-day" type="button">день 6</button>
         </li>
       </ul>
-      <button class="guests__btn js-guests-btn" type="button">Все гости</button>
-      <button class="guests__btn js-guests-btn-close" type="button">Свернуть гостей</button>
     </div>
     <div class="schedule__content">
       <div class="schedule__content-item schedule__content-item_active">
@@ -412,7 +410,7 @@
             </div>
           </li>
           <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
+            <div class="schedule__time-item">14:15</div>
             <div class="schedule__activity-item">
               <h3 class="schedule__activity-title">Обед.</h3>
               <div class="schedule__activity-time">14:15 - 15:45
@@ -482,7 +480,7 @@
           <li class="schedule__item">
             <div class="schedule__time-item">6:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздоровительная программа.</h3>
+              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
               <div class="schedule__activity-time">6:30 - 7:30
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
@@ -518,13 +516,13 @@
           <li class="schedule__item">
             <div class="schedule__time-item">10:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образовательная программа. </h3>
+              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
               <div class="schedule__activity-time">10:30 - 14:00
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образовательная программа. </div>
+              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
           <li class="schedule__item">
@@ -598,7 +596,7 @@
           <li class="schedule__item">
             <div class="schedule__time-item">6:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздоровительная программа.</h3>
+              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
               <div class="schedule__activity-time">6:30 - 7:30
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
@@ -634,13 +632,13 @@
           <li class="schedule__item">
             <div class="schedule__time-item">10:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образовательная программа. </h3>
+              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
               <div class="schedule__activity-time">10:30 - 14:00
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образовательная программа. </div>
+              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
           <li class="schedule__item">
@@ -714,7 +712,7 @@
           <li class="schedule__item">
             <div class="schedule__time-item">6:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздоровительная программа.</h3>
+              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
               <div class="schedule__activity-time">6:30 - 7:30
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
@@ -750,13 +748,13 @@
           <li class="schedule__item">
             <div class="schedule__time-item">10:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образовательная программа. </h3>
+              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
               <div class="schedule__activity-time">10:30 - 14:00
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образовательная программа. </div>
+              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
           <li class="schedule__item">
@@ -830,7 +828,7 @@
           <li class="schedule__item">
             <div class="schedule__time-item">6:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздоровительная программа.</h3>
+              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
               <div class="schedule__activity-time">6:30 - 7:30
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
@@ -866,13 +864,13 @@
           <li class="schedule__item">
             <div class="schedule__time-item">10:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образовательная программа. </h3>
+              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
               <div class="schedule__activity-time">10:30 - 14:00
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образовательная программа. </div>
+              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
           <li class="schedule__item">
@@ -946,7 +944,7 @@
           <li class="schedule__item">
             <div class="schedule__time-item">6:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздоровительная программа.</h3>
+              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
               <div class="schedule__activity-time">6:30 - 7:30
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
@@ -982,63 +980,16 @@
           <li class="schedule__item">
             <div class="schedule__time-item">10:30</div>
             <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образовательная программа. </h3>
+              <h3 class="schedule__activity-title">ВЫЕЗД</h3>
               <div class="schedule__activity-time">10:30 - 14:00
                 <svg class="shedule__icon-clock">
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образовательная программа. </div>
+              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед. </h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Обед. </div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Практикум.</h3>
-              <div class="schedule__activity-time">16:00 - 17:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Мастер-классы, совместные развивающие активности для взрослых и детей</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Ужин.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Культурная программа</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Культурная программа</div>
-            </div>
-          </li>
+      
         </ul>
       </div>
     </div>
