@@ -51,6 +51,44 @@ function galleryImg() {
 }
 galleryImg();
 
+// слайдер challenge
+
+function challengeImg() {
+
+	jQuery('.challenge__list').slick({
+		arrows: true,
+		dots: false,
+		speed: 1000,
+		slidesToShow: 3,
+		adaptiveHeight: false,
+		//		draggable: true
+		responsive: [{
+			breakpoint: 1450,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+			breakpoint: 1200,
+			settings: {
+				slidesToShow: 3
+			}
+		}, {
+
+			breakpoint: 750,
+			settings: {
+				slidesToShow: 2
+			}
+		}, {
+
+			breakpoint: 550,
+			settings: {
+				slidesToShow: 1
+			}
+		}]
+	});
+}
+challengeImg();
+
 //Видео в модальном окне
 
 jQuery(".js-modal-video").modalVideo();

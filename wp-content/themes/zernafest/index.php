@@ -289,6 +289,15 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
 <section class="itwas" id="itwas" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
@@ -310,62 +319,62 @@
   </div>
 </section>
 <section class="where-will" id="where-will" data-page="4">
-      <div class="head head_where-will">
-        <div class="head__title-block">
-          <h2 class="head__title">ГДЕ ПРОЙДЕТ
-            <div class="head__title head__title_small">ФЕСТИВАЛЬ </div>
-          </h2>
-        </div>
+  <div class="head head_where-will">
+    <div class="head__title-block">
+      <h2 class="head__title">ГДЕ ПРОЙДЕТ
+        <div class="head__title head__title_small">ФЕСТИВАЛЬ </div>
+      </h2>
+    </div>
+  </div>
+  <div class="where-will__block">
+    <div class="where-will__img-block">
+      <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
+        <div class="where-will__arrow-left" id="left"></div>
+        <div class="where-will__arrow-right" id="right"></div>
       </div>
-      <div class="where-will__block">
-        <div class="where-will__img-block">
-          <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
-            <div class="where-will__arrow-left" id="left"></div>
-            <div class="where-will__arrow-right" id="right"></div>
-          </div>
-          <div class="where-will__slider">
-            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
-              <div class="where-will__comment-slide">
-                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
-                <ul class="where-will__list-slide">
-                  <li>• 379 номеров, включая 44 люкса</li>
-                  <li>• 7 бунгало</li>
-                  <li>• 2 ресторана и 4 бара</li>
-                  <li>• Конгресс-центр</li>
-                  <li>• Спа-центр «Кемпински Спа», Фито-бар</li>
-                  <li>• Фитнес – центр и тренажерный зал</li>
-                  <li>• Открытые и крытый бассейны</li>
-                  <li>• Спортивная площадка</li>
-                  <li>• Теннисные корты</li>
-                  <li>• Благоустроенная территория</li>
-                  <li>• Парковка</li>
-                </ul>
-              </div>
-            </div>
-            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
-              <div class="where-will__comment-slide">
-                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
-              </div>
-            </div>
-            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
-              <div class="where-will__comment-slide">
-                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
-              </div>
-            </div>
-            <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
-              <div class="where-will__comment-slide">
-                <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
-              </div>
-            </div>
+      <div class="where-will__slider">
+        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
+          <div class="where-will__comment-slide">
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
+            <ul class="where-will__list-slide">
+              <li>• 379 номеров, включая 44 люкса</li>
+              <li>• 7 бунгало</li>
+              <li>• 2 ресторана и 4 бара</li>
+              <li>• Конгресс-центр</li>
+              <li>• Спа-центр «Кемпински Спа», Фито-бар</li>
+              <li>• Фитнес – центр и тренажерный зал</li>
+              <li>• Открытые и крытый бассейны</li>
+              <li>• Спортивная площадка</li>
+              <li>• Теннисные корты</li>
+              <li>• Благоустроенная территория</li>
+              <li>• Парковка</li>
+            </ul>
           </div>
         </div>
-        <div class="where-will__content-block">
-          <div class="where-will__content">
-            <div class="where-will__comment"></div>
+        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
+          <div class="where-will__comment-slide">
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
+          </div>
+        </div>
+        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
+          <div class="where-will__comment-slide">
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
+          </div>
+        </div>
+        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
+          <div class="where-will__comment-slide">
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="where-will__content-block">
+      <div class="where-will__content">
+        <div class="where-will__comment"></div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="schedule" id="schedule" data-page="5">
   <div class="container container_schedule">
     <div class="schedule__days">
@@ -989,13 +998,42 @@
               <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
             </div>
           </li>
-      
+
         </ul>
       </div>
     </div>
   </div>
   <button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить полную программу</button>
 </section>
+
+<section class="challenge" id="skazat_glavnoe" data-page="3">
+  <div class="container">
+    <div class="itwas__row-up">
+      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="OgQq4N5efTQ"></a></div>
+      <div class="itwas__content">
+        <h2 class="itwas__title itwas__title--blue">СКАЗАТЬ ГЛАВНОЕ
+        </h2>
+        <p class="itwas__text">Ежедневно тысячи родителей, в погоне за тем, чтобы дать своему ребенку самое лучшее (образование, одежду, гаджеты) забывают о ГЛАВНОМ… </p>
+        <p class="itwas__text">Просим вас поддержать наш challenge! Запишите короткое видео-признание своему ребенку и выложите в соц. сеть с тегом</p>
+        <p class="itwas__text"><b>#СКАЗАТЬГЛАВНОЕ</b></p>
+        <p class="itwas__text">Давайте скажем своим детям самые важные слова…</p>
+        <p class="itwas__text">Помните, дети как зерна – то, что вы сеете в них в детстве, то и прорастает.</p>
+      </div>
+    </div>
+    <div class="itwas__row-down challenge__list">
+      <div class="itwas__video itwas__video_1"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="_XpZJmZPo84">
+      </a><span>Сергей, 44 года</span></div>
+      <div class="itwas__video itwas__video_2"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="1a8W-0nhbKg">
+      </a><span>Карина, 47 лет</span></div>
+      <div class="itwas__video itwas__video_3"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="ySMqFUF-rvg">
+      </a><span>Артем, 38 лет</span></div>
+      <div class="itwas__video itwas__video_4"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="8eH2Mms5ffs">
+      </a><span>Промо проекта</span></div>
+    </div>
+  </div>
+</section>
+
+
 <section class="gallery" id="gallery" data-page="6">
   <div class="head">
     <div class="head__title-block">
