@@ -14,3 +14,35 @@ function styleConnect(){
 	// wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', '?ver=1.0');
 
 }
+
+
+$options = array(
+	// yes, slug is the part of the option name, so, to get the value, use
+	// get_option( '{SLUG}_{ID}' );
+	// get_option( 'styles_headercolor' );
+	'slug'	=>	'about',
+	// h2 title on your settings page
+	'title' => 'Описание и контактая информация',
+	// this displayed in admin menu, try to make it short
+	'menuname' => 'Главный разворот',
+	'capability'=>	'manage_options',
+		// second section
+		array(
+			'id' => 'contact',
+			'name' => 'Контактная информация',
+			'fields' => array(
+				array(
+					'id'	=> 'phone',
+					'label' => 'Телефон',
+					'type'	=> 'text',
+					'placeholder' => 'В формате +7 911-222-333-4',
+				),
+
+			)
+		),
+
+	)
+);
+
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $options );

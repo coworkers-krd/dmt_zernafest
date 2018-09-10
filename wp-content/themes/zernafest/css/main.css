@@ -459,6 +459,7 @@ p {
   -ms-flex-pack: start;
   justify-content: flex-start;
   color: #7b4590; 
+  background-position: center;
 }
 @media screen and (max-width: 992px) {
   .promo {
@@ -2281,6 +2282,7 @@ p {
   font-weight: 500;
   margin-bottom: 4%;
   overflow: hidden;
+  height: 60px;
   /*white-space: nowrap; */
 
 }
@@ -2417,28 +2419,28 @@ p {
 .challenge .slick-next {
   left: 100%;
 }
-.challenge .itwas__video:before {
+#skazat_glavnoe .itwas__video:before {
   background-color: transparent;
 }
-.challenge .itwas__video_1 {
+#skazat_glavnoe .itwas__video_1 {
   background-image: url(../img/new_video_bgr/hH-Jgqz1vQw.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
 }
-.challenge .itwas__video_2 {
+#skazat_glavnoe .itwas__video_2 {
   background-image: url(../img/new_video_bgr/9LiksmKNtSE.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
 }
-.challenge .itwas__video_3 {
+#skazat_glavnoe .itwas__video_3 {
   background-image: url(../img/new_video_bgr/IiZbHqqVNFY.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
 }
-.challenge .itwas__video_4 {
+#skazat_glavnoe .itwas__video_4 {
   background-image: url(../img/new_video_bgr/6A8JafX1L88.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -4588,16 +4590,17 @@ p {
 .footer__copyright {
   text-transform: uppercase;
   color: #787e92;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 3px; 
+  margin-bottom: 3px;
+  padding: 1em 0 2em 0; 
 }
 
 .footer__copyright_link {
   text-transform: uppercase;
   color: #787e92;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 400;
   text-decoration: none; 
 }

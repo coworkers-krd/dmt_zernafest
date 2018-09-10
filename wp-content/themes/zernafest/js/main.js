@@ -867,3 +867,34 @@ jQuery(function () {
 		});
 	});
 });
+
+jQuery(function () {
+	jQuery('#price__form').submit(function (e) {
+		console.log(123);
+		e.preventDefault();
+		var m_data = jQuery(this).serialize();
+		jQuery.ajax({
+			type: "POST",
+			url: '/wp-content/themes/zernafest/requests/price.php',
+			data: m_data,
+			success: function () {
+				// jQuery('.registration').fadeIn(200);
+				// jQuery('.registration__inner').fadeIn(200);
+				jQuery('.registration__text').fadeIn(200);
+				jQuery('.registration-form').fadeOut(200);
+				jQuery('.registration__text').text('Ваша заявка успешно отправлена!');
+
+				document.getElementById('registration-form').reset();
+			},
+			error: function () {
+				// jQuery('.registration').fadeIn(200);
+				// jQuery('.registration__inner').fadeIn(200);
+				jQuery('.registration__text').fadeIn(200);
+				jQuery('.registration-form').fadeOut(200);
+				jQuery('.registration__text').text('Заявка не отправлена! Пожалуйства, попробуйте еще или свяжитесь с нами по телефону.');
+
+				document.getElementById('price__form').reset();
+			}
+		});
+	});
+});

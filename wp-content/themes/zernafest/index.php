@@ -145,12 +145,12 @@
         <h3 class="speakers__name">ДИНА КОРЗУН</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Дина Корзун российская актриса театра и кино, соучредитель российского благотворительного фонда «Подари жизнь». Мама троих детей.</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар МАРИНА ТАРГАКОВА" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_7.jpeg">
+<!--       <li class="speakers__item"><img class="speakers__avatar" alt="аватар МАРИНА ТАРГАКОВА" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_7.jpeg">
         <div class="speakers__position">гость фестиваля</div>
         <h3 class="speakers__name">ВЕРА ПОЛОЗКОВА</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">российская поэтесса, актриса, певица</div>
-      </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар МАРИНА ТАРГАКОВА" src="<?php echo get_template_directory_uri(); ?>/img/speakers/user.svg">
+      </li> -->
+      <li class="speakers__item"><img class="speakers__avatar" alt="" src="<?php echo get_template_directory_uri(); ?>/img/speakers/user.svg">
         <div class="speakers__position">гость фестиваля</div>
         <h3 class="speakers__name">Секретный гость</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content"></div>
@@ -190,68 +190,69 @@
           <div class="price__quantity-row">
             <div class="price__quantity-title">Взрослые</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0">
+            <input class="price__quantity-number" type="text" placeholder="0" name="adult_count" id="adult_count">
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
           <div class="price__quantity-row">
             <div class="price__quantity-title">Дети до 3 лет</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0">
+            <input class="price__quantity-number" type="text" placeholder="0" name="kids_3_count" id="kids_3_count">
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
           <div class="price__quantity-row">
             <div class="price__quantity-title">Дети до 11 лет</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0">
+            <input class="price__quantity-number" type="text" placeholder="0" name="kids_11_count" id="kids_11_count">
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
           <div class="price__quantity-row">
             <div class="price__quantity-title">Дети до 18 лет</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0">
+            <input class="price__quantity-number" type="text" placeholder="0" name="kids_18_count" id="kids_18_count">
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
           <div class="price__quantity-row">
             <div class="price__quantity-title">Учителя</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0">
+            <input class="price__quantity-number" type="text" placeholder="0" name="teachers_count" id="teachers_count">
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
         </div>
         <div class="price__checkboxes">
           <div class="price__checkboxes-row price__checkboxes-row_first">
             <label class="price__checkboxes-label">постоянный участник</label>
-            <input class="price__checkboxes-checkbox" type="checkbox" name="first-not" value="not-first">
+            <input class="price__checkboxes-checkbox" type="checkbox" name="first_not" value="Постоянно">
           </div>
           <div class="price__checkboxes-row">
             <label class="price__checkboxes-label">впервые</label>
-            <input class="price__checkboxes-checkbox" type="checkbox" name="first-not" value="first">
+            <input class="price__checkboxes-checkbox" type="checkbox" name="first_not" value="Впервые">
           </div>
         </div>
         <div class="price__inputs">
           <div class="price__inputs-row">
             <label class="price__input-text">Фамилия</label>
-            <input class="price__input-input" type="text" required name="price-form-lastname" id="price-form-lastname">
+            <input class="price__input-input" type="text" required name="price_form_lastname" id="price_form_lastname">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">Имя</label>
-            <input class="price__input-input" type="text" required name="price-form-name" id="price-form-name">
+            <input class="price__input-input" type="text" required name="price_form_name" id="price_form_name">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">e-mail</label>
-            <input class="price__input-input" type="text" required name="price-form-mail" id="price-form-mail">
+            <input class="price__input-input" type="text" required name="price_form_mail" id="price_form_mail">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">телефон</label>
-            <input class="price__input-input" type="text" required name="price-form-tel" id="price-form-tel">
+            <input class="price__input-input" type="text" required name="price_form_tel" id="price_form_tel">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">промокод</label>
-            <input class="price__input-input" type="text" name="price-form-promocode" id="price-form-promocode">
+            <input class="price__input-input" type="text" name="price_form_promocode" id="price_form_promocode">
           </div>
         </div>
       </div>
-      <button class="price__btn">узнать скидку</button>
+      <!-- <button class="price__btn">узнать скидку</button> -->
+      <input type="submit" value="узнать скидку" class="price__btn">
       <label class="price__confid"><span class="price__confid-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с </span><a class="price__confid-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности</a><span class="price__confid-text"> и </span><a class="price__confid-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></label>
     </form>
   </div>
