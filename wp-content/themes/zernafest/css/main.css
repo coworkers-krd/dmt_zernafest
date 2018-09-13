@@ -487,6 +487,9 @@ p {
   align-items: center;
   padding: 100px 0 50px 0; 
 }
+@media screen and (max-width: 992px) {
+  .logo_wrapper {padding-top: 50px;}
+}
 @media screen and (max-width: 550px) {
   .logo_wrapper {
     padding-top: 7%; 
@@ -638,15 +641,18 @@ p {
   font-size: 2.625rem;
   text-align: left;
   text-transform: uppercase; 
+  width: 50%;
 }
 @media screen and (max-width: 1199px) {
   .promo__text {
     font-size: 1.875rem; 
+    width: 75%;
   } 
 }
 @media screen and (max-width: 768px) {
   .promo__text {
     font-size: 2.125rem; 
+    width: 100%;
   } 
 }
 @media screen and (max-width: 550px) {
@@ -2383,6 +2389,9 @@ p {
   font-weight: bold;
   font-size: 20px;
 }
+.challenge .itwas__video {
+  /*background-color: transparent;*/
+}
 .challenge .itwas__row-down {
   display: block;
 }
@@ -2422,29 +2431,60 @@ p {
 #skazat_glavnoe .itwas__video:before {
   background-color: transparent;
 }
-#skazat_glavnoe .itwas__video_1 {
-  background-image: url(../img/new_video_bgr/hH-Jgqz1vQw.jpg);
+#skazat_glavnoe .itwas__video {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
+}
+#skazat_glavnoe .itwas__video_1 {
+  background-image: url(../img/new_video_bgr/hH-Jgqz1vQw.jpg);
 }
 #skazat_glavnoe .itwas__video_2 {
   background-image: url(../img/new_video_bgr/9LiksmKNtSE.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; 
 }
 #skazat_glavnoe .itwas__video_3 {
   background-image: url(../img/new_video_bgr/IiZbHqqVNFY.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; 
 }
 #skazat_glavnoe .itwas__video_4 {
   background-image: url(../img/new_video_bgr/6A8JafX1L88.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center; 
+}
+
+
+#skazat_glavnoe .itwas__video_5 {
+  background-image: url(../img/new_video_bgr/R69GVz10g8k.jpg);
+}
+#skazat_glavnoe .itwas__video_6 {
+  background-image: url(../img/new_video_bgr/QXyVQ48xCPA.jpg);
+}
+#skazat_glavnoe .itwas__video_7 {
+  background-image: url(../img/new_video_bgr/HEfkey6uf80.jpg);
+}
+#skazat_glavnoe .itwas__video_8 {
+  background-image: url(../img/new_video_bgr/mA0LvlQuWds.jpg);
+}
+#skazat_glavnoe .itwas__video_9 {
+  background-image: url(../img/new_video_bgr/0zwxsDMrtRs.jpg);
+}
+#skazat_glavnoe .itwas__video_10 {
+  background-image: url(../img/new_video_bgr/YgYv5ZfCWQg.jpg);
+}
+#skazat_glavnoe .itwas__video_11 {
+  background-image: url(../img/new_video_bgr/T_4C-u5g3QM.jpg);
+}
+#skazat_glavnoe .itwas__video_12 {
+  background-image: url(../img/new_video_bgr/X6AY-bsObT4.jpg);
+}
+#skazat_glavnoe .itwas__video_13 {
+  background-image: url(../img/new_video_bgr/-PLM-kDZIFQ.jpg);
+}
+#skazat_glavnoe .itwas__video_14 {
+  background-image: url(../img/new_video_bgr/B8yT-RurSUs.jpg);
+}
+#skazat_glavnoe .itwas__video_15 {
+  background-image: url(../img/new_video_bgr/nQjF8Nejg2c.jpg);
+}
+#skazat_glavnoe .itwas__video_16 {
+  background-image: url(../img/new_video_bgr/VdnJdG8aQjQ.jpg);
 }
 
 
@@ -3349,6 +3389,9 @@ p {
   .container_gallery {
     padding: 0 5px; 
   } 
+  .gallery {
+    display: none;
+  }
 }
 
 .slick-slider .slick-track, .slick-slider .slick-list {

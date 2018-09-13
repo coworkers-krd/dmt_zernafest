@@ -7,37 +7,40 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 add_action( 'wp_enqueue_scripts', 'styleConnect' );
 
-function styleConnect(){
-	// wp_enqueue_style( 'slick', get_template_directory_uri() . '/plugins/slick/slick.css');
-	// wp_enqueue_style( 'modalvideo', get_template_directory_uri() . '/plugins/modal-video/modal-video.min.css');
-	// wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', '?ver=1.0');
-	// wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', '?ver=1.0');
-
-}
-
-
-$options = array(
-	// yes, slug is the part of the option name, so, to get the value, use
-	// get_option( '{SLUG}_{ID}' );
-	// get_option( 'styles_headercolor' );
-	'slug'	=>	'about',
-	// h2 title on your settings page
-	'title' => 'Описание и контактая информация',
-	// this displayed in admin menu, try to make it short
+$main_promo = array(
+	'slug'	=>	'promo',
+	'title' => 'Главный разворот',
 	'menuname' => 'Главный разворот',
 	'capability'=>	'manage_options',
-		// second section
+	'sections' => array(
+		// first section
 		array(
-			'id' => 'contact',
-			'name' => 'Контактная информация',
+			'id' => 'main_promo',
+			'name' => 'Главный разворот',
 			'fields' => array(
 				array(
-					'id'	=> 'phone',
-					'label' => 'Телефон',
-					'type'	=> 'text',
-					'placeholder' => 'В формате +7 911-222-333-4',
+					'id'			=> 'title',
+					'label'			=> 'Заголовок',
+					'type'			=> 'text', // table of types is above
+					'default'		=> 'ГЛАВНОЕ СОБЫТИЕ ГОДА О ВОСПИТАНИИ СЧАСТЛИВЫХ И УСПЕШНЫХ ДЕТЕЙ!'
 				),
-
+				array(
+					'id'			=> 'place',
+					'label'			=> 'Название отеля',
+					'type'			=> 'text', // table of types is above
+					'default'		=> 'Kempinski Grand Hotel Gelendzhik'
+				),
+				array(
+					'id'			=> 'town',
+					'label'			=> 'Название города',
+					'type'			=> 'text', // table of types is above
+					'default'		=> '(Геленджик)'
+				),
+				array(
+					'id'			=> 'photo',
+					'label'			=> 'Фон главного разворота',
+					'type'			=> 'file', // table of types is above
+				),
 			)
 		),
 
@@ -45,4 +48,4 @@ $options = array(
 );
 
 if( class_exists( 'trueOptionspage' ) )
-	new trueOptionspage( $options );
+	new trueOptionspage( $main_promo );

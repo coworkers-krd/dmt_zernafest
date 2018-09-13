@@ -7,7 +7,7 @@
 
             -->
             <h3 class="footer__subtitle">2-7 ноября</h3>
-            <div class="footer__subtitle-description">Kempinski Grand Hotel (Геленджик)</div>
+            <div class="footer__subtitle-description">Kempinski Grand Hotel Gelendzhik (Геленджик)</div>
             <h3 class="footer__subtitle">Адрес</h3>
             <div class="footer__subtitle-description">ул. Революционная, 53, Геленджик, Краснодарский край, 353461</div>
           </div>

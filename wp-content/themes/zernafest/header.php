@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="wrapper js-wrapper-preloader">
-      <section class="promo">
+      <section class="promo" style="background-image: url(<?= get_option('promo_photo');?>);">
         <header class="header">
           <button class="hamburger js-hamburger" type="button">
             <div class="hamburger__item"></div>

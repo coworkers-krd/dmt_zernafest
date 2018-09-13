@@ -5,30 +5,30 @@
 ?>
 <?php get_header(); ?>
 
-<div class="promo__content">
-  <div class="logo_wrapper"><img class="promo__newlogo promo__logo-rozetka" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_rozetka.png"><img class="promo__newlogo promo__logo-text" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_text.png"></div>
-  <h1 class="promo__text">ГЛАВНОЕ СОБЫТИЕ ГОДА <br>О ВОСПИТАНИИ <br><span>СЧАСТЛИВЫХ И УСПЕШНЫХ ДЕТЕЙ!</span></h1>
-  <p class="promo__date">2-7 НОЯБРЯ 2018</p>
-  <p class="promo__place">Kempinski Grand Hotel </p>
-  <p class="promo__place">(Геленджик)</p>
-  <button class="promo-form__btn js-registration-btn" type="submit">оставить заявку</button>
-</div>
-<div class="promo__form">
-  <form class="promo-form" id="promo-form">
-    <h2 class="promo-form__title">Регистрация</h2>
-    <label class="promo-form__label">
-      <input class="promo-form__input" type="text" placeholder="Ваше ФИО" name="promo-form-name" id="promo-form-name">
-    </label>
-    <label class="promo-form__label">
-      <input class="promo-form__input" type="text" placeholder="Ваш e-mail" name="promo-form-mail" id="promo-form-mail">
-    </label>
-    <label class="promo-form__label">
-      <input class="promo-form__input" type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel">
-    </label>
-    <button class="promo-form__btn" type="submit">оставить заявку</button>
-    <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></span></label>
-  </form>
-</div>
+  <div class="promo__content">
+    <div class="logo_wrapper"><img class="promo__newlogo promo__logo-rozetka" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_rozetka.png"><img class="promo__newlogo promo__logo-text" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_text.png"></div>
+    <h1 class="promo__text"><?= get_option('promo_title');?></h1>
+    <p class="promo__date">2-7 НОЯБРЯ 2018</p>
+    <p class="promo__place"><?= get_option('promo_place');?></p>
+    <p class="promo__place"><?= get_option('promo_town');?></p>
+    <button class="promo-form__btn js-registration-btn" type="submit">оставить заявку</button>
+  </div>
+  <div class="promo__form">
+    <form class="promo-form" id="promo-form">
+      <h2 class="promo-form__title">Регистрация</h2>
+      <label class="promo-form__label">
+        <input class="promo-form__input" type="text" placeholder="Ваше ФИО" name="promo-form-name" id="promo-form-name">
+      </label>
+      <label class="promo-form__label">
+        <input class="promo-form__input" type="text" placeholder="Ваш e-mail" name="promo-form-mail" id="promo-form-mail">
+      </label>
+      <label class="promo-form__label">
+        <input class="promo-form__input" type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel">
+      </label>
+      <button class="promo-form__btn" type="submit">оставить заявку</button>
+      <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></span></label>
+    </form>
+  </div>
 </section>
 <section class="mission" id="mission" data-page="1">
   <div class="mission__row">
@@ -302,7 +302,7 @@
 <section class="itwas" id="itwas" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
-      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="UQL7xyovI_8"></a></div>
+      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="UQL7xyovI_8"></a></div>
       <div class="itwas__content">
         <h2 class="itwas__title">как это
           <div class="itwas__title-subtitle">было</div>
@@ -313,9 +313,9 @@
       </div>
     </div>
     <div class="itwas__row-down">
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="QF0pgtTKpoU"></a></div>
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="I-ab3POMZRc"></a></div>
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="Bdg94vtHXU0"></a></div>
+      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="QF0pgtTKpoU"></a></div>
+      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="I-ab3POMZRc"></a></div>
+      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="Bdg94vtHXU0"></a></div>
     </div>
   </div>
 </section>
@@ -1010,7 +1010,7 @@
 <section class="challenge" id="skazat_glavnoe" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
-      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="OgQq4N5efTQ"></a></div>
+      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="OgQq4N5efTQ"></a></div>
       <div class="itwas__content">
         <h2 class="itwas__title itwas__title--blue">СКАЗАТЬ ГЛАВНОЕ
         </h2>
@@ -1022,14 +1022,38 @@
       </div>
     </div>
     <div class="itwas__row-down challenge__list">
-      <div class="itwas__video itwas__video_1"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="_XpZJmZPo84">
+      <div class="itwas__video itwas__video_1"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="_XpZJmZPo84">
       </a><span>Сергей, 44 года</span></div>
-      <div class="itwas__video itwas__video_2"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="1a8W-0nhbKg">
+      <div class="itwas__video itwas__video_2"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="1a8W-0nhbKg">
       </a><span>Карина, 47 лет</span></div>
-      <div class="itwas__video itwas__video_3"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="ySMqFUF-rvg">
+      <div class="itwas__video itwas__video_3"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="ySMqFUF-rvg">
       </a><span>Артем, 38 лет</span></div>
-      <div class="itwas__video itwas__video_4"><a class="for-whom__video-link js-modal-video" herf="#" data-video-id="8eH2Mms5ffs">
+      <div class="itwas__video itwas__video_4"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="8eH2Mms5ffs">
       </a><span>Промо проекта</span></div>
+      <div class="itwas__video itwas__video_5"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="R69GVz10g8k">
+      </a><span>Алексей</span></div>
+      <div class="itwas__video itwas__video_6"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="QXyVQ48xCPA">
+      </a><span>Анастасия</span></div>
+      <div class="itwas__video itwas__video_7"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="HEfkey6uf80">
+      </a><span>Алексей</span></div>
+      <div class="itwas__video itwas__video_8"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="mA0LvlQuWds">
+      </a><span>Артем</span></div>
+      <div class="itwas__video itwas__video_9"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="0zwxsDMrtRs">
+      </a><span>Елена</span></div>
+      <div class="itwas__video itwas__video_10"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="YgYv5ZfCWQg">
+      </a><span>Евгений</span></div>
+      <div class="itwas__video itwas__video_11"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="T_4C-u5g3QM">
+      </a><span>Диана</span></div>
+      <div class="itwas__video itwas__video_12"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="X6AY-bsObT4">
+      </a><span>Дина</span></div>
+      <div class="itwas__video itwas__video_13"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="-PLM-kDZIFQ">
+      </a><span>Ирина</span></div>
+      <div class="itwas__video itwas__video_14"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="B8yT-RurSUs">
+      </a><span>Мария</span></div>
+      <div class="itwas__video itwas__video_15"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="nQjF8Nejg2c">
+      </a><span>Наталья</span></div>
+      <div class="itwas__video itwas__video_16"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="VdnJdG8aQjQ">
+      </a><span>Ольга</span></div>
     </div>
   </div>
 </section>
