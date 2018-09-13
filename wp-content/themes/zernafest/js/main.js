@@ -144,12 +144,12 @@ function openElseGuest() {
 
 
 	const elseBtn = jQuery('.js-guests-btn');
-	
+
 	const elseBtnClose = jQuery('.js-guests-btn-close');
 	const guestsList = jQuery('.guests__list');
 	const guestsItem = jQuery('.guests__item');
 	const guestsItemHeight = guestsItem.css('height');
-	
+
 	elseBtnClose.css('display', 'none');
 	guestsList.css('height', guestsItemHeight);
 
@@ -273,10 +273,10 @@ function modalSpeakers() {
 modalSpeakers();
 
 
-// СЕКЦИЯ РАСПИСАНИЕ	
+// СЕКЦИЯ РАСПИСАНИЕ
 
 function sheduleSection() {
-	//	
+	//
 
 	const sheduleBtn = document.querySelectorAll(".schedule__days-day");
 	const sheduleContent = document.querySelectorAll(".schedule__content-item");
@@ -327,7 +327,7 @@ function reviewsSlider() {
 		//			asNavFor: '.rewiews__img',
 		prevArrow: '.rewiews__arrow-right',
 		nextArrow: '.rewiews__arrow-left',
-		//			
+		//
 		dots: false,
 		centerMode: true,
 		focusOnSelect: true,
@@ -685,7 +685,7 @@ function activeMenu() {
 
 			window.addEventListener('scroll', () => {
 				let posTop = section[i].getBoundingClientRect().top.toFixed();
-				//				
+				//
 				if (posTop > 10 && posTop < 150) {
 
 					let currentSection = section[i].getAttribute('data-page');
@@ -705,7 +705,7 @@ function activeMenu() {
 
 activeMenu();
 
-//PRELOADER 
+//PRELOADER
 
 //function preloader() {
 //	document.body.onload = () => {
@@ -878,8 +878,8 @@ jQuery(function () {
 			url: '/wp-content/themes/zernafest/requests/price.php',
 			data: m_data,
 			success: function () {
-				// jQuery('.registration').fadeIn(200);
-				// jQuery('.registration__inner').fadeIn(200);
+				jQuery('.registration').fadeIn(200);
+				jQuery('.registration__inner').fadeIn(200);
 				jQuery('.registration__text').fadeIn(200);
 				jQuery('.registration-form').fadeOut(200);
 				jQuery('.registration__text').text('Ваша заявка успешно отправлена!');
@@ -887,8 +887,8 @@ jQuery(function () {
 				document.getElementById('registration-form').reset();
 			},
 			error: function () {
-				// jQuery('.registration').fadeIn(200);
-				// jQuery('.registration__inner').fadeIn(200);
+				jQuery('.registration').fadeIn(200);
+				jQuery('.registration__inner').fadeIn(200);
 				jQuery('.registration__text').fadeIn(200);
 				jQuery('.registration-form').fadeOut(200);
 				jQuery('.registration__text').text('Заявка не отправлена! Пожалуйства, попробуйте еще или свяжитесь с нами по телефону.');
