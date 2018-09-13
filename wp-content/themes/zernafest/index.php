@@ -94,11 +94,11 @@
         <h3 class="speakers__name">Артем Соловейчик</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Главный редактор Издательского Дома «Первое сентября». Профессор Lesley University (Cambridge, MA, USA). Department Education through Arts. Вице-президент по стратегическим коммуникациям «Российский учебник». Мастер-класс «Как не потерять доверие ребенка» — про глубинные</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_4.jpeg">
+<!--       <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_4.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Аркадий Цукер</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Практикующий бизнес-консультант, соавтор уникальной методологии исследований и разработки прорывных стратегических решений в сфере бизнеса. В портфолио Аркадия Цукера более 700 консалтинговых проектов в различных сферах в России и за рубежом (до 40 комплексных маркетинговых проектов в год), около 120 научных работ по вопросам инновационного маркетинга, менеджмента и образования, опыт преподавания в Бостоне (США), совместные проекты с Гарвардским университетом. «Временные трудности» - переходный возраст Секреты для родителей</div>
-      </li>
+      </li> -->
       <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_5.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Арам Пахчанян</h3><a class="speakers__fb-link" href="#"></a>
