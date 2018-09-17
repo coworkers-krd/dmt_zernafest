@@ -237,7 +237,7 @@ function modalSpeakers() {
 
 			ModalSpeakersPos.textContent = pos.innerHTML;
 			ModalSpeakersName.textContent = name.innerHTML;
-			ModalSpeakersComment.textContent = cont.innerHTML;
+			ModalSpeakersComment.textContent = cont.textContent;
 			ModalSpeakersImg.setAttribute("src", imgSrc);
 
 
