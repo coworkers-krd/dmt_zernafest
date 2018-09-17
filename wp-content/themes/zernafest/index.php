@@ -5,30 +5,30 @@
 ?>
 <?php get_header(); ?>
 
-  <div class="promo__content">
-    <div class="logo_wrapper"><img class="promo__newlogo promo__logo-rozetka" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_rozetka.png"><img class="promo__newlogo promo__logo-text" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_text.png"></div>
-    <h1 class="promo__text"><?= get_option('promo_title');?></h1>
-    <p class="promo__date">2-7 НОЯБРЯ 2018</p>
-    <p class="promo__place"><?= get_option('promo_place');?></p>
-    <p class="promo__place"><?= get_option('promo_town');?></p>
-    <button class="promo-form__btn js-registration-btn" type="submit">оставить заявку</button>
-  </div>
-  <div class="promo__form">
-    <form class="promo-form" id="promo-form">
-      <h2 class="promo-form__title">Регистрация</h2>
-      <label class="promo-form__label">
-        <input class="promo-form__input" type="text" placeholder="Ваше ФИО" name="promo-form-name" id="promo-form-name">
-      </label>
-      <label class="promo-form__label">
-        <input class="promo-form__input" type="text" placeholder="Ваш e-mail" name="promo-form-mail" id="promo-form-mail">
-      </label>
-      <label class="promo-form__label">
-        <input class="promo-form__input" type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel">
-      </label>
-      <button class="promo-form__btn" type="submit">оставить заявку</button>
-      <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></span></label>
-    </form>
-  </div>
+<div class="promo__content">
+  <div class="logo_wrapper"><img class="promo__newlogo promo__logo-rozetka" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_rozetka.png"><img class="promo__newlogo promo__logo-text" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_text.png"></div>
+  <h1 class="promo__text"><?= get_option('promo_title');?></h1>
+  <p class="promo__date">2-7 НОЯБРЯ 2018</p>
+  <p class="promo__place"><?= get_option('promo_place');?></p>
+  <p class="promo__place"><?= get_option('promo_town');?></p>
+  <button class="promo-form__btn js-registration-btn" type="submit">оставить заявку</button>
+</div>
+<div class="promo__form">
+  <form class="promo-form" id="promo-form">
+    <h2 class="promo-form__title">Регистрация</h2>
+    <label class="promo-form__label">
+      <input class="promo-form__input" type="text" placeholder="Ваше ФИО" name="promo-form-name" id="promo-form-name">
+    </label>
+    <label class="promo-form__label">
+      <input class="promo-form__input" type="text" placeholder="Ваш e-mail" name="promo-form-mail" id="promo-form-mail">
+    </label>
+    <label class="promo-form__label">
+      <input class="promo-form__input" type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel">
+    </label>
+    <button class="promo-form__btn" type="submit">оставить заявку</button>
+    <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></span></label>
+  </form>
+</div>
 </section>
 <section class="mission" id="mission" data-page="1">
   <div class="mission__row">
@@ -57,53 +57,81 @@
       <div class="speakers__subtitle">ФЕСТИВАЛЯ</div>
     </h2>
     <ul class="speakers__list">
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар ШАЛВА АМОНАШВИЛИ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_amonashvilii.png">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_amonashvilii.png">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">ШАЛВА АМОНАШВИЛИ</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Доктор психологических наук, академик Российской академии образования, иностранный член академии педагогических наук Украины, почётный доктор Софийского университета имени Климента Охридского, заведующий лабораторией гуманной педагогики Московского городского педагогического университета, Почетный президент международной ассоциации общественных объединений «Международный центр гуманной педагогики», лауреат премии Правительства РФ, «Рыцарь Гуманной Педагогики», «Рыцарь детства». Награждён медалями: «К.Д.Ушинского», «Учитель Великой России».</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар МАРИНА ТАРГАКОВА" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_targakova.png">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_targakova.png">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">МАРИНА ТАРГАКОВА</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Специалист по семейной и детской психотерапии, президент медицинской корпорации «БРАНТ», мастер образовательного проекта «Психология третьего тысячелетия», «Рыцарь Гуманной Педагогики». Автор 5 изобретений, имеющих международный патент в области психиатрии и эндокринной патологии.Поняв, что главная причина болезней и несчастий человека — его внутренний мир, Марина Замшарифовна главной сферой своего изучения и преподавания сделала психологию и психотерапию. В 2004 году была признана лучшим экспертом­психологом в Республике Казахстан. Проводит тренинги и семинары в различных странах мира.</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар ПААТА АМОНАШВИЛИ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-paata.png">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-paata.png">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">ПААТА АМОНАШВИЛИ</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Президент международной ассоциации общественных объединений «Международный центр гуманной педагогики», доктор психологических наук, директор и научный руководитель детской художественной студии «Басти­Бубу», «Рыцарь Гуманной Педагогики», писатель. Паата Шалвович Амонашвили осуществляет широкую образовательную деятельность. Проводит психологические консультации, семинары, мастер­классы и тренинги для учителей и родителей. Ежегодно, встречи с его участием посещают 6 000 слушателей. Автор 5 книг, написанных в жанре духовной фантастики.</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар СЕРГЕЙ АВАКОВ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-avakov.png">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-avakov.png">
         <div class="speakers__position">директор фестиваля</div>
         <h3 class="speakers__name">СЕРГЕЙ АВАКОВ</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Профессиональный коуч-консультант по личностному развитию 📈, эксперт в вопросах сохранения семьи и развития высокой культуры семейных традиций, ведущий психолог-тренер Высшей школы практической психологии, мастер образовательного проекта «Психология третьего тысячелетия», руководитель крупных образовательных форумов и фестивалей, автор и ведущий популярных тренингов и семинаров, Рыцарь гуманной педагогики. Счастливый муж и отец 5 детей.</div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-babayanz.png">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker-babayanz.png">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">АЛЕКСЕЙ БАБАЯНЦ</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Психолог-консультант в сфере семейных и детско-родительских отношений, бизнес тренер, директор Высшей школы практической психологии. В своих программах Алексей Анатольевич активно использует наглядные примеры из фильмов и других источников, что позволяет с легкостью проиллюстрировать решение сложных вопросов во взаимоотношениях родителей и детей.</div>
       </li>
 
 
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_3.jpeg">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_3.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Игорь Эрметов</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Вице-президент Всеукраинского центра гуманной педагогики, врач-стоматолог, Рыцарь гуманной педагогики. «Добрые заметки «страшного врача» - как страх ребенка превратить в радость и мечту. </div>
       </li>
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_1.jpeg">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_1.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Артем Соловейчик</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Главный редактор Издательского Дома «Первое сентября». Профессор Lesley University (Cambridge, MA, USA). Department Education through Arts. Вице-президент по стратегическим коммуникациям «Российский учебник». Мастер-класс «Как не потерять доверие ребенка» — про глубинные</div>
       </li>
-<!--       <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_4.jpeg">
+<!--       <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_4.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Аркадий Цукер</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Практикующий бизнес-консультант, соавтор уникальной методологии исследований и разработки прорывных стратегических решений в сфере бизнеса. В портфолио Аркадия Цукера более 700 консалтинговых проектов в различных сферах в России и за рубежом (до 40 комплексных маркетинговых проектов в год), около 120 научных работ по вопросам инновационного маркетинга, менеджмента и образования, опыт преподавания в Бостоне (США), совместные проекты с Гарвардским университетом. «Временные трудности» - переходный возраст Секреты для родителей</div>
       </li> -->
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар АЛЕКСЕЙ БАБАЯНЦ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_5.jpeg">
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_5.jpeg">
         <div class="speakers__position">спикер фестиваля</div>
         <h3 class="speakers__name">Арам Пахчанян</h3><a class="speakers__fb-link" href="#"></a>
         <div class="speakers__content">Директор инновационной школы «Айб», сооснователь образовательного фонда «Айб». Вице-президент компании ABBYY, лидера в области искусственного интеллекта и обработки информации. Член инвестиционного комитета «Фонда посевных инвестиций РВК», соинвестор и советник первого в Армении венчурного фонда Granatus Ventures.</div>
       </li>
+
+
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_100.jpg">
+        <div class="speakers__position">спикер фестиваля</div>
+        <h3 class="speakers__name">Вероника Гавриленок</h3><a class="speakers__fb-link" href="#"></a>
+        <div class="speakers__content">Живые народные игры и впечатляющие хороводы.</div>
+      </li>
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_2.jpeg">
+        <div class="speakers__position">спикер фестиваля</div>
+        <h3 class="speakers__name">Нино Амонашвили</h3><a class="speakers__fb-link" href="#"></a>
+        <div class="speakers__content">Мастер-класс «Образы, как светлячки, или жизнь в семье Амонашвили»</div>
+      </li>
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_103.jpg">
+        <div class="speakers__position">спикер фестиваля</div>
+        <h3 class="speakers__name">Денис и Олеся Сабуровы</h3><a class="speakers__fb-link" href="#"></a>
+        <div class="speakers__content">Свой частный детский сад «на раз, два, три…»!</div>
+      </li>
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_101.jpg">
+        <div class="speakers__position">спикер фестиваля</div>
+        <h3 class="speakers__name">Анастасия Тюрина</h3><a class="speakers__fb-link" href="#"></a>
+        <div class="speakers__content">Как хобби превратить в Дело жизни, которое приносит стабильный доход</div>
+      </li>
+      <li class="speakers__item"><img class="speakers__avatar" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_102.png">
+        <div class="speakers__position">спикер фестиваля</div>
+        <h3 class="speakers__name">Михаил Петрович Щетинин</h3><a class="speakers__fb-link" href="#"></a>
+        <div class="speakers__content">российский педагог-новатор, член Российской академии образования, основатель и директор экспериментальной общеобразовательной школы интернатного типа.</div>
+      </li>
+
     </ul>
     <button class="speakers__btn js-speakers-btn" type="button">Все спикеры</button>
     <button class="speakers__btn speakers_btn_offer js-offer-speaker-btn" type="button">Предложить спикера</button>
