@@ -3600,8 +3600,8 @@ p {
 }
 
 .rewiews__img {
-  width: 100%;
-  height: 550px;
+  width: 45vw;
+  height: 45vw;
   overflow: hidden;
   border-radius: 5px; 
 }
@@ -3612,8 +3612,8 @@ p {
 }
 
 .rewiews__big-img {
-  width: 100%;
-  height: 550px;
+  width: 45vw;
+  height: 45vw;
   -o-object-fit: cover;
   object-fit: cover; 
 }
@@ -3650,7 +3650,7 @@ p {
 }
 
 .reviews__slide {
-  height: 70px;
+  /*height: 70px;*/
   width: 18%;
   margin: 20px 5px;
   overflow: hidden;
