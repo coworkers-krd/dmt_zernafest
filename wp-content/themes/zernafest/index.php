@@ -398,7 +398,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Обед.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -422,7 +422,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Ужин.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -478,7 +478,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Утренний настрой.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -490,7 +490,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Завтрак.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -502,7 +502,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -514,7 +514,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Обед. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -538,7 +538,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Ужин.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -606,7 +606,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Завтрак.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -618,7 +618,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -630,7 +630,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Обед. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -654,7 +654,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Ужин.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -666,7 +666,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Культурная программа</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
         </ul>
@@ -710,7 +710,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Утренний настрой.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -722,7 +722,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Завтрак.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -734,7 +734,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -746,7 +746,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Обед. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -770,7 +770,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Ужин.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -782,7 +782,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Культурная программа</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
         </ul>
@@ -826,7 +826,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Утренний настрой.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -838,7 +838,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Завтрак.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -850,7 +850,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -862,7 +862,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Обед. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -886,7 +886,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Ужин.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -942,7 +942,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Утренний настрой.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -954,7 +954,7 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Завтрак.</div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
           <li class="schedule__item">
@@ -966,10 +966,9 @@
                   <use xlink:href="img/icons/sprite.svg#clock"></use>
                 </svg>
               </div>
-              <div class="schedule__activity-types">Образова&shy;тельная программа. </div>
+              <div class="schedule__activity-types"></div>
             </div>
           </li>
-
         </ul>
       </div>
     </div>
@@ -1137,7 +1136,7 @@
           <div class="reviews__slide-position">г. Москва</div>
           <div class="reviews__slide-comment">Так здорово, что есть Фестиваль, который знакомит с увлекательным и разнообразным миром педагогики! Время Фестиваля - это время, которое зажигает сердца и вдохновляет на новые свершения каждого, попавшего в атмосферу синтеза любви и знаний!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_8.jpeg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_8.jpg">
           <h3 class="reviews__slide-name">Максим Орел</h3>
           <div class="reviews__slide-position">Германия</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики - это опыт, который невозможно передать словами, каждый человек должен сам прочувствовать атмосферу Города Солнца. Город Солнца - это не выдумка, это не утопическое представление, это совместное настроение, в котором каждый может принять участие. Опыт фестиваля удивителен тем, что находясь в этом благостном настроении, находясь в общении с выдающимися педагогами современности, начинают открываться сердца. Меняются взгляды на людей, на родных, близких, меняется взгляд на мир. Для меня, как обычного подростка, по новому открылись родители (возможно, они не такие ужасные, как кажутся в таком возрасте). Фестиваль стал для меня возможностью познакомиться с единомышленниками, с ровесниками, почувствовать настоящую дружбу, возможностью провести время с семьей, возможностью пообщаться с учителями, ведь каждая проведенная с ними секунда на вес золота, и запомниться на всю жизнь.</div>
