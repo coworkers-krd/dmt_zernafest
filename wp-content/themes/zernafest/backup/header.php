@@ -13,10 +13,10 @@
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/plugins/slick/slick.css' type='text/css' media='all' />
-  <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/plugins/modal-video/modal-video.min.css' type='text/css' media='all' />
-  <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/css/main.css?v=<?php echo date(U);?>' type='text/css' media='all' />
-  <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/style.css?v=<?php echo date(U);?>' type='text/css' media='all' />
+<link rel='stylesheet' href='http://zernafest.ru/wp-content/themes/zernafest/plugins/slick/slick.css?v<?php echo date(U);?>' type='text/css' media='all' />
+<link rel='stylesheet' href='http://zernafest.ru/wp-content/themes/zernafest/plugins/modal-video/modal-video.min.css?v<?php echo date(U);?>' type='text/css' media='all' />
+<link rel='stylesheet' href='http://zernafest.ru/wp-content/themes/zernafest/css/main.css?v<?php echo date(U);?>' type='text/css' media='all' />
+<link rel='stylesheet' href='http://zernafest.ru/wp-content/themes/zernafest/style.css?v<?php echo date(U);?>' type='text/css' media='all' />
 
   <?php wp_head(); ?>
 

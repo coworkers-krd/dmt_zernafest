@@ -100,11 +100,12 @@ function openElseSpeakers() {
 	const elseBtnClose = jQuery('.js-speakers-btn-close');
 	const speakersList = jQuery('.speakers__list');
 	const speakersItem = jQuery('.speakers__item');
-	const speakersItemHeight = speakersItem.css('height');
+	const speakersItemHeight = speakersItem.height();
 
 
 	speakersList.css('height', speakersItemHeight);
 	elseBtnClose.css('display', 'none');
+	console.log(speakersItemHeight);
 
 
 	elseBtn.on('click', function () {
@@ -126,11 +127,11 @@ function openElseSpeakers() {
 
 	});
 
-	jQuery(window).on('resize', () => {
+	// jQuery(window).on('resize', () => {
 
-		const speakersItemHeight = speakersItem.css('height');
-		speakersList.css('height', speakersItemHeight);
-	});
+	// 	const speakersItemHeight = speakersItem.css('height');
+	// 	speakersList.css('height', speakersItemHeight);
+	// });
 
 }
 
@@ -148,7 +149,7 @@ function openElseGuest() {
 	const elseBtnClose = jQuery('.js-guests-btn-close');
 	const guestsList = jQuery('.guests__list');
 	const guestsItem = jQuery('.guests__item');
-	const guestsItemHeight = guestsItem.css('height');
+	const guestsItemHeight = guestsItem.height();
 
 	elseBtnClose.css('display', 'none');
 	guestsList.css('height', guestsItemHeight);

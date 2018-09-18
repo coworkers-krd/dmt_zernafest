@@ -86,7 +86,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/plugins/modal-video/jquery-modal-video.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/plugins/slick/slick.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/plugins/input_mask/jquery.maskedinput.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?v=<?php echo date(U);?>"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js?v=1.0"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/reg.js"></script>
 
 
