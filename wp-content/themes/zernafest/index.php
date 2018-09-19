@@ -347,44 +347,35 @@
   </div>
   <div class="where-will__block">
     <div class="where-will__img-block">
-      <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
+      <div class="where-will__bigimg"><img class="where-will__slide-bigimg" alt="" src="">
         <div class="where-will__arrow-left" id="left"></div>
         <div class="where-will__arrow-right" id="right"></div>
       </div>
       <div class="where-will__slider">
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
-            <ul class="where-will__list-slide">
-              <li>• 379 номеров, включая 44 люкса</li>
-              <li>• 7 бунгало</li>
-              <li>• 2 ресторана и 4 бара</li>
-              <li>• Конгресс-центр</li>
-              <li>• Спа-центр «Кемпински Спа», Фито-бар</li>
-              <li>• Фитнес – центр и тренажерный зал</li>
-              <li>• Открытые и крытый бассейны</li>
-              <li>• Спортивная площадка</li>
-              <li>• Теннисные корты</li>
-              <li>• Благоустроенная территория</li>
-              <li>• Парковка</li>
-            </ul>
+        <?php
+        $args = array(
+          'posts_per_page' => 99,
+          'order' => 'DESC',
+          'post_type' => array( 'where_will' ),
+        );
+        $posts = new WP_Query( $args );
+        while( $posts->have_posts() ) :
+          $posts->the_post();
+          ?>
+
+          <div class="where-will__slide">
+            <img class="where-will__img-slide" alt="" src="<?php the_post_thumbnail_url(); ?>">
+            <div class="where-will__comment-slide">
+              <h3 class="where-will__slide-name"><?php echo the_title(); ?></h3>
+              <?php echo the_content(); ?>
+            </div>
           </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
-          </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
-          </div>
-        </div>
-        <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
-          <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
-          </div>
-        </div>
+
+          <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
+
       </div>
     </div>
     <div class="where-will__content-block">
@@ -1139,6 +1130,36 @@
         <div class="rewiews__arrow-right"></div>
       </div>
       <div class="reviews__slider">
+
+        <?php
+        $args = array(
+          'posts_per_page' => 99,
+          'order' => 'DESC',
+          'post_type' => array( 'where_will' ),
+        );
+        $posts = new WP_Query( $args );
+        while( $posts->have_posts() ) :
+          $posts->the_post();
+          ?>
+
+          <div class="where-will__slide">
+            <img class="where-will__img-slide" alt="" src="<?php the_post_thumbnail_url(); ?>">
+            <div class="where-will__comment-slide">
+              <h3 class="where-will__slide-name"><?php echo the_title(); ?></h3>
+              <?php echo the_content(); ?>
+            </div>
+          </div>
+
+          <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
+
+
+
+
+
+
         <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_3.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Андрей и Екатерина Векшины</h3>
           <div class="reviews__slide-position">г. Горячий Ключ</div>

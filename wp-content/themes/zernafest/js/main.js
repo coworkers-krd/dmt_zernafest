@@ -337,12 +337,12 @@ function reviewsSlider() {
 			settings: {
 				slidesToShow: 4
 			}
-}, {
+		}, {
 			breakpoint: 520,
 			settings: {
 				slidesToShow: 3
 			}
-}]
+		}]
 	});
 }
 
@@ -459,12 +459,12 @@ function whereWillSlider() {
 			settings: {
 				slidesToShow: 4
 			}
-}, {
+		}, {
 			breakpoint: 520,
 			settings: {
 				slidesToShow: 3
 			}
-}]
+		}]
 	});
 }
 
@@ -473,91 +473,22 @@ whereWillSlider();
 //СЕКЦИЯ Где пройдет - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
 function WhereWillContent() {
-
-
-	const slide = document.querySelector('.where-will__img-block');
-
-	const reviewSlide = document.querySelectorAll('.where-will__slide');
-	const reviewSlideImg = document.querySelectorAll('.where-will__img-slide');
-	const reviewContent = document.querySelector('.where-will__content');
-
-	const bigImg = document.querySelector('.where-will__slide-bigimg');
-
-	const name = document.querySelector('.where-will__comment');
-
-
-
-	const nameSlide = document.querySelectorAll('.where-will__comment-slide');
-
-
-	let trw;
-
-
-
-	for (let q = 0; q < reviewSlide.length; q++) {
-
-
-		if (reviewSlide[q].classList.contains('slick-current')) {
-
-
-			let currentImg = reviewSlide[q].firstChild.getAttribute('src');
-
-			bigImg.setAttribute('src', currentImg);
-
-			name.innerHTML = reviewSlide[q].children[1].innerHTML;
-
-		}
-	}
-
-
-	slide.addEventListener('click', () => {
-
-		for (let i = 0; i < reviewSlide.length; i++) {
-
-
-
-
-			if (reviewSlide[i].classList.contains('slick-current')) {
-
-
-
-
-				let currentImg = reviewSlide[i].firstChild.getAttribute('src');
-
-				bigImg.setAttribute('src', currentImg);
-
-				name.innerHTML = reviewSlide[i].children[1].innerHTML;
-
-
-
-
-				reviewContent.style.transform = 'translateX(0%)';
-				trw = 100;
-
-
-
-				setTimeout(function WhereTransl() {
-
-					if (trw > 0) {
-						trw -= 10;
-						reviewContent.style.transform = `translateX(jQuery{trw}%)`;
-
-						setTimeout(WhereTransl, 50)
-					}
-
-				}, 200);
-
-			}
-
-
-
-		}
-	});
-
-
+	var currentImg = jQuery('#where-will').find('.slick-active').find('img').attr('src');
+	var currentHTML = jQuery('#where-will').find('.slick-active').find('.where-will__comment-slide').html();
+	jQuery('.where-will__slide-bigimg').attr('src', currentImg);
+	jQuery('.where-will__content-block').html(currentHTML);
 };
 
 WhereWillContent();
+jQuery('.where-will__slide').on('click', function(){
+	WhereWillContent();
+});
+jQuery('.where-will__arrow-right').on('click', function(){
+	WhereWillContent();
+});
+jQuery('.where-will__arrow-left').on('click', function(){
+	WhereWillContent();
+});
 
 //секция prices
 
@@ -660,8 +591,8 @@ jQuery(".menu__link").on("click", function (e) {
 	e.preventDefault();
 	jQuery("html, body").animate({
 		scrollTop: jQuery(jQuery(this)
-				.attr("href"))
-			.offset().top - 100
+			.attr("href"))
+		.offset().top - 100
 	}, 300, "linear");
 
 });

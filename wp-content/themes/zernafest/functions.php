@@ -168,10 +168,66 @@ function partner_item() {
 	$args = array(
 		'labels' => $labels,
 		'public' => true,
-		'menu_icon' => 'dashicons-editor-paste-text',
+		'menu_icon' => 'dashicons-networking',
 		'menu_position' => 4,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail')
 	);
 	register_post_type( 'partner', $args);
+}
+
+// Добавление где пройдет фестиваль
+add_action( 'init', 'where_will_item' ); // Использовать функцию только внутри хука init
+function where_will_item() {
+	$labels = array(
+		'name' => 'Где пройдет фестиваль',
+		'singular_name' => 'Где пройдет фестиваль',
+		'add_new' => 'Добавить инфо о месте',
+		'add_new_item' => 'Добавить инфо о месте',
+		'edit_item' => 'Редактировать инфо о месте',
+		'new_item' => 'Новая информация инфо о месте',
+		'all_items' => 'Вся информация о месте',
+		'view_item' => 'Просмотр информации о месте на сайте',
+		'search_items' => 'Искать инфо о месте',
+		'not_found' => 'Информации не найдено.',
+		'not_found_in_trash' => 'В корзине нет информации.',
+		'menu_name' => 'Где пройдет фестиваль'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-location-alt',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'where_will', $args);
+}
+
+// Добавление отзывов
+add_action( 'init', 'review_item' ); // Использовать функцию только внутри хука init
+function review_item() {
+	$labels = array(
+		'name' => 'Отзывы о фестивале',
+		'singular_name' => 'Отзывы о фестивале',
+		'add_new' => 'Добавить отзыв о фестивале',
+		'add_new_item' => 'Добавить отзыв о фестивале',
+		'edit_item' => 'Редактировать отзыв о фестивале',
+		'new_item' => 'Новый отзыв о фестивале',
+		'all_items' => 'Все отзывы о фестивале',
+		'view_item' => 'Просмотр отзывов о фестивале на сайте',
+		'search_items' => 'Искать отзывы',
+		'not_found' => 'Отзывов не найдено.',
+		'not_found_in_trash' => 'В корзине нет отзывов.',
+		'menu_name' => 'Отзывы о фестивале'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-carrot',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'review', $args);
 }
