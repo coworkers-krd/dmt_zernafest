@@ -26,7 +26,7 @@
       <input class="promo-form__input" type="text" placeholder="Ваш телефон" name="promo-form-tel" id="promo-form-tel">
     </label>
     <button class="promo-form__btn" type="submit">оставить заявку</button>
-    <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></span></label>
+    <label class="promo-form__label promo-form__label_checkbox"><span class="promo-form-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="http://zernafest.ru/privacy_policy.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="http://zernafest.ru/public_offer.pdf" target="_blank">пользовательским соглашением.</a></span></label>
   </form>
 </div>
 </section>
@@ -97,16 +97,25 @@
 <section class="friends" id="friends">
   <h2 class="friends__title">наши партнеры</h2>
   <ul class="friends__list">
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/ico_exp_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/aquaris_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/mda_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/meetup_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/kweb_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/ico_exp_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/aquaris_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/mda_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/meetup_logo.png"></li>
-    <li class="friends__item"><img class="friends__logo" alt="иконка спонсора" src="<?php echo get_template_directory_uri(); ?>/img/sponsors/kweb_logo.png"></li>
+    <?php
+    $args = array(
+      'posts_per_page' => 99,
+      'order' => 'ASC',
+      'post_type' => array( 'partner' ),
+    );
+    $posts = new WP_Query( $args );
+    while( $posts->have_posts() ) :
+      $posts->the_post();
+      ?>
+
+      <li class="friends__item">
+        <img class="friends__logo" alt="иконка спонсора" src="<?php the_post_thumbnail_url(); ?>">
+      </li>
+
+      <?php
+    endwhile;
+    wp_reset_postdata();
+    ?>
   </ul>
 </section>
 <section class="speakers" id="guests" data-page="0">
@@ -228,11 +237,46 @@
       </div>
       <!-- <button class="price__btn">узнать скидку</button> -->
       <input type="submit" value="узнать скидку" class="price__btn">
-      <label class="price__confid"><span class="price__confid-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с </span><a class="price__confid-link" href="https://www.vospitai.com/privacy_policy_phuz_2018.pdf" target="_blank">политикой конфиденциальности</a><span class="price__confid-text"> и </span><a class="price__confid-link" href="https://www.vospitai.com/public_offer_phuz_2018.pdf" target="_blank">пользовательским соглашением.</a></label>
+      <label class="price__confid"><span class="price__confid-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с </span><a class="price__confid-link" href="http://zernafest.ru/privacy_policy.pdf" target="_blank">политикой конфиденциальности</a><span class="price__confid-text"> и </span><a class="price__confid-link" href="http://zernafest.ru/public_offer.pdf" target="_blank">пользовательским соглашением.</a></label>
     </form>
   </div>
 </section>
+
 <section class="for-whom" id="for-whom" data-page="2">
+  <div class="container">
+    <h2 class="for-whom__title">для кого
+      <div class="for-whom__title-small">фестиваль</div>
+    </h2>
+    <div class="for-whom__video-block">
+      <ul class="for-whom__video-list">
+        <li class="for-whom__video-item">
+          <div class="for-whom__video-title">Родители, бабушки и дедушки</div>
+          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="4aeOCJqRPNM"></a></div>
+          <div class="for-whom__video-content"></div>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Родители,</span><span class="for-whom__video-text_normal"> которые хотят построить гармоничные отношения в семье, реализовать свою миссию в родительстве. Желают вырастить успешных и счастливых детей. Хотят достичь согласия в воспитании детей.</span></p>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Дедушки и бабушки</span><span class="for-whom__video-text_normal">, которые хотят лучше понимать своих детей и внуков, вносить свой вклад в процесс воспитания. Стремятся быть в курсе новаторских педагогических подходов.</span></p>
+        </li>
+        <li class="for-whom__video-item">
+          <div class="for-whom__video-title">Учителя и воспитатели</div>
+          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="ea9rvQy8ST0"></a></div>
+          <div class="for-whom__video-content"></div>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Учителя</span><span class="for-whom__video-text_normal">, которые стремятся реализовать свой талант и созидательный творческий потенциал вопреки существующей системе авторитарного воспитания в школе. Хотят получить эмоциональный ресурс и новый педагогический опыт.</span></p>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Воспитатели</span><span class="for-whom__video-text_normal">, которые осознают всю важность создания атмосферы радостного проживания периода детства для становления счастливого взрослого в будущем.</span></p>
+        </li>
+        <li class="for-whom__video-item">
+          <div class="for-whom__video-title">Дети и подростки</div>
+          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" data-video-id="GdXOIP9Ih14" href="#"></a></div>
+          <div class="for-whom__video-content"></div>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Дети</span><span class="for-whom__video-text_normal">, которые хотят быть важными и любимыми для своих родителей.</span></p>
+          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Подростки</span><span class="for-whom__video-text_normal">, которые жаждут понимания со стороны взрослых, уважения и веры в них.</span></p>
+          <p class="for-whom__video-text">Ребенок узнает много нового и сможет найти ответы на вопросы: «Как найти себя?», «Как ставить цели и достигать их?», «Как общаться со сверстниками?» и многое другое.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="for-whom" id="for-whom" data-page="2">
   <div class="container">
     <h2 class="for-whom__title">для кого
       <div class="for-whom__title-small">фестиваль</div>
@@ -252,8 +296,12 @@
           ?>
 
           <li class="for-whom__video-item">
-            <div class="for-whom__video-title"><?php the_title(); ?></div>
-            <div class="for-whom__video" style="background-image: url(<?php echo get_post_meta( get_the_id(), 'for_whom_video_bgr', true); ?>);"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?php echo get_post_meta( get_the_id(), 'for_whom_video_id', true); ?>"></a></div>
+            <div class="for-whom__video-title">
+              <?php the_title(); ?>
+            </div>
+            <div class="for-whom__video" style="background-image: url(<?php echo get_post_meta( get_the_id(), 'for_whom_video_bgr', true); ?>);">
+              <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?php echo get_post_meta( get_the_id(), 'for_whom_video_id', true); ?>"></a>
+            </div>
             <div class="for-whom__video-content"></div>
             <div class="for-whom__video-text"><?php the_content(); ?></div>
           </li>
@@ -264,7 +312,7 @@
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -306,7 +354,7 @@
       <div class="where-will__slider">
         <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-1.png">
           <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Курортный отель премиум-класса расположен на первой линии побережья Чёрного моря. К услугам Гостей доступны:</span>
             <ul class="where-will__list-slide">
               <li>• 379 номеров, включая 44 люкса</li>
               <li>• 7 бунгало</li>
@@ -324,17 +372,17 @@
         </div>
         <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-2.png">
           <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Комфортабельные номера отеля премиум класса примут гостей фестиваля. Осенние каникулы наполненные романтикой теплого семейного отдыха.</span>
           </div>
         </div>
         <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-3.png">
           <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Главная площадка Конгресс-центра предназначен для масштабных конгрессов, деловых сессий, концертов, кинопоказов. Именно здесь пройдет главное событие фестиваля, где Вас ждет встреча с ведущими педагогами мира и рядом ярких гостей имена которых пока остаются в секрете.</span>
           </div>
         </div>
         <div class="where-will__slide"><img class="where-will__img-slide" alt="" src="<?php echo get_template_directory_uri(); ?>/img/where-will/slide-4.png">
           <div class="where-will__comment-slide">
-            <h3 class="where-will__slide-name">Kempinski Grand Hotel</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
+            <h3 class="where-will__slide-name">Kempinski Grand Hotel Gelendzhik</h3><span>Живописная бухта, окаймленная знаменитой набережной, восхитительные морские и горные пейзажи, зеленые склоны, покрытые рощами пицундской сосны, исключительная экология и современное благоустройство курорта, широкая палитра развлечений в сочетании с превосходным сервисом способствуют прекрасному отдыху круглый год год. Отдых в Геленджике – это прекрасная возможность насладиться живописными пейзажами Юга России и посетить множество уникальных мест.</span>
           </div>
         </div>
       </div>
@@ -1091,82 +1139,82 @@
         <div class="rewiews__arrow-right"></div>
       </div>
       <div class="reviews__slider">
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_3.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_3.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Андрей и Екатерина Векшины</h3>
           <div class="reviews__slide-position">г. Горячий Ключ</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики отличается от всего, что мы видели и где побывали раньше. За 5 дней мы наполнились детским смехом, юношеской рассудительностью и родительской любовью. Удивительно было наблюдать как размышляют и действуют ребята в непринужденной атмосфере доверия, которая царит на фестивале. Пожалуй, самым любимым действием для нас были открытые встречи, на которых дети со сцены рассказывали взрослым о своих переживаниях и о том как они видят жизнь. Огромная благодарность учителям и педагогам, которые делятся своей мудростью и любовью к детям на протяжении фестиваля. Мы зарядились на весь год светлыми эмоциями и вдохновением. С нетерпением ждём новой встречи с уже такими родными участниками и организаторами фестиваля.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_18.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_18.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Даша Берюк</h3>
           <div class="reviews__slide-position">г. Минск</div>
           <div class="reviews__slide-comment">Фестиваль многому научил меня! Помог взглянуть на привычные вещи новыми глазами. Рассказывая о воспитании детей, лекторы помогли мне лучше понять себя и то, какими красивыми и созидательными могут быть отношения с детьми и также со взрослыми. Лекторы фестиваля очень щедрые люди. И есть ощущение, что просто находясь рядом с ними, становишься лучше. Наполнение фестиваля и его атмосфера - это хорошая почва для раскрытия, познания, роста гармоничной личности. Желаю всем поучаствовать в этом Празднике!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_5.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_5.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Настя Краславская</h3>
           <div class="reviews__slide-position">г. Ростов-на-Дону</div>
           <div class="reviews__slide-comment">На осенних каникулах я была на фестивале в Подмосковье. Он был просто необыкновенный! Большая благодарность всем организаторам и почётным гостям!  Это четвертый фестиваль гуманной педагогики, который носит название "Фейерверк уроков жизни".И оно полностью соответствует фестивалю! У меня здесь было много важных реализаций.  На фестивале  были замечательные  учителя - Шалва Амонашвили, Паата Амонашвили, Марина Таргакова, Олег Гадецкий, Сергей Аваков со своей семьёй, Алексей Бабаянц, Игорь Киршин, Рами Блект, мать более 1050 детей - матушка Синдутай и другие невероятные  личности. И самое удивительное - то, что каждый  может с ними открыто общаться! Здесь я познакомилась с детским, молодёжным объединением ,,Молодая гвардия". Они очень искренние, радостные и классные ребята! Когда видишь их - на лице появляется улыбка, появляется радость, которой хочется делиться со всеми. Дорогие Гатам, Айдар, Максим, Клим, Лера, Юля, Лиза, Ангелина, Аня, Мари спасибо вам большое! Теперь у меня есть ещё большее вдохновение и радость каждому дню.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_21.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_21.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Артем Мельник</h3>
           <div class="reviews__slide-position"> </div>
           <div class="reviews__slide-comment">Фест был веселый, хотя я ни с кем не общался почти, классно проводили время вместе, были интересные лекции. Получил много полезного, как на лекциях, так и в свободное время. Особенно хочется отметить:Сабину, Данила, Артемку, Бориса. Спасибо за эти дни!!! Советую всем приехать на этот фест еще раз в след. году, думаю будет еще круче... Мб приглашу друзей!! Всем спасибо!!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_1.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_1.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Наталья и Константин Валеевы</h3>
           <div class="reviews__slide-position">г. Кременная</div>
           <div class="reviews__slide-comment">Мы с семьей были на фестивале несколько раз, и это очень сильно повлияло на нашу жизнь! Я чувствовала, что это именно то место и те процессы, в которых я хотела бы находиться. И так много позитивной, творческой энергии! Знаний, поражающих своей глубиной! Добрых лиц добрых людей! Своих внутренних открытий! И ДЕТИ, которые счастливы!!! Это чудесно!!! Я обязательно постараюсь приехать и в этом году на фестиваль.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_4.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_4.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Владимир и Наталья Морозовы</h3>
           <div class="reviews__slide-position">г. Минск</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики - это удивительное место, наполненное знаниями,  радостью и друзьями. Уже на протяжении нескольких лет мы приезжаем на фестиваль и чувствуем, что наши сердца меняются. Соприкасаясь с Учителями, мастерами и лекторами фестиваля мы получаем большой практический опыт, который сразу влияет на нас. В прошлом году фестиваль помог нам остановиться и увидеть себя, как родителей со стороны. А также по-настоящему увидеть нашего сына. Однажды вечером, после лекции, уложив сына спать, мы лежали рядом с ним, смотрели на него сладкого, спящего, и задали себе вопросы: «А что он скажет о своем детстве, когда вырастет? Скажет ли он, что был счастлив? Достаточно ли ему было нашего внимания или он не видел нас, пока мы были заняты «очень важными» делами?». И благодаря всем Учителям на фестивале, мы поняли, что нельзя разделять «нас или наше дело» и «ребенка», а быть вместе в этом удивительном процессе жизни. И нужно обязательно включать в этот процесс ребенка, наполняя жизнь семьи радостью, простыми смешными моментами, сокровенными разговорами, которые запомнит сердце ребенка, семейными прогулками к реке, добрыми подарками, встречей гостей, неожиданными сладостями, совместной учебой, а также верой в Добро и Свет. Спасибо Фестивалю за это глубокое осознание, которое делает нашу семью счастливее.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_20.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_20.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Виталий Лоренцевич и Ирина Александровна Аваковы</h3>
           <div class="reviews__slide-position"> </div>
           <div class="reviews__slide-comment">Все фестивали, посвященные гуманной педагогике, принципиальным проводником которых является Шалва Александрович Амонашвили, представляют собой удивительный сказочный мир. Эти события собирают не только педагогов со всей России и многих других стран, но и людей, неравнодушных к современному состоянию педагогики. В выступлениях самого Ш. А. Амонашвили, Марины Таргаковой, Марины Шишовой и многих других педагогов-экспертов отражены потенциальные возможности высококачественного обучения и воспитания подрастающего поколения, основанного на гуманно-личностном подходе. Мы с супругой являемся педагогами-пенсионерами, проработали в школе более 30 лет. С большим удовольствием мы посещаем этот фестиваль и всегда обогащаемся новыми знания, новым опытом и большим вдохновением, способствующим воспитанию наших внуков. Мы ратуем за то, чтобы такие программы стали постоянно действующим фактором педагогической жизни нашей страны. </div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_22.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_22.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Александр Усанин</h3>
           <div class="reviews__slide-position">г. Москва</div>
           <div class="reviews__slide-comment">В детстве человек получает первые и наиболее важные представления о целях и ценностях жизни, о отношениях между людьми, что формирует его внутренний мир, его личные смыслы и то, как он будет относиться к другим, какой будет вся его жизнь. Счастливы те дети, которым посчастливилось увидеть примеры возвышенной жизни и уважительное отношение к себе как индивидуальной, пусть даже пока ещё маленькой, но всё же уникальной, потенциально способной изменить к лучшему весь этот мир, личности. То, каким  будет будущее этой планеты, наше ближайшее будущее - зависит от того, кто, как, на каких ориентирах и ценностях воспитывает наших детей. Поэтому педагог - тот, кто программирует будущее этой планеты. Поэтому этот фестиваль очень важен: на нём те, кто хотят повлиять на жизни детей делятся важным и уникальным педагогическим опытом: как это очень тактично и бережно делать. Такой Фестиваль - это забота о людях, которые помогают детям, как нежному прекрасному бутону раскрыться в лучах их любви, чтобы цвести и принести сладкий плод в виде счастливой и чистой возвышенной жизни.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_6.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_6.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Андрей и Виктория Подкользины</h3>
           <div class="reviews__slide-position">г. Москва</div>
           <div class="reviews__slide-comment">Так здорово, что есть Фестиваль, который знакомит с увлекательным и разнообразным миром педагогики! Время Фестиваля - это время, которое зажигает сердца и вдохновляет на новые свершения каждого, попавшего в атмосферу синтеза любви и знаний!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_8.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_8.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Максим Орел</h3>
           <div class="reviews__slide-position">Германия</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики - это опыт, который невозможно передать словами, каждый человек должен сам прочувствовать атмосферу Города Солнца. Город Солнца - это не выдумка, это не утопическое представление, это совместное настроение, в котором каждый может принять участие. Опыт фестиваля удивителен тем, что находясь в этом благостном настроении, находясь в общении с выдающимися педагогами современности, начинают открываться сердца. Меняются взгляды на людей, на родных, близких, меняется взгляд на мир. Для меня, как обычного подростка, по новому открылись родители (возможно, они не такие ужасные, как кажутся в таком возрасте). Фестиваль стал для меня возможностью познакомиться с единомышленниками, с ровесниками, почувствовать настоящую дружбу, возможностью провести время с семьей, возможностью пообщаться с учителями, ведь каждая проведенная с ними секунда на вес золота, и запомниться на всю жизнь.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_7.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_7.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Валерия</h3>
           <div class="reviews__slide-position">г Омск</div>
           <div class="reviews__slide-comment">Для меня, как для подростка, фестиваль стал незабываемым путешествием в настоящий Город Солнца, где я повстречала друзей, даже поучаствовала в организации некоторых мероприятий вместе с другими ребятами, а главное - встретилась с мудрыми, счастливыми взрослыми. Только ради того, чтобы увидеть Шалву Александровича, встретить его любящий и искрящийся светом взгляд,  познакомиться со многими педагогами и подружиться с ними, стоит ехать на фестиваль! Стоит ехать на фестиваль ради того, чтобы научиться никогда не стареть и, как ребёнок, верить в чудеса, удивляясь каждому мгновению жизни!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_9.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_9.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Ангелина Денисова</h3>
           <div class="reviews__slide-position">г. Алматы</div>
           <div class="reviews__slide-comment">Фестиваль - удивительно путешествие в Город Солнца. Я окунулась в небывалую атмосферу счастья. Фестиваль - это уникальнейшая возможность встретиться с настоящими Учителями. Они совсем не скучные, а наоборот. Невозможно было расстаться с ними без слез. Но я увезла фестиваль в своём сердце, где он надежно поселился. Фестиваль - это просто страна детства, где даже я, не такой уж и взрослый человек, научилась заново изумляться, удивляться, поражаться! В общем, друзья, не теряйте ни секунды, спешите на фестиваль!!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_16.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_16.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Лиза Денисова</h3>
           <div class="reviews__slide-position">г. Алматы</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики стал для меня очень особенным событием. Абсолютно каждый день, проведенный там, даёт возможность научиться проживать день, как одну жизнь. Атмосфера фестиваля пропитана любовью и желанием людей помочь, будто бы все, попав туда, становятся одной семьей, где каждый житель города Солнца важен и нужен. Король и Министры города Солнца - это учителя, которые помогают открывать новые и прекрасные сундуки знаний гуманной педагогики, они помогают нам самим измениться в лучшую сторону и узнать что-то новое. Попав туда однажды, не захочется покидать этот изумительный город, где каждый день наполнен любовью, доверием и искренностью людей.</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_2.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_2.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Вероника Гаркуша</h3>
           <div class="reviews__slide-position">Украина</div>
           <div class="reviews__slide-comment">Я была на фестивале несколько раз, и всегда попадала в чудесную атмосферу сотрудничества взрослых с детьми. Получила полезные знания и познакомилась с замечательными людьми, во время каждого фестиваля открывая для себя что-то новое!!!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_17.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_17.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Милана</h3>
           <div class="reviews__slide-position">г. Алматы</div>
           <div class="reviews__slide-comment">Была на фестивале с семьёй в 2015 году. Первое ощущение, когда приехали на фестиваль, как-будто попали в добрую сказку). Нас очень радушно встречали, для детей была организована специальная зона, где они могли играть пока родители проходили процедуру регистрации, а ещё детям дарили бумажных зайчиков с конфеткой внутри, от чего те были очень счастливы! Больше всего на фестивале запомнилась атмосфера семьи и внимательности к каждому, соприкосновение с учителями, которые щедро делились своими знаниями и проводили потрясающие лекции и практические занятия. Практические занятия это вообще отдельная история! В реальном формате видишь как рождается гуманная педагогика и сам на время становишься ребенком! Особая благодарность детскому департаменту за организацию очень классной программы! Сын с удовольствием ходил на нее, пока мы были на лекции. Отличный фестиваль, где есть возможность познакомиться с единомышленниками, пообщаться с учителями, напитаться знаниями и вдохновением!</div>
         </div>
-        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_19.jpg">
+        <div class="reviews__slide"><img class="reviews__slide-img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/rewiews/review_19.jpg?v=<?php echo date(U);?>">
           <h3 class="reviews__slide-name">Семья Саламатовых, Анжела и Александр</h3>
           <div class="reviews__slide-position">г. Москва</div>
           <div class="reviews__slide-comment">Фестиваль гуманной педагогики — это не просто фестиваль, не просто место… Это атмосфера, это увлеченные люди, это поток любви, тепла, дружественности, поиска смыслов и любви в своем сердце! Одним словом, Фейерверк! Этот удивительное пространство, объединяющее наставников, педагогов, родителей и конечно детей! Где дети - активные участники образовательного процесса для взрослых. Здесь сеются зерна радости познания другого, понимания между взрослыми и детьми, способности строить настоящие отношения, видеть в другом личность или явление! Это целый мир, преображающий сердца участников через общение с великими мастерами, учителями, с другими участниками фестиваля и конечно детьми! Здесь все создано для сотворчества, преображения, раскрытия сердца и получения ценных знаний! Мы желаем каждому оказаться на этом чудотворном семейном фестивале! </div>

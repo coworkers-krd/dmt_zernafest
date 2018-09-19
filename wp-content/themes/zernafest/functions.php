@@ -112,7 +112,7 @@ function for_whom_item() {
 		'search_items' => 'Искать пункты',
 		'not_found' => 'Пунктов не найдено.',
 		'not_found_in_trash' => 'В корзине нет пунктов.',
-		'menu_name' => 'Для кого фестивать'
+		'menu_name' => 'Для кого фестиваль'
 	);
 	$args = array(
 		'labels' => $labels,
@@ -147,3 +147,31 @@ $metabox = array(
 	)
 );
 new trueMetaBox( $metabox );
+
+// Добавление партнеров
+add_action( 'init', 'partner_item' ); // Использовать функцию только внутри хука init
+function partner_item() {
+	$labels = array(
+		'name' => 'Партнеры фестиваля',
+		'singular_name' => 'Партнеры фестиваля',
+		'add_new' => 'Добавить партнера',
+		'add_new_item' => 'Добавить партнера',
+		'edit_item' => 'Редактировать партнера',
+		'new_item' => 'Новый партнер',
+		'all_items' => 'Все партнеры',
+		'view_item' => 'Просмотр партнеров на сайте',
+		'search_items' => 'Искать партнеров',
+		'not_found' => 'Партнеров не найдено.',
+		'not_found_in_trash' => 'В корзине нет партнеров.',
+		'menu_name' => 'Партнеры фестиваля'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-editor-paste-text',
+		'menu_position' => 4,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'partner', $args);
+}
