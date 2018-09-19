@@ -3658,7 +3658,7 @@ p {
 
   .reviews__slider {
     width: 102%;
-    height: 20%;
+    height: 18%;
     background-color: #fff;
     display: -moz-flex;
     display: -ms-flex;
@@ -3738,6 +3738,30 @@ p {
 
   .reviews__slide-comment {
     visibility: hidden; 
+  }
+
+  .reviews__content-vis .reviews__slide-name {
+    visibility: unset; 
+    font-size: 1.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    color: #fff;
+  }
+
+  .reviews__content-vis .reviews__slide-position {
+    visibility: unset; 
+    color: #eee;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10%;
+  }
+
+  .reviews__content-vis .reviews__slide-comment {
+    visibility: unset; 
+    color: #fff;
+    font-size: 1.125rem;
+    line-height: 1.2;
   }
 
   .reviews__content-block {

@@ -351,96 +351,27 @@ reviewsSlider();
 
 //СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
-function reviewsContent() {
-	const slide = document.querySelector('.reviews__img-block');
-	const reviewSlide = document.querySelectorAll('.reviews__slide');
-	const reviewSlideImg = document.querySelectorAll('.reviews__slide-img');
-	const reviewContent = document.querySelector('.reviews__content');
-
-	const bigImg = document.querySelector('.rewiews__big-img');
-
-	const name = document.querySelector('.reviews__name ');
-	const position = document.querySelector('.reviews__position');
-	const comment = document.querySelector('.reviews__comment');
-
-
-	const nameSlide = document.querySelectorAll('.reviews__slide-name ');
-	const positionSlide = document.querySelectorAll('.reviews__slide-position');
-	const commentSlide = document.querySelectorAll('.reviews__slide-comment');
-
-	let tr;
-
-
-
-	for (let l = 0; l < reviewSlide.length; l++) {
-
-
-
-
-		if (reviewSlide[l].classList.contains('slick-current')) {
-
-
-
-			let currentImg = reviewSlide[l].firstChild.getAttribute('src');
-
-			bigImg.setAttribute('src', currentImg);
-
-			name.textContent = reviewSlide[l].children[1].innerHTML;
-			position.textContent = reviewSlide[l].children[2].innerHTML;
-			comment.textContent = reviewSlide[l].children[3].innerHTML;
-
-		}
-	}
-
-
-	slide.addEventListener('click', () => {
-
-		for (let i = 0; i < reviewSlide.length; i++) {
-
-
-			if (reviewSlide[i].classList.contains('slick-current')) {
-
-
-				let currentImg = reviewSlide[i].firstChild.getAttribute('src');
-
-				bigImg.setAttribute('src', currentImg);
-
-				name.textContent = reviewSlide[i].children[1].innerHTML;
-				position.textContent = reviewSlide[i].children[2].innerHTML;
-				comment.textContent = reviewSlide[i].children[3].innerHTML;
-
-
-
-				reviewContent.style.transform = 'translateX(0%)';
-				tr = 100;
-
-
-
-				setTimeout(function RewTransl() {
-
-					if (tr > 0) {
-						tr -= 10;
-						reviewContent.style.transform = `translateX(jQuery{tr}%)`;
-
-						setTimeout(RewTransl, 50)
-					}
-
-				}, 200);
-
-			}
-
-
-
-		}
-	});
-
-
-
-
-
+function reviewContent() {
+	var currentImg = jQuery('#reviews').find('.slick-active').find('img').attr('src');
+	var currentHTML = jQuery('#reviews').find('.slick-active').find('.reviews__content').html();
+	jQuery('.rewiews__big-img').attr('src', currentImg);
+	jQuery('.reviews__content-vis').html(currentHTML);
+	console.log(currentHTML);
 };
 
-reviewsContent();
+reviewContent();
+jQuery('.reviews__slide').on('click', function(){
+	reviewContent();
+});
+jQuery('.reviews__arrow-right').on('click', function(){
+	reviewContent();
+});
+jQuery('.rewiews__arrow-left').on('click', function(){
+	reviewContent();
+});
+
+
+
 
 //Слайдер секции where-will
 function whereWillSlider() {
@@ -552,37 +483,22 @@ function openMenu() {
 	const openNav = jQuery('.js-menu');
 	const menuItem = jQuery('.menu__link');
 
-
 	openBtn.on('click', function () {
-
 		openNav.slideToggle();
-
-
-
 	});
 
 	menuItem.on('click', function () {
 		if (jQuery(window).innerWidth() < '992') {
 			openNav.slideUp();
-
-
-
 		}
-
-
 	});
-
-
 	jQuery(window).on('resize', () => {
-
 		if (jQuery(window).width() > '995') {
-
 			openNav.css('display', 'flex');
 		} else {
 			openNav.css('display', 'none');
 		};
 	});
-
 }
 openMenu();
 

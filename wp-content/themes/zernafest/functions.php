@@ -128,7 +128,7 @@ function for_whom_item() {
 $metabox = array(
 	'id' =>	'for_whom',
 	'capability' => 'edit_posts',
-	'name' => 'Фото главного слайдера',
+	'name' => 'Дополнительная информация',
 	'post_type' => array('for_whom'),
 	'priority' => 'high',
 	'args' => array(
@@ -231,3 +231,33 @@ function review_item() {
 	);
 	register_post_type( 'review', $args);
 }
+
+$metabox = array(
+	'id' =>	'review',
+	'capability' => 'edit_posts',
+	'name' => 'Дополнительная информация',
+	'post_type' => array('review'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'city',
+			'label' => 'Город',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Город'
+		)
+	)
+);
+new trueMetaBox( $metabox );
+
+
+/* Удаление пунктов меню в админке */
+function remove_admin_submenu_items() {
+	remove_menu_page( 'edit.php' );
+	remove_menu_page( 'edit.php?post_type=page' );
+	remove_menu_page( 'link-manager.php' );
+	remove_menu_page( 'edit-comments.php' );
+	remove_menu_page( 'themes.php' );
+	remove_menu_page( 'plugins.php' );
+	remove_menu_page( 'users.php' );
+}
+add_action( 'admin_menu', 'remove_admin_submenu_items');
