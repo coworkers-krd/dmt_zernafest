@@ -2504,7 +2504,7 @@ p {
     background-image: url(../img/new_video_bgr/VdnJdG8aQjQ.jpg);
   }
 
-*/
+  */
 
 
 
@@ -2824,7 +2824,8 @@ p {
 
     .where-will__slider {
       width: 100%;
-      height: 20%;
+      /*height: 20%;*/
+      height: 100px;
       background-color: #fff;
       display: -moz-flex;
       display: -ms-flex;
@@ -2851,7 +2852,7 @@ p {
     .where-will__slide {
       height: 70px;
       width: 25%;
-      margin: 1%;
+      margin: 15px 5px;
       overflow: hidden;
       -webkit-transition: 0.3s;
       -o-transition: 0.3s;
@@ -2859,9 +2860,12 @@ p {
       -webkit-box-sizing: border-box;
       box-sizing: border-box; 
     }
-    .where-will__slide:hover {
-      border: 3px solid #e45914; 
+    @media screen and (min-width: 768px) {
+      .where-will__slide:hover {
+        border: 3px solid #e45914; 
+      }
     }
+    
     @media screen and (max-width: 768px) {
       .where-will__slide {
         width: 23%; 
@@ -3666,7 +3670,8 @@ p {
 
     .reviews__slider {
       width: 102%;
-      height: 18%;
+      /*height: 18%;*/
+      height: 100px;
       background-color: #fff;
       display: -moz-flex;
       display: -ms-flex;
@@ -3701,9 +3706,12 @@ p {
       -webkit-box-sizing: border-box;
       box-sizing: border-box; 
     }
-    .reviews__slide:hover {
-      border: 3px solid #e45914; 
+    @media screen and (min-width: 768px) {
+      .reviews__slide:hover {
+        border: 3px solid #e45914; 
+      }
     }
+    
     @media screen and (max-width: 768px) {
       .reviews__slide {
         width: 23%; 

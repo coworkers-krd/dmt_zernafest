@@ -105,8 +105,6 @@ function openElseSpeakers() {
 
 	speakersList.css('height', speakersItemHeight);
 	elseBtnClose.css('display', 'none');
-	console.log(speakersItemHeight);
-
 
 	elseBtn.on('click', function () {
 
@@ -325,7 +323,6 @@ function reviewsSlider() {
 	jQuery('.reviews__slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		//			asNavFor: '.rewiews__img',
 		prevArrow: '.rewiews__arrow-right',
 		nextArrow: '.rewiews__arrow-left',
 		//
@@ -352,11 +349,11 @@ reviewsSlider();
 //СЕКЦИЯ ОТЗЫВЫ - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
 function reviewContent() {
-	var currentImg = jQuery('#reviews').find('.slick-active').find('img').attr('src');
-	var currentHTML = jQuery('#reviews').find('.slick-active').find('.reviews__content').html();
+	var currentImg = jQuery('#reviews').find('.slick-current').find('img').attr('src');
+	var currentHTML = jQuery('#reviews').find('.slick-current').find('.reviews__content').html();
 	jQuery('.rewiews__big-img').attr('src', currentImg);
 	jQuery('.reviews__content-vis').html(currentHTML);
-	console.log(currentHTML);
+	console.log(currentImg);
 };
 
 reviewContent();
@@ -380,8 +377,8 @@ function whereWillSlider() {
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		//			arrows: true,
-		prevArrow: '#right',
-		nextArrow: '#left',
+		prevArrow: '#left',
+		nextArrow: '#right',
 		dots: false,
 		centerMode: true,
 		focusOnSelect: true,
@@ -404,8 +401,8 @@ whereWillSlider();
 //СЕКЦИЯ Где пройдет - КОНТЕНТ ПРИ СМЕНЕ СЛАЙДОВ
 
 function WhereWillContent() {
-	var currentImg = jQuery('#where-will').find('.slick-active').find('img').attr('src');
-	var currentHTML = jQuery('#where-will').find('.slick-active').find('.where-will__comment-slide').html();
+	var currentImg = jQuery('#where-will').find('.slick-current').find('img').attr('src');
+	var currentHTML = jQuery('#where-will').find('.slick-current').find('.where-will__comment-slide').html();
 	jQuery('.where-will__slide-bigimg').attr('src', currentImg);
 	jQuery('.where-will__content-block').html(currentHTML);
 };
@@ -718,7 +715,6 @@ jQuery(function () {
 
 jQuery(function () {
 	jQuery('#price__form').submit(function (e) {
-		console.log(123);
 		e.preventDefault();
 		var m_data = jQuery(this).serialize();
 		jQuery.ajax({

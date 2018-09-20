@@ -318,7 +318,7 @@
 <section class="itwas" id="itwas" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
-      <div class="itwas__video-big" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_big_img'))[0];?>);">
+      <div class="itwas__video-big" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_big_img'), full)[0];?>);">
         <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_big');?>"></a>
       </div>
       <div class="itwas__content">
@@ -329,13 +329,13 @@
       </div>
     </div>
     <div class="itwas__row-down">
-      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos1_img'))[0];?>);">
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos1_img'), full)[0];?>);">
         <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos1');?>"></a>
       </div>
-      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos2_img'))[0];?>);">
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos2_img'), full)[0];?>);">
         <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos2');?>"></a>
       </div>
-      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos3_img'))[0];?>);">
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos3_img'), full)[0];?>);">
         <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos3');?>"></a>
       </div>
     </div>
@@ -359,7 +359,7 @@
         <?php
         $args = array(
           'posts_per_page' => 99,
-          'order' => 'DESC',
+          'order' => 'ASC',
           'post_type' => array( 'where_will' ),
         );
         $posts = new WP_Query( $args );
