@@ -59,7 +59,7 @@
       </div>
     </div>
     <div class="wrapper js-wrapper-preloader">
-      <section class="promo" style="background-image: url(<?= get_option('promo_photo');?>);">
+      <section class="promo" style="background-image: url(<?= wp_get_attachment_image_src(get_option('promo_photo'), full)[0];?>);">
         <header class="header">
           <button class="hamburger js-hamburger" type="button">
             <div class="hamburger__item"></div>
@@ -75,6 +75,9 @@
                 <li class="menu__item"><a class="menu__link" href="#gallery">галерея</a></li>
               </ul>
             </nav>
-            <div class="header__tel"><a class="header__tel-link" href="tel:+74993501918">+7 (499) 350-19-18,</a><a class="header__tel-link" href="tel:+79782114500">+7 (978) 211-45-00</a></div>
+            <div class="header__tel">
+              <a class="header__tel-link" href="tel:+<?php $tel = get_option('contacts_tel1'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel1'); ?>,</a>
+              <a class="header__tel-link" href="tel:+<?php $tel = get_option('contacts_tel2'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel2'); ?></a>
+            </div>
           </div>
         </header>

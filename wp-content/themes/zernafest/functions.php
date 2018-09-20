@@ -1,5 +1,12 @@
 <?php
 
+// Уважаемый разработчик.
+// Если ты читаешь этот текст, значит ты взялся за обслуживание сайта zernafest.ru
+// А значит скорее всего работаешь с Артемом. 
+// Дружище, мой тебе совет - беги. Работать с ними катастрофически сложно и некомфортно.
+
+// С уважением и пониманием, sidderman.
+
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
@@ -39,7 +46,117 @@ $main_promo = array(
 				array(
 					'id'			=> 'photo',
 					'label'			=> 'Фон главного разворота',
-					'type'			=> 'file', // table of types is above
+					'type'			=> 'image', // table of types is above
+				),
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $main_promo );
+
+
+
+$mission = array(
+	'slug'	=>	'mission',
+	'title' => 'Миссия фестиваля',
+	'menuname' => 'Миссия фестиваля',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'main_promo',
+			'name' => 'Миссия фестиваля',
+			'fields' => array(
+				array(
+					'id'			=> 'text',
+					'label'			=> 'Заголовок',
+					'type'			=> 'textarea', // table of types is above
+					'default'		=> ''
+				)
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $mission );
+
+
+$how_it_was = array(
+	'slug'	=>	'how_it_was',
+	'title' => 'Как это было',
+	'menuname' => 'Как это было',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'info',
+			'name' => 'Текст',
+			'fields' => array(
+				array(
+					'id'			=> 'text',
+					'label'			=> 'Заголовок',
+					'type'			=> 'textarea', // table of types is above
+					'default'		=> ''
+				)
+			)
+		),
+		array(
+			'id' => 'video',
+			'name' => 'Видео',
+			'fields' => array(
+				array(
+					'id'			=> 'big',
+					'label'			=> 'ID большого видео',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'big_img',
+					'label'			=> 'Фон большого видео',
+					'type'			=> 'image', // table of types is above
+					'default'		=> ''
+				),
+
+				array(
+					'id'			=> 'pos1',
+					'label'			=> 'ID первого видео',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'pos1_img',
+					'label'			=> 'Фон первого видео',
+					'type'			=> 'image', // table of types is above
+					'default'		=> ''
+				),
+
+				array(
+					'id'			=> 'pos2',
+					'label'			=> 'ID второго видео',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'pos2_img',
+					'label'			=> 'Фон второго видео',
+					'type'			=> 'image', // table of types is above
+					'default'		=> ''
+				),
+
+				array(
+					'id'			=> 'pos3',
+					'label'			=> 'ID третьего видео',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'pos3_img',
+					'label'			=> 'Фон третьего видео',
+					'type'			=> 'image', // table of types is above
+					'default'		=> ''
 				),
 			)
 		),
@@ -48,7 +165,98 @@ $main_promo = array(
 );
 
 if( class_exists( 'trueOptionspage' ) )
-	new trueOptionspage( $main_promo );
+	new trueOptionspage( $how_it_was );
+
+
+
+$say_main = array(
+	'slug'	=>	'say_main',
+	'title' => 'Сказать главное',
+	'menuname' => 'Сказать главное',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'info',
+			'name' => 'Сказать главное',
+			'fields' => array(
+				array(
+					'id'			=> 'text',
+					'label'			=> 'Заголовок',
+					'type'			=> 'textarea', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'video_id',
+					'label'			=> 'Видео ID',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'video_bgr',
+					'label'			=> 'Фон видео',
+					'type'			=> 'image', // table of types is above
+					'default'		=> ''
+				)
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $say_main );
+
+
+$contacts = array(
+	'slug'	=>	'contacts',
+	'title' => 'Контакты',
+	'menuname' => 'Контакты',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'info',
+			'name' => 'Контакты',
+			'fields' => array(
+				array(
+					'id'			=> 'tel1',
+					'label'			=> 'Номер телефона',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'tel2',
+					'label'			=> 'Номер телефона',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'mail',
+					'label'			=> 'Почта',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'adress',
+					'label'			=> 'Адрес',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'name',
+					'label'			=> 'Название места проведения',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $contacts );
+
+
 
 add_theme_support( 'post-thumbnails' );
 // Добавление спикеров
@@ -72,7 +280,7 @@ function speaker_item() {
 		'labels' => $labels,
 		'public' => true,
 		'menu_icon' => 'dashicons-admin-users',
-		'menu_position' => 4,
+		'menu_position' => 2,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail')
 	);
@@ -118,7 +326,7 @@ function for_whom_item() {
 		'labels' => $labels,
 		'public' => true,
 		'menu_icon' => 'dashicons-editor-paste-text',
-		'menu_position' => 4,
+		'menu_position' => 2,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail')
 	);
@@ -169,7 +377,7 @@ function partner_item() {
 		'labels' => $labels,
 		'public' => true,
 		'menu_icon' => 'dashicons-networking',
-		'menu_position' => 4,
+		'menu_position' => 3,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail')
 	);
@@ -225,7 +433,7 @@ function review_item() {
 		'labels' => $labels,
 		'public' => true,
 		'menu_icon' => 'dashicons-carrot',
-		'menu_position' => 4,
+		'menu_position' => 5,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail')
 	);
@@ -249,6 +457,53 @@ $metabox = array(
 );
 new trueMetaBox( $metabox );
 
+// Добавление сказать главное
+add_action( 'init', 'say_main_item' ); // Использовать функцию только внутри хука init
+function say_main_item() {
+	$labels = array(
+		'name' => 'Сказать главное',
+		'singular_name' => 'Сказать главное',
+		'add_new' => 'Добавить сказать главное',
+		'add_new_item' => 'Добавить сказать главное',
+		'edit_item' => 'Редактировать сказать главное',
+		'new_item' => 'Новая информация сказать главное',
+		'all_items' => 'Все сказать главное',
+		'view_item' => 'Просмотр сказать главное на сайте',
+		'search_items' => 'Искать сказать главное',
+		'not_found' => 'Информации не найдено.',
+		'not_found_in_trash' => 'В корзине нет сказать главное.',
+		'menu_name' => 'Сказать главное'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-format-quote',
+		'menu_position' => 6,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'say_main', $args);
+}
+$metabox = array(
+	'id' =>	'say_main',
+	'capability' => 'edit_posts',
+	'name' => 'Дополнительная информация',
+	'post_type' => array('say_main'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'video_id',
+			'label' => 'Видео ID',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Видео ID'
+		)
+	)
+);
+new trueMetaBox( $metabox );
+
+
+
+
 
 /* Удаление пунктов меню в админке */
 function remove_admin_submenu_items() {
@@ -259,5 +514,8 @@ function remove_admin_submenu_items() {
 	remove_menu_page( 'themes.php' );
 	remove_menu_page( 'plugins.php' );
 	remove_menu_page( 'users.php' );
+	remove_menu_page( 'upload.php' );
+	remove_menu_page( 'tools.php' );
+	remove_menu_page( 'index.php' );
 }
 add_action( 'admin_menu', 'remove_admin_submenu_items');

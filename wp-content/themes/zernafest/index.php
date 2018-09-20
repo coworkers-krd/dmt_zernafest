@@ -45,10 +45,8 @@
     </div>
   </div>
   <div class="mission__content">
-    <p class="mission__text">С 2013 года мы собираем на одной площадке легендарных учителей, чтобы превращать в реальность мечты о будущем детей.</p>
-    <p class="mission__text">Мы стремимся дать детям лучшее образование и воспитание. Мечтаем видеть их счастливыми и успешными.</p>
-    <p class="mission__text">Великие учителя - от Сократа и Платона до Льва Толстого и Шалвы Амонашвили убеждены, что образование детей- это в первую очередь воспитание себя. Поэтому вместе с детьми мы приглашаем на фестиваль мам и пап, бабушек и дедушек, учителей и учеников. Чтобы с любовью создавать питательную среду для расцветания в нас и наших детях самых лучших качеств Человека. Учиться быть творческими и счастливыми друг с другом. И улучшать мир вокруг себя.</p>
-    <p class="mission__text">Событие года о счастливом воспитании родителей, учителей и детей.</p>
+    <p><?= get_option('mission_text');?></p>
+    
   </div>
 </section>
 <section class="speakers" id="speakers" data-page="0">
@@ -242,7 +240,7 @@
   </div>
 </section>
 
-<section class="for-whom" id="for-whom" data-page="2">
+<!-- <section class="for-whom" id="for-whom" data-page="2">
   <div class="container">
     <h2 class="for-whom__title">для кого
       <div class="for-whom__title-small">фестиваль</div>
@@ -274,9 +272,9 @@
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
-<!-- <section class="for-whom" id="for-whom" data-page="2">
+<section class="for-whom" id="for-whom" data-page="2">
   <div class="container">
     <h2 class="for-whom__title">для кого
       <div class="for-whom__title-small">фестиваль</div>
@@ -312,7 +310,7 @@
       </ul>
     </div>
   </div>
-</section> -->
+</section>
 
 
 
@@ -320,20 +318,26 @@
 <section class="itwas" id="itwas" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
-      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="UQL7xyovI_8"></a></div>
+      <div class="itwas__video-big" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_big_img'))[0];?>);">
+        <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_big');?>"></a>
+      </div>
       <div class="itwas__content">
         <h2 class="itwas__title">как это
           <div class="itwas__title-subtitle">было</div>
         </h2>
-        <p class="itwas__text">Вот уже 5 лет мы объединяем родителей, детей и учителей под эгидой фестиваля гуманной педагогики! Тысячам родителей по всему миру удалось увидеть,  что Воспитание может быть легким и гармоничными. И что секрет долгих, добрых и красивых отношений между родителями и детьми    открыт в идеях гуманной педагогики.  </p>
-        <p class="itwas__text">Мы рады приветствовать постоянных участников и новых гостей.</p>
-        <p class="itwas__text">Ждём с предвкушением встречи на новой площадке фестиваля в прекрасном черноморском Grand Hotel Kempinski  в городе Геленджике.</p>
+        <?= get_option('how_it_was_text');?>
       </div>
     </div>
     <div class="itwas__row-down">
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="QF0pgtTKpoU"></a></div>
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="I-ab3POMZRc"></a></div>
-      <div class="itwas__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="Bdg94vtHXU0"></a></div>
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos1_img'))[0];?>);">
+        <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos1');?>"></a>
+      </div>
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos2_img'))[0];?>);">
+        <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos2');?>"></a>
+      </div>
+      <div class="itwas__video" style="background-image: url(<?= wp_get_attachment_image_src(get_option('how_it_was_pos3_img'))[0];?>);">
+        <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('how_it_was_pos3');?>"></a>
+      </div>
     </div>
   </div>
 </section>
@@ -1018,18 +1022,41 @@
 <section class="challenge" id="skazat_glavnoe" data-page="3">
   <div class="container">
     <div class="itwas__row-up">
-      <div class="itwas__video-big"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="OgQq4N5efTQ"></a></div>
-      <div class="itwas__content">
-        <h2 class="itwas__title itwas__title--blue">СКАЗАТЬ ГЛАВНОЕ
-        </h2>
-        <p class="itwas__text">Ежедневно тысячи родителей, в погоне за тем, чтобы дать своему ребенку самое лучшее (образование, одежду, гаджеты) забывают о ГЛАВНОМ… </p>
-        <p class="itwas__text">Просим вас поддержать наш challenge! Запишите короткое видео-признание своему ребенку и выложите в соц. сеть с тегом</p>
-        <p class="itwas__text"><b>#СКАЗАТЬГЛАВНОЕ</b></p>
-        <p class="itwas__text">Давайте скажем своим детям самые важные слова…</p>
-        <p class="itwas__text">Помните, дети как зерна – то, что вы сеете в них в детстве, то и прорастает.</p>
+      <div class="itwas__video-big" style="background-image: url(<?= wp_get_attachment_image_src(get_option('say_main_video_bgr'), full)[0];?>);">
+        <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?= get_option('say_main_video_id');?>"></a></div>
+        <div class="itwas__content">
+          <h2 class="itwas__title itwas__title--blue">СКАЗАТЬ ГЛАВНОЕ
+          </h2>
+          <?= get_option('say_main_text');?>
+        </div>
       </div>
-    </div>
-    <div class="itwas__row-down challenge__list">
+      <div class="itwas__row-down challenge__list">
+
+        <?php
+        $args = array(
+          'posts_per_page' => 99,
+          'order' => 'ASC',
+          'post_type' => array( 'say_main' ),
+        );
+        $posts = new WP_Query( $args );
+        while( $posts->have_posts() ) :
+          $posts->the_post();
+          ?>
+
+          <div class="itwas__video" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+            <a class="for-whom__video-link js-modal-video" href="#" data-video-id="<?php echo get_post_meta( get_the_id(), 'say_main_video_id', true); ?>">
+            </a>
+            <span><?php echo the_title(); ?></span>
+          </div>
+
+          <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
+
+<!-- 
+
+
       <div class="itwas__video itwas__video_1"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="_XpZJmZPo84">
       </a><span>Сергей, 44 года</span></div>
       <div class="itwas__video itwas__video_2"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="1a8W-0nhbKg">
@@ -1061,7 +1088,7 @@
       <div class="itwas__video itwas__video_15"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="nQjF8Nejg2c">
       </a><span>Наталья</span></div>
       <div class="itwas__video itwas__video_16"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="VdnJdG8aQjQ">
-      </a><span>Ольга</span></div>
+      </a><span>Ольга</span></div> -->
     </div>
   </div>
 </section>
