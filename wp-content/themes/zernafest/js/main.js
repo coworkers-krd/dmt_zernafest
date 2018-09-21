@@ -568,9 +568,9 @@ activeMenu();
 //}
 //
 //preloader();
-jQuery('#offer-speaker-tel').mask("+7 (999) 999-9999");
-jQuery('#get-program-tel').mask("+7 (999) 999-9999");
-jQuery('#registration-tel').mask("+7 (999) 999-9999");
+// jQuery('#offer-speaker-tel').mask("+7 (999) 999-9999");
+// jQuery('#get-program-tel').mask("+7 (999) 999-9999");
+// jQuery('#registration-tel').mask("+7 (999) 999-9999");
 
 //модальное окно
 
