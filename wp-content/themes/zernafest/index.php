@@ -389,6 +389,8 @@
     </div>
   </div>
 </section>
+
+
 <section class="schedule" id="schedule" data-page="5">
   <div class="container container_schedule">
     <div class="schedule__days">
@@ -414,610 +416,248 @@
       </ul>
     </div>
     <div class="schedule__content">
+
+
+
       <div class="schedule__content-item schedule__content-item_active">
         <div class="schedule__content-titles">
           <h2 class="schedule__title">день первый</h2>
           <h2 class="schedule__title">2 ноября</h2>
         </div>
+
         <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Встреча гостей.</h3>
-              <div class="schedule__activity-time">8:00 - 15:40
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+
+          <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 1) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Регистрация участников. Расселение по номерам. Знакомства.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед.</h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">15:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Встреча гостей.</h3>
-              <div class="schedule__activity-time">15:45 - 17:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Регистрация участников. Расселение по номерам. Знакомства.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Открытие</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Торжественное открытие фестиваля.</div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
+    </div>
+
+
+
+
+    <div class="schedule__content-item">
+      <div class="schedule__content-titles">
+        <h2 class="schedule__title">день второй</h2>
+        <h2 class="schedule__title">3 ноября</h2>
       </div>
-      <div class="schedule__content-item">
-        <div class="schedule__content-titles">
-          <h2 class="schedule__title">день второй</h2>
-          <h2 class="schedule__title">3 ноября</h2>
-        </div>
-        <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">5:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Марафон для пап.</h3>
-              <div class="schedule__activity-time">5:30 - 6:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+      <ul class="schedule__list">
+                 <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 2) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Тренинг раскрытия мужского потенциала.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">6:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
-              <div class="schedule__activity-time">6:30 - 7:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Айкидо, семейная веселая зарядка</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">7:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Утренний настрой.</h3>
-              <div class="schedule__activity-time">7:45 - 8:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">8:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Завтрак.</h3>
-              <div class="schedule__activity-time">8:45 - 10:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
-              <div class="schedule__activity-time">10:30 - 14:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед. </h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Практикум.</h3>
-              <div class="schedule__activity-time">16:00 - 17:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Мастер-классы, совместные развивающие активности для взрослых и детей</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Культурная программа</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Культурная программа</div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
+    </div>
+    <div class="schedule__content-item">
+      <div class="schedule__content-titles">
+        <h2 class="schedule__title">день третий</h2>
+        <h2 class="schedule__title">4 ноября</h2>
       </div>
-      <div class="schedule__content-item">
-        <div class="schedule__content-titles">
-          <h2 class="schedule__title">день третий</h2>
-          <h2 class="schedule__title">4 ноября</h2>
-        </div>
-        <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">5:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Марафон для пап.</h3>
-              <div class="schedule__activity-time">5:30 - 6:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+      <ul class="schedule__list">
+                 <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 3) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Тренинг раскрытия мужского потенциала.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">6:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
-              <div class="schedule__activity-time">6:30 - 7:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Айкидо, семейная веселая зарядка</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">7:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Утренний настрой.</h3>
-              <div class="schedule__activity-time">7:45 - 8:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Утренний настрой.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">8:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Завтрак.</h3>
-              <div class="schedule__activity-time">8:45 - 10:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
-              <div class="schedule__activity-time">10:30 - 14:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед. </h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Практикум.</h3>
-              <div class="schedule__activity-time">16:00 - 17:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Мастер-классы, совместные развивающие активности для взрослых и детей</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Культурная программа</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
+    </div>
+    <div class="schedule__content-item">
+      <div class="schedule__content-titles">
+        <h2 class="schedule__title">день четвёртый</h2>
+        <h2 class="schedule__title">5 ноября</h2>
       </div>
-      <div class="schedule__content-item">
-        <div class="schedule__content-titles">
-          <h2 class="schedule__title">день четвёртый</h2>
-          <h2 class="schedule__title">5 ноября</h2>
-        </div>
-        <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">5:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Марафон для пап.</h3>
-              <div class="schedule__activity-time">5:30 - 6:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+      <ul class="schedule__list">
+                 <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 4) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Тренинг раскрытия мужского потенциала.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">6:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
-              <div class="schedule__activity-time">6:30 - 7:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Айкидо, семейная веселая зарядка</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">7:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Утренний настрой.</h3>
-              <div class="schedule__activity-time">7:45 - 8:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">8:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Завтрак.</h3>
-              <div class="schedule__activity-time">8:45 - 10:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
-              <div class="schedule__activity-time">10:30 - 14:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед. </h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Практикум.</h3>
-              <div class="schedule__activity-time">16:00 - 17:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Мастер-классы, совместные развивающие активности для взрослых и детей</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Культурная программа</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
+    </div>
+    <div class="schedule__content-item">
+      <div class="schedule__content-titles">
+        <h2 class="schedule__title">день пятый</h2>
+        <h2 class="schedule__title">6 ноября</h2>
       </div>
-      <div class="schedule__content-item">
-        <div class="schedule__content-titles">
-          <h2 class="schedule__title">день пятый</h2>
-          <h2 class="schedule__title">6 ноября</h2>
-        </div>
-        <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">5:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Марафон для пап.</h3>
-              <div class="schedule__activity-time">5:30 - 6:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+      <ul class="schedule__list">
+                  <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 5) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Тренинг раскрытия мужского потенциала.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">6:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
-              <div class="schedule__activity-time">6:30 - 7:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Айкидо, семейная веселая зарядка</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">7:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Утренний настрой.</h3>
-              <div class="schedule__activity-time">7:45 - 8:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">8:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Завтрак.</h3>
-              <div class="schedule__activity-time">8:45 - 10:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Образова&shy;тельная программа. </h3>
-              <div class="schedule__activity-time">10:30 - 14:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">14:15</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Обед. </h3>
-              <div class="schedule__activity-time">14:15 - 15:45
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">16:00</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Практикум.</h3>
-              <div class="schedule__activity-time">16:00 - 17:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Мастер-классы, совместные развивающие активности для взрослых и детей</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">17:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Ужин.</h3>
-              <div class="schedule__activity-time">17:45 - 19:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">19:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Культурная программа</h3>
-              <div class="schedule__activity-time">19:30 - 21:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Культурная программа</div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
+    </div>
+    <div class="schedule__content-item">
+      <div class="schedule__content-titles">
+        <h2 class="schedule__title">день шестой</h2>
+        <h2 class="schedule__title">7 ноября</h2>
       </div>
-      <div class="schedule__content-item">
-        <div class="schedule__content-titles">
-          <h2 class="schedule__title">день шестой</h2>
-          <h2 class="schedule__title">7 ноября</h2>
-        </div>
-        <ul class="schedule__list">
-          <li class="schedule__item">
-            <div class="schedule__time-item">5:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Марафон для пап.</h3>
-              <div class="schedule__activity-time">5:30 - 6:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
+      <ul class="schedule__list">
+                 <?php
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'ASC',
+            'orderby' => 'date',
+            'post_type' => array( 'schedule' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            if(get_post_meta( get_the_id(), 'schedule_day', true) == 6) {
+              ?>
+              <li class="schedule__item">
+                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+                <div class="schedule__activity-item">
+                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+                  <svg class="shedule__icon-clock">
+                    <use xlink:href="img/icons/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
               </div>
-              <div class="schedule__activity-types">Тренинг раскрытия мужского потенциала.</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">6:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Оздорови&shy;тельная программа.</h3>
-              <div class="schedule__activity-time">6:30 - 7:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types">Айкидо, семейная веселая зарядка</div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">7:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Утренний настрой.</h3>
-              <div class="schedule__activity-time">7:45 - 8:30
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">8:45</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">Завтрак.</h3>
-              <div class="schedule__activity-time">8:45 - 10:15
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-          <li class="schedule__item">
-            <div class="schedule__time-item">10:30</div>
-            <div class="schedule__activity-item">
-              <h3 class="schedule__activity-title">ВЫЕЗД</h3>
-              <div class="schedule__activity-time">10:30 - 14:00
-                <svg class="shedule__icon-clock">
-                  <use xlink:href="img/icons/sprite.svg#clock"></use>
-                </svg>
-              </div>
-              <div class="schedule__activity-types"></div>
-            </div>
-          </li>
-        </ul>
-      </div>
+            </li>
+            <?php
+          }
+        endwhile;
+        wp_reset_postdata();
+        ?>
+      </ul>
     </div>
   </div>
-  <button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить полную программу</button>
+</div>
+<button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить полную программу</button>
 </section>
+
+
+
+
+
+
+
 
 <section class="challenge" id="skazat_glavnoe" data-page="3">
   <div class="container">
@@ -1053,145 +693,109 @@
         endwhile;
         wp_reset_postdata();
         ?>
-
-<!-- 
-
-
-      <div class="itwas__video itwas__video_1"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="_XpZJmZPo84">
-      </a><span>Сергей, 44 года</span></div>
-      <div class="itwas__video itwas__video_2"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="1a8W-0nhbKg">
-      </a><span>Карина, 47 лет</span></div>
-      <div class="itwas__video itwas__video_3"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="ySMqFUF-rvg">
-      </a><span>Артем, 38 лет</span></div>
-      <div class="itwas__video itwas__video_4"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="8eH2Mms5ffs">
-      </a><span>Промо проекта</span></div>
-      <div class="itwas__video itwas__video_5"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="R69GVz10g8k">
-      </a><span>Алексей</span></div>
-      <div class="itwas__video itwas__video_6"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="QXyVQ48xCPA">
-      </a><span>Анастасия</span></div>
-      <div class="itwas__video itwas__video_7"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="HEfkey6uf80">
-      </a><span>Алексей</span></div>
-      <div class="itwas__video itwas__video_8"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="mA0LvlQuWds">
-      </a><span>Артем</span></div>
-      <div class="itwas__video itwas__video_9"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="0zwxsDMrtRs">
-      </a><span>Елена</span></div>
-      <div class="itwas__video itwas__video_10"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="YgYv5ZfCWQg">
-      </a><span>Евгений</span></div>
-      <div class="itwas__video itwas__video_11"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="T_4C-u5g3QM">
-      </a><span>Диана</span></div>
-      <div class="itwas__video itwas__video_12"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="X6AY-bsObT4">
-      </a><span>Дина</span></div>
-      <div class="itwas__video itwas__video_13"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="-PLM-kDZIFQ">
-      </a><span>Ирина</span></div>
-      <div class="itwas__video itwas__video_14"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="B8yT-RurSUs">
-      </a><span>Мария</span></div>
-      <div class="itwas__video itwas__video_15"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="nQjF8Nejg2c">
-      </a><span>Наталья</span></div>
-      <div class="itwas__video itwas__video_16"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="VdnJdG8aQjQ">
-      </a><span>Ольга</span></div> -->
-    </div>
-  </div>
-</section>
-
-
-<section class="gallery" id="gallery" data-page="6">
-  <div class="head">
-    <div class="head__title-block">
-      <h2 class="head__title">галерея
-        <div class="head__title head__title_small">фестиваля </div>
-      </h2>
-    </div>
-    <div class="head__description">
-      <div class="head__description-block head__description-block_up">
-        <div class="head__number">1000  </div>
-        <div class="head__text">участников</div>
-      </div>
-      <div class="head__description-block">
-        <div class="head__number">20</div>
-        <div class="head__text">стран мира</div>
       </div>
     </div>
-  </div>
-  <div class="container container_gallery">
-    <ul class="gallery__list">
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/arqpMUahr0.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/C0GO27PPqgM.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/EpQslXBg_5Y.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/fZ0bPUTv6Q0.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/FzaGLHNQ8F8.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/GwnjfJODt94.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/ieSEtU1EWlc.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/iJQZtqunMBk.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/joIoJdvXPJE.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/KnGywM44EMM.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/o_cz_ete_P0.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/pJE7Rkcfgyk.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/uQKKfssELKA.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/vIDvFMqwWhQ.jpg"></li>
-      <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/xryIHary73U.jpg"></li>
-    </ul>
-  </div>
-</section>
-<section class="reviews" id="reviews" data-page="7">
-  <div class="head head_reviews">
-    <div class="head__title-block">
-      <h2 class="head__title">отзывы
-        <div class="head__title head__title_small">участников </div>
-      </h2>
-    </div>
-    <div class="head__description">
-      <div class="head__description-block head__description-block_up">
-        <div class="head__number">40  </div>
-        <div class="head__text">мастер-классов</div>
+  </section>
+
+
+  <section class="gallery" id="gallery" data-page="6">
+    <div class="head">
+      <div class="head__title-block">
+        <h2 class="head__title">галерея
+          <div class="head__title head__title_small">фестиваля </div>
+        </h2>
       </div>
-      <div class="head__description-block">
-        <div class="head__number">20</div>
-        <div class="head__text">лекций</div>
+      <div class="head__description">
+        <div class="head__description-block head__description-block_up">
+          <div class="head__number">1000  </div>
+          <div class="head__text">участников</div>
+        </div>
+        <div class="head__description-block">
+          <div class="head__number">20</div>
+          <div class="head__text">стран мира</div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="reviews__block">
-    <div class="reviews__img-block">
-      <div class="rewiews__img"><img class="rewiews__big-img" alt="большой слайд" src="">
-        <div class="rewiews__arrow-left"></div>
-        <div class="rewiews__arrow-right"></div>
+    <div class="container container_gallery">
+      <ul class="gallery__list">
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/arqpMUahr0.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/C0GO27PPqgM.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/EpQslXBg_5Y.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/fZ0bPUTv6Q0.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/FzaGLHNQ8F8.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/GwnjfJODt94.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/ieSEtU1EWlc.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/iJQZtqunMBk.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/joIoJdvXPJE.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/KnGywM44EMM.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/o_cz_ete_P0.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/pJE7Rkcfgyk.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/uQKKfssELKA.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/vIDvFMqwWhQ.jpg"></li>
+        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/xryIHary73U.jpg"></li>
+      </ul>
+    </div>
+  </section>
+  <section class="reviews" id="reviews" data-page="7">
+    <div class="head head_reviews">
+      <div class="head__title-block">
+        <h2 class="head__title">отзывы
+          <div class="head__title head__title_small">участников </div>
+        </h2>
       </div>
-      <div class="reviews__slider">
-
-        <?php
-        $args = array(
-          'posts_per_page' => 99,
-          'order' => 'DESC',
-          'post_type' => array( 'review' ),
-        );
-        $posts = new WP_Query( $args );
-        while( $posts->have_posts() ) :
-          $posts->the_post();
-          ?>
-
-          <div class="reviews__slide">
-            <img class="reviews__slide-img" alt="" src="<?php the_post_thumbnail_url(); ?>">
-            <div class="reviews__content">
-              <h3 class="reviews__slide-name"><?php echo the_title(); ?></h3>
-              <div class="reviews__slide-position"><?php echo get_post_meta( get_the_id(), 'review_city', true); ?></div>
-              <div class="reviews__slide-comment"><?php echo the_content(); ?></div>            
-            </div>
-          </div>
+      <div class="head__description">
+        <div class="head__description-block head__description-block_up">
+          <div class="head__number">40  </div>
+          <div class="head__text">мастер-классов</div>
+        </div>
+        <div class="head__description-block">
+          <div class="head__number">20</div>
+          <div class="head__text">лекций</div>
+        </div>
+      </div>
+    </div>
+    <div class="reviews__block">
+      <div class="reviews__img-block">
+        <div class="rewiews__img"><img class="rewiews__big-img" alt="большой слайд" src="">
+          <div class="rewiews__arrow-left"></div>
+          <div class="rewiews__arrow-right"></div>
+        </div>
+        <div class="reviews__slider">
 
           <?php
-        endwhile;
-        wp_reset_postdata();
-        ?>
+          $args = array(
+            'posts_per_page' => 99,
+            'order' => 'DESC',
+            'post_type' => array( 'review' ),
+          );
+          $posts = new WP_Query( $args );
+          while( $posts->have_posts() ) :
+            $posts->the_post();
+            ?>
 
+            <div class="reviews__slide">
+              <img class="reviews__slide-img" alt="" src="<?php the_post_thumbnail_url(); ?>">
+              <div class="reviews__content">
+                <h3 class="reviews__slide-name"><?php echo the_title(); ?></h3>
+                <div class="reviews__slide-position"><?php echo get_post_meta( get_the_id(), 'review_city', true); ?></div>
+                <div class="reviews__slide-comment"><?php echo the_content(); ?></div>            
+              </div>
+            </div>
+
+            <?php
+          endwhile;
+          wp_reset_postdata();
+          ?>
+
+        </div>
+      </div>
+      <div class="reviews__content-block">
+        <div class="reviews__content-vis">
+
+        </div>
       </div>
     </div>
-    <div class="reviews__content-block">
-      <div class="reviews__content-vis">
-
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<?php get_footer(); ?>
+  <?php get_footer(); ?>

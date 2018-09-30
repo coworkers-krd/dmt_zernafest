@@ -502,6 +502,70 @@ $metabox = array(
 new trueMetaBox( $metabox );
 
 
+// Расписание фестиваля
+add_action( 'init', 'schedule_item' ); // Использовать функцию только внутри хука init
+function schedule_item() {
+	$labels = array(
+		'name' => 'Расписание фестиваля',
+		'singular_name' => 'Расписание фестиваля',
+		'add_new' => 'Добавить событие',
+		'add_new_item' => 'Добавить новое событие',
+		'edit_item' => 'Редактировать событие',
+		'new_item' => 'Новое событие',
+		'all_items' => 'Все события',
+		'view_item' => 'Просмотр событий на сайте',
+		'search_items' => 'Искать события',
+		'not_found' => 'Событий не найдено.',
+		'not_found_in_trash' => 'В корзине нет событий',
+		'menu_name' => 'Расписание фестиваля'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-editor-ul',
+		'menu_position' => 5,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'schedule', $args);
+}
+
+$metabox = array(
+	'id' =>	'schedule',
+	'capability' => 'edit_posts',
+	'name' => 'Расписание дня',
+	'post_type' => array('schedule'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'name',
+			'label' => 'Название мероприятия',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Введите название мероприятия'
+		),
+		array(
+			'id'	=> 'day',
+			'label' => 'День проведения',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Введите день проведения'
+		),
+		array(
+			'id'	=> 'time_start',
+			'label' => 'Время начала',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Введите время начала'
+		),
+		array(
+			'id'	=> 'time_int',
+			'label' => 'Временной инервал',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Введите временной интервал'
+		),
+	)
+);
+new trueMetaBox( $metabox );
+
+
 
 
 
@@ -515,7 +579,6 @@ function remove_admin_submenu_items() {
 	remove_menu_page( 'plugins.php' );
 	remove_menu_page( 'users.php' );
 	remove_menu_page( 'upload.php' );
-	remove_menu_page( 'tools.php' );
 	remove_menu_page( 'index.php' );
 }
 add_action( 'admin_menu', 'remove_admin_submenu_items');

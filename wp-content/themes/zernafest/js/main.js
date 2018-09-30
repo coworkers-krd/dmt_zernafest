@@ -275,36 +275,18 @@ modalSpeakers();
 // СЕКЦИЯ РАСПИСАНИЕ
 
 function sheduleSection() {
-	//
-
 	const sheduleBtn = document.querySelectorAll(".schedule__days-day");
 	const sheduleContent = document.querySelectorAll(".schedule__content-item");
-
 	for (let i = 0; i < sheduleBtn.length; i++) {
-
 		for (let l = 0; l < sheduleBtn.length; l++) {
-
-
-
 			sheduleBtn[i].addEventListener('click', () => {
-
-
 				sheduleBtn[l].classList.remove('schedule__days-day_active');
 				sheduleBtn[i].classList.add('schedule__days-day_active');
-
 				sheduleContent[l].classList.remove('schedule__content-item_active');
-
 				sheduleContent[i].classList.add('schedule__content-item_active');
-
-
-
-
 			});
-
 		}
 	}
-
-
 };
 
 sheduleSection();

@@ -3205,7 +3205,7 @@ p {
     }
     @media screen and (max-width: 992px) {
       .schedule__activity-item {
-        width: 60%; 
+        width: 70%; 
       } 
     }
     @media screen and (max-width: 550px) {
