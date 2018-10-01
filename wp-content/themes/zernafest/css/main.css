@@ -3486,7 +3486,7 @@ p {
       } 
     }
 
-    .gallery__img {
+    .gallery__item img {
       height: auto;
       width: 100%;
       position: absolute;

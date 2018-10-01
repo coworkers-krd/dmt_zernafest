@@ -468,186 +468,186 @@
         <h2 class="schedule__title">3 ноября</h2>
       </div>
       <ul class="schedule__list">
-                 <?php
-          $args = array(
-            'posts_per_page' => 99,
-            'order' => 'ASC',
-            'orderby' => 'date',
-            'post_type' => array( 'schedule' ),
-          );
-          $posts = new WP_Query( $args );
-          while( $posts->have_posts() ) :
-            $posts->the_post();
-            if(get_post_meta( get_the_id(), 'schedule_day', true) == 2) {
-              ?>
-              <li class="schedule__item">
-                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
-                <div class="schedule__activity-item">
-                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
-                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
-                  <svg class="shedule__icon-clock">
-                    <use xlink:href="img/icons/sprite.svg#clock"></use>
-                  </svg>
-                </div>
-                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
-              </div>
-            </li>
-            <?php
-          }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-      </ul>
-    </div>
-    <div class="schedule__content-item">
-      <div class="schedule__content-titles">
-        <h2 class="schedule__title">день третий</h2>
-        <h2 class="schedule__title">4 ноября</h2>
-      </div>
-      <ul class="schedule__list">
-                 <?php
-          $args = array(
-            'posts_per_page' => 99,
-            'order' => 'ASC',
-            'orderby' => 'date',
-            'post_type' => array( 'schedule' ),
-          );
-          $posts = new WP_Query( $args );
-          while( $posts->have_posts() ) :
-            $posts->the_post();
-            if(get_post_meta( get_the_id(), 'schedule_day', true) == 3) {
-              ?>
-              <li class="schedule__item">
-                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
-                <div class="schedule__activity-item">
-                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
-                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
-                  <svg class="shedule__icon-clock">
-                    <use xlink:href="img/icons/sprite.svg#clock"></use>
-                  </svg>
-                </div>
-                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
-              </div>
-            </li>
-            <?php
-          }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-      </ul>
-    </div>
-    <div class="schedule__content-item">
-      <div class="schedule__content-titles">
-        <h2 class="schedule__title">день четвёртый</h2>
-        <h2 class="schedule__title">5 ноября</h2>
-      </div>
-      <ul class="schedule__list">
-                 <?php
-          $args = array(
-            'posts_per_page' => 99,
-            'order' => 'ASC',
-            'orderby' => 'date',
-            'post_type' => array( 'schedule' ),
-          );
-          $posts = new WP_Query( $args );
-          while( $posts->have_posts() ) :
-            $posts->the_post();
-            if(get_post_meta( get_the_id(), 'schedule_day', true) == 4) {
-              ?>
-              <li class="schedule__item">
-                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
-                <div class="schedule__activity-item">
-                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
-                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
-                  <svg class="shedule__icon-clock">
-                    <use xlink:href="img/icons/sprite.svg#clock"></use>
-                  </svg>
-                </div>
-                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
-              </div>
-            </li>
-            <?php
-          }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-      </ul>
-    </div>
-    <div class="schedule__content-item">
-      <div class="schedule__content-titles">
-        <h2 class="schedule__title">день пятый</h2>
-        <h2 class="schedule__title">6 ноября</h2>
-      </div>
-      <ul class="schedule__list">
-                  <?php
-          $args = array(
-            'posts_per_page' => 99,
-            'order' => 'ASC',
-            'orderby' => 'date',
-            'post_type' => array( 'schedule' ),
-          );
-          $posts = new WP_Query( $args );
-          while( $posts->have_posts() ) :
-            $posts->the_post();
-            if(get_post_meta( get_the_id(), 'schedule_day', true) == 5) {
-              ?>
-              <li class="schedule__item">
-                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
-                <div class="schedule__activity-item">
-                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
-                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
-                  <svg class="shedule__icon-clock">
-                    <use xlink:href="img/icons/sprite.svg#clock"></use>
-                  </svg>
-                </div>
-                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
-              </div>
-            </li>
-            <?php
-          }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-      </ul>
-    </div>
-    <div class="schedule__content-item">
-      <div class="schedule__content-titles">
-        <h2 class="schedule__title">день шестой</h2>
-        <h2 class="schedule__title">7 ноября</h2>
-      </div>
-      <ul class="schedule__list">
-                 <?php
-          $args = array(
-            'posts_per_page' => 99,
-            'order' => 'ASC',
-            'orderby' => 'date',
-            'post_type' => array( 'schedule' ),
-          );
-          $posts = new WP_Query( $args );
-          while( $posts->have_posts() ) :
-            $posts->the_post();
-            if(get_post_meta( get_the_id(), 'schedule_day', true) == 6) {
-              ?>
-              <li class="schedule__item">
-                <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
-                <div class="schedule__activity-item">
-                  <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
-                  <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
-                  <svg class="shedule__icon-clock">
-                    <use xlink:href="img/icons/sprite.svg#clock"></use>
-                  </svg>
-                </div>
-                <div class="schedule__activity-types"><?php echo the_content(); ?></div>
-              </div>
-            </li>
-            <?php
-          }
-        endwhile;
-        wp_reset_postdata();
-        ?>
-      </ul>
-    </div>
+       <?php
+       $args = array(
+        'posts_per_page' => 99,
+        'order' => 'ASC',
+        'orderby' => 'date',
+        'post_type' => array( 'schedule' ),
+      );
+       $posts = new WP_Query( $args );
+       while( $posts->have_posts() ) :
+        $posts->the_post();
+        if(get_post_meta( get_the_id(), 'schedule_day', true) == 2) {
+          ?>
+          <li class="schedule__item">
+            <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+            <div class="schedule__activity-item">
+              <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+              <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+              <svg class="shedule__icon-clock">
+                <use xlink:href="img/icons/sprite.svg#clock"></use>
+              </svg>
+            </div>
+            <div class="schedule__activity-types"><?php echo the_content(); ?></div>
+          </div>
+        </li>
+        <?php
+      }
+    endwhile;
+    wp_reset_postdata();
+    ?>
+  </ul>
+</div>
+<div class="schedule__content-item">
+  <div class="schedule__content-titles">
+    <h2 class="schedule__title">день третий</h2>
+    <h2 class="schedule__title">4 ноября</h2>
   </div>
+  <ul class="schedule__list">
+   <?php
+   $args = array(
+    'posts_per_page' => 99,
+    'order' => 'ASC',
+    'orderby' => 'date',
+    'post_type' => array( 'schedule' ),
+  );
+   $posts = new WP_Query( $args );
+   while( $posts->have_posts() ) :
+    $posts->the_post();
+    if(get_post_meta( get_the_id(), 'schedule_day', true) == 3) {
+      ?>
+      <li class="schedule__item">
+        <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+        <div class="schedule__activity-item">
+          <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+          <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+          <svg class="shedule__icon-clock">
+            <use xlink:href="img/icons/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <div class="schedule__activity-types"><?php echo the_content(); ?></div>
+      </div>
+    </li>
+    <?php
+  }
+endwhile;
+wp_reset_postdata();
+?>
+</ul>
+</div>
+<div class="schedule__content-item">
+  <div class="schedule__content-titles">
+    <h2 class="schedule__title">день четвёртый</h2>
+    <h2 class="schedule__title">5 ноября</h2>
+  </div>
+  <ul class="schedule__list">
+   <?php
+   $args = array(
+    'posts_per_page' => 99,
+    'order' => 'ASC',
+    'orderby' => 'date',
+    'post_type' => array( 'schedule' ),
+  );
+   $posts = new WP_Query( $args );
+   while( $posts->have_posts() ) :
+    $posts->the_post();
+    if(get_post_meta( get_the_id(), 'schedule_day', true) == 4) {
+      ?>
+      <li class="schedule__item">
+        <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+        <div class="schedule__activity-item">
+          <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+          <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+          <svg class="shedule__icon-clock">
+            <use xlink:href="img/icons/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <div class="schedule__activity-types"><?php echo the_content(); ?></div>
+      </div>
+    </li>
+    <?php
+  }
+endwhile;
+wp_reset_postdata();
+?>
+</ul>
+</div>
+<div class="schedule__content-item">
+  <div class="schedule__content-titles">
+    <h2 class="schedule__title">день пятый</h2>
+    <h2 class="schedule__title">6 ноября</h2>
+  </div>
+  <ul class="schedule__list">
+    <?php
+    $args = array(
+      'posts_per_page' => 99,
+      'order' => 'ASC',
+      'orderby' => 'date',
+      'post_type' => array( 'schedule' ),
+    );
+    $posts = new WP_Query( $args );
+    while( $posts->have_posts() ) :
+      $posts->the_post();
+      if(get_post_meta( get_the_id(), 'schedule_day', true) == 5) {
+        ?>
+        <li class="schedule__item">
+          <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+          <div class="schedule__activity-item">
+            <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+            <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+            <svg class="shedule__icon-clock">
+              <use xlink:href="img/icons/sprite.svg#clock"></use>
+            </svg>
+          </div>
+          <div class="schedule__activity-types"><?php echo the_content(); ?></div>
+        </div>
+      </li>
+      <?php
+    }
+  endwhile;
+  wp_reset_postdata();
+  ?>
+</ul>
+</div>
+<div class="schedule__content-item">
+  <div class="schedule__content-titles">
+    <h2 class="schedule__title">день шестой</h2>
+    <h2 class="schedule__title">7 ноября</h2>
+  </div>
+  <ul class="schedule__list">
+   <?php
+   $args = array(
+    'posts_per_page' => 99,
+    'order' => 'ASC',
+    'orderby' => 'date',
+    'post_type' => array( 'schedule' ),
+  );
+   $posts = new WP_Query( $args );
+   while( $posts->have_posts() ) :
+    $posts->the_post();
+    if(get_post_meta( get_the_id(), 'schedule_day', true) == 6) {
+      ?>
+      <li class="schedule__item">
+        <div class="schedule__time-item"><?php echo get_post_meta( get_the_id(), 'schedule_time_start', true); ?></div>
+        <div class="schedule__activity-item">
+          <h3 class="schedule__activity-title"><?php echo get_post_meta( get_the_id(), 'schedule_name', true); ?></h3>
+          <div class="schedule__activity-time"><?php echo get_post_meta( get_the_id(), 'schedule_time_int', true); ?>
+          <svg class="shedule__icon-clock">
+            <use xlink:href="img/icons/sprite.svg#clock"></use>
+          </svg>
+        </div>
+        <div class="schedule__activity-types"><?php echo the_content(); ?></div>
+      </div>
+    </li>
+    <?php
+  }
+endwhile;
+wp_reset_postdata();
+?>
+</ul>
+</div>
+</div>
 </div>
 <button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить полную программу</button>
 </section>
@@ -716,23 +716,27 @@
         </div>
       </div>
     </div>
-    <div class="container container_gallery">
+    <div class="container container_gallery" style="display: none;">
       <ul class="gallery__list">
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/arqpMUahr0.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/C0GO27PPqgM.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/EpQslXBg_5Y.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/fZ0bPUTv6Q0.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/FzaGLHNQ8F8.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/GwnjfJODt94.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/ieSEtU1EWlc.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/iJQZtqunMBk.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/joIoJdvXPJE.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/KnGywM44EMM.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/o_cz_ete_P0.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/pJE7Rkcfgyk.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/uQKKfssELKA.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/vIDvFMqwWhQ.jpg"></li>
-        <li class="gallery__item"><img class="gallery__img" alt="" src="<?php echo get_template_directory_uri(); ?>/img/gallery/xryIHary73U.jpg"></li>
+        <?php
+        $args = array(
+          'posts_per_page' => 99,
+          'order' => 'ASC',
+          'post_type' => array( 'gallery' ),
+        );
+        $posts = new WP_Query( $args );
+        while( $posts->have_posts() ) :
+          $posts->the_post();
+          ?>
+
+          <li class="gallery__item">
+            <?php echo wp_get_attachment_image(get_post_meta( get_the_id(), 'gallery_pic', true), full ); ?>
+          </li>
+
+          <?php
+        endwhile;
+        wp_reset_postdata();
+        ?>
       </ul>
     </div>
   </section>

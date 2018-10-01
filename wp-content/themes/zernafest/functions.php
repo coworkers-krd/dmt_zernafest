@@ -305,6 +305,57 @@ $metabox = array(
 new trueMetaBox( $metabox );
 
 
+
+
+// Добавление гостей
+add_action( 'init', 'guest_item' ); // Использовать функцию только внутри хука init
+function guest_item() {
+	$labels = array(
+		'name' => 'Гости фестиваля',
+		'singular_name' => 'Гость фестиваля',
+		'add_new' => 'Добавить гостя фестиваля',
+		'add_new_item' => 'Добавить гостя фестиваля',
+		'edit_item' => 'Редактировать гостя фестиваля',
+		'new_item' => 'Новый гость фестиваля',
+		'all_items' => 'Все гости',
+		'view_item' => 'Просмотр гостей на сайте',
+		'search_items' => 'Искать гостей',
+		'not_found' => 'Гостей не найдено.',
+		'not_found_in_trash' => 'В корзине нет гостей.',
+		'menu_name' => 'Гости фестиваля'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-universal-access',
+		'menu_position' => 2,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'guest', $args);
+}
+
+$metabox = array(
+	'id' =>	'guest',
+	'capability' => 'edit_posts',
+	'name' => 'Тип выступления',
+	'post_type' => array('guest'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'type',
+			'label' => 'Тип выступления',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Гость фестиваля'
+		)
+	)
+);
+new trueMetaBox( $metabox );
+
+
+
+
+
 // Добавление для кого фестиваль
 add_action( 'init', 'for_whom_item' ); // Использовать функцию только внутри хука init
 function for_whom_item() {
@@ -566,6 +617,49 @@ $metabox = array(
 new trueMetaBox( $metabox );
 
 
+// ГАЛЕРЕЯ фестиваля
+add_action( 'init', 'gallery_item' ); // Использовать функцию только внутри хука init
+function gallery_item() {
+	$labels = array(
+		'name' => 'ГАЛЕРЕЯ фестиваля',
+		'singular_name' => 'ГАЛЕРЕЯ фестиваля',
+		'add_new' => 'Добавить фото',
+		'add_new_item' => 'Добавить новое фото',
+		'edit_item' => 'Редактировать фото',
+		'new_item' => 'Новое фото',
+		'all_items' => 'Все фото',
+		'view_item' => 'Просмотр фото на сайте',
+		'search_items' => 'Искать фото',
+		'not_found' => 'Фото не найдено.',
+		'not_found_in_trash' => 'В корзине нет фото',
+		'menu_name' => 'ГАЛЕРЕЯ фестиваля'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-format-gallery',
+		'menu_position' => 5,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'gallery', $args);
+}
+$metabox = array(
+	'id' =>	'gallery',
+	'capability' => 'edit_posts',
+	'name' => 'Фотография',
+	'post_type' => array('gallery'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'pic',
+			'label' => 'Загрузите фотографию',
+			'type'	=> 'image',
+			'placeholder' 	=> 'Загрузите фотографию'
+		),
+	)
+);
+new trueMetaBox( $metabox );
 
 
 
