@@ -1800,7 +1800,6 @@ p {
   @media screen and (max-width: 768px) {
     .speakers__name {
       width: 100%;
-      white-space: nowrap; 
     } 
   }
 

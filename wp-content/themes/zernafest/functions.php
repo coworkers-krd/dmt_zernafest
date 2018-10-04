@@ -70,8 +70,32 @@ $mission = array(
 			'name' => 'Миссия фестиваля',
 			'fields' => array(
 				array(
+					'id'			=> 'number_1',
+					'label'			=> 'Число 1',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_1',
+					'label'			=> 'Текст 1',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'number_2',
+					'label'			=> 'Число 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_2',
+					'label'			=> 'Текст 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
 					'id'			=> 'text',
-					'label'			=> 'Заголовок',
+					'label'			=> 'Текст',
 					'type'			=> 'textarea', // table of types is above
 					'default'		=> ''
 				)
@@ -82,6 +106,93 @@ $mission = array(
 );
 if( class_exists( 'trueOptionspage' ) )
 	new trueOptionspage( $mission );
+
+$reviews = array(
+	'slug'	=>	'reviews',
+	'title' => 'Отзывы о фестивале',
+	'menuname' => 'Отзывы о фестивале',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'main_promo',
+			'name' => 'Миссия фестиваля',
+			'fields' => array(
+				array(
+					'id'			=> 'number_1',
+					'label'			=> 'Число 1',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_1',
+					'label'			=> 'Текст 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'number_2',
+					'label'			=> 'Число 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_2',
+					'label'			=> 'Текст 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $reviews );
+
+
+$gallery = array(
+	'slug'	=>	'gallery',
+	'title' => 'Галерея фестиваля',
+	'menuname' => 'Галерея фестиваля',
+	'capability'=>	'manage_options',
+	'sections' => array(
+		// first section
+		array(
+			'id' => 'main_promo',
+			'name' => 'Миссия фестиваля',
+			'fields' => array(
+				array(
+					'id'			=> 'number_1',
+					'label'			=> 'Число 1',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_1',
+					'label'			=> 'Текст 1',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'number_2',
+					'label'			=> 'Число 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+				array(
+					'id'			=> 'text_2',
+					'label'			=> 'Текст 2',
+					'type'			=> 'text', // table of types is above
+					'default'		=> ''
+				),
+			)
+		),
+
+	)
+);
+if( class_exists( 'trueOptionspage' ) )
+	new trueOptionspage( $gallery );
 
 
 $how_it_was = array(

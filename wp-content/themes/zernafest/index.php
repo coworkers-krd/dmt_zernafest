@@ -35,12 +35,12 @@
     <h2 class="mission__title">миссия<span class="mission__title_small">фестиваля</span></h2>
     <div class="mission__numbers">
       <div class="mission__numbers-col">
-        <div class="mission__number mission__number_five">5</div>
-        <div class="mission__descr">дней фестиваля </div>
+        <div class="mission__number mission__number_five"><?= get_option('mission_number_1');?></div>
+        <div class="mission__descr"><?= get_option('mission_text_1');?></div>
       </div>
       <div class="mission__numbers-col">
-        <div class="mission__number">30</div>
-        <div class="mission__descr">лучших педагогов-экспертов</div>
+        <div class="mission__number"><?= get_option('mission_number_2');?></div>
+        <div class="mission__descr"><?= get_option('mission_text_2');?></div>
       </div>
     </div>
   </div>
@@ -122,21 +122,28 @@
       <div class="speakers__subtitle">ФЕСТИВАЛЯ</div>
     </h2>
     <ul class="speakers__list">
-      <li class="speakers__item"><img class="speakers__avatar" alt="аватар ШАЛВА АМОНАШВИЛИ" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_6.jpeg">
-        <div class="speakers__position">гость фестиваля</div>
-        <h3 class="speakers__name">ДИНА КОРЗУН</h3><a class="speakers__fb-link" href="#"></a>
-        <div class="speakers__content">Дина Корзун российская актриса театра и кино, соучредитель российского благотворительного фонда «Подари жизнь». Мама троих детей.</div>
-      </li>
-<!--       <li class="speakers__item"><img class="speakers__avatar" alt="аватар МАРИНА ТАРГАКОВА" src="<?php echo get_template_directory_uri(); ?>/img/speakers/speaker_7.jpeg">
-        <div class="speakers__position">гость фестиваля</div>
-        <h3 class="speakers__name">ВЕРА ПОЛОЗКОВА</h3><a class="speakers__fb-link" href="#"></a>
-        <div class="speakers__content">российская поэтесса, актриса, певица</div>
-      </li> -->
-      <li class="speakers__item"><img class="speakers__avatar" alt="" src="<?php echo get_template_directory_uri(); ?>/img/speakers/user.svg">
-        <div class="speakers__position">гость фестиваля</div>
-        <h3 class="speakers__name">Секретный гость</h3><a class="speakers__fb-link" href="#"></a>
-        <div class="speakers__content"></div>
-      </li>
+
+
+      <?php
+      $args = array(
+        'posts_per_page' => 99,
+        'order' => 'ASC',
+        'post_type' => array( 'guest' ),
+      );
+      $posts = new WP_Query( $args );
+      while( $posts->have_posts() ) :
+        $posts->the_post();
+        ?>
+
+        <li class="speakers__item"><img class="speakers__avatar" src="<?php the_post_thumbnail_url(); ?>">
+          <div class="speakers__position"><?php echo get_post_meta( get_the_id(), 'guest_type', true); ?></div>
+          <h3 class="speakers__name"><?php the_title(); ?></h3><a class="speakers__fb-link" href="#"></a>
+          <div class="speakers__content"><?php the_content(); ?></div>
+        </li>
+        <?php
+      endwhile;
+      wp_reset_postdata();
+      ?>
     </ul>
     <!-- <button class="speakers__btn js-speakers-btn" type="button">Все гости</button> -->
     <!-- <button class="speakers__btn js-speakers-btn-close" type="button">Свернуть список</button> -->
@@ -697,7 +704,6 @@ wp_reset_postdata();
     </div>
   </section>
 
-
   <section class="gallery" id="gallery" data-page="6">
     <div class="head">
       <div class="head__title-block">
@@ -707,16 +713,17 @@ wp_reset_postdata();
       </div>
       <div class="head__description">
         <div class="head__description-block head__description-block_up">
-          <div class="head__number">1000  </div>
-          <div class="head__text">участников</div>
+          <div class="head__number"><?= get_option('gallery_number_1');?></div>
+          <div class="head__text"><?= get_option('gallery_text_1');?></div>
         </div>
         <div class="head__description-block">
-          <div class="head__number">20</div>
-          <div class="head__text">стран мира</div>
+          <div class="head__number"><?= get_option('gallery_number_2');?></div>
+          <div class="head__text"><?= get_option('gallery_text_1');?></div>
         </div>
       </div>
     </div>
-    <div class="container container_gallery" style="display: none;">
+
+    <div class="container container_gallery">
       <ul class="gallery__list">
         <?php
         $args = array(
@@ -739,6 +746,8 @@ wp_reset_postdata();
         ?>
       </ul>
     </div>
+
+
   </section>
   <section class="reviews" id="reviews" data-page="7">
     <div class="head head_reviews">
@@ -749,12 +758,12 @@ wp_reset_postdata();
       </div>
       <div class="head__description">
         <div class="head__description-block head__description-block_up">
-          <div class="head__number">40  </div>
-          <div class="head__text">мастер-классов</div>
+          <div class="head__number"><?= get_option('reviews_number_1');?></div>
+          <div class="head__text"><?= get_option('reviews_text_1');?></div>
         </div>
         <div class="head__description-block">
-          <div class="head__number">20</div>
-          <div class="head__text">лекций</div>
+          <div class="head__number"><?= get_option('reviews_number_2');?></div>
+          <div class="head__text"><?= get_option('reviews_text_1');?></div>
         </div>
       </div>
     </div>
