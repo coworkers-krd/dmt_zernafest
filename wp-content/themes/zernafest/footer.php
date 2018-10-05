@@ -14,8 +14,8 @@
         <h3 class="footer__contacts">контакты</h3>
         <a class="footer__contacts-link footer__contacts-link_mail" href="email:<?= get_option('contacts_mail');?>">
           <?= get_option('contacts_mail');?></a>
-          <a class="footer__contacts-link footer__contacts-link_tel" href="tel:+<?php $tel = get_option('contacts_tel1'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel1'); ?></a>
-          <a class="footer__contacts-link footer__contacts-link_tel" href="tel:+<?php $tel = get_option('contacts_tel2'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel2'); ?></a>
+          <a class="footer__contacts-link footer__contacts-link_tel" href="tel:+<?php $tel = get_option('contacts_tel1'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel1'); ?><br><span class="subtext">(Бесплатно по СНГ)</span></a>
+          <a class="footer__contacts-link footer__contacts-link_tel" href="tel:+<?php $tel = get_option('contacts_tel2'); $replace=array('-', ' ', '+', '(', ')'); $tel = str_replace($replace, '', $tel); echo $tel; ?>"><?php echo get_option('contacts_tel2'); ?><br><span class="subtext">(Бесплатно весь мир)</span></a>
 
         </div>
       </div>

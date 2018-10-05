@@ -492,7 +492,7 @@ p {
 }
 @media screen and (max-width: 550px) {
   .logo_wrapper {
-    padding-top: 7%; 
+    padding-top: 50px; 
   } 
 }
 
@@ -1328,6 +1328,9 @@ p {
   position: relative;
   white-space: nowrap; 
 }
+.subtext {
+  font-size: .7em;
+}
 .menu__link:before, .header__tel-link:before {
   content: '';
   display: block;
@@ -1397,12 +1400,18 @@ p {
   .header__tel {
     -ms-flex-item-align: start;
     align-self: flex-start; 
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
   } 
 }
 
 .header__tel-link {
   font-weight: bold;
   margin-right: 2%; 
+  padding-left: 15px; 
 }
 .header__tel-link:last-child {
   margin-right: 0; 
@@ -4569,7 +4578,6 @@ p {
       color: #7C458f;
       font-size: 1rem;
       font-weight: 300;
-      text-transform: lowercase;
       text-decoration: none;
       margin-bottom: 3%; 
     }
