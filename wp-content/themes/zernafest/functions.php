@@ -1,12 +1,5 @@
 <?php
 
-// Уважаемый разработчик.
-// Если ты читаешь этот текст, значит ты взялся за обслуживание сайта zernafest.ru
-// А значит скорее всего работаешь с Артемом. 
-// Дружище, мой тебе совет - беги. Работать с ними катастрофически сложно и некомфортно.
-
-// С уважением и пониманием, sidderman.
-
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );

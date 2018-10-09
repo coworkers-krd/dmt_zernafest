@@ -275,18 +275,36 @@ modalSpeakers();
 // СЕКЦИЯ РАСПИСАНИЕ
 
 function sheduleSection() {
+	//
+
 	const sheduleBtn = document.querySelectorAll(".schedule__days-day");
 	const sheduleContent = document.querySelectorAll(".schedule__content-item");
+
 	for (let i = 0; i < sheduleBtn.length; i++) {
+
 		for (let l = 0; l < sheduleBtn.length; l++) {
+
+
+
 			sheduleBtn[i].addEventListener('click', () => {
+
+
 				sheduleBtn[l].classList.remove('schedule__days-day_active');
 				sheduleBtn[i].classList.add('schedule__days-day_active');
+
 				sheduleContent[l].classList.remove('schedule__content-item_active');
+
 				sheduleContent[i].classList.add('schedule__content-item_active');
+
+
+
+
 			});
+
 		}
 	}
+
+
 };
 
 sheduleSection();
@@ -703,16 +721,17 @@ jQuery(function () {
 			type: "POST",
 			url: '/wp-content/themes/zernafest/requests/price.php',
 			data: m_data,
-			success: function () {
+			dataType: 'json',
+			success: function (data) {
 				jQuery('.registration').fadeIn(200);
 				jQuery('.registration__inner').fadeIn(200);
 				jQuery('.registration__text').fadeIn(200);
 				jQuery('.registration-form').fadeOut(200);
-				jQuery('.registration__text').text('Ваша заявка успешно отправлена!');
+				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.sale +'</b> рублей</span>');
 
 				document.getElementById('registration-form').reset();
 			},
-			error: function () {
+			error: function (data) {
 				jQuery('.registration').fadeIn(200);
 				jQuery('.registration__inner').fadeIn(200);
 				jQuery('.registration__text').fadeIn(200);

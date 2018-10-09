@@ -6,7 +6,8 @@ if (isset($_POST["registration-tel"])) { $person_phone = $_POST["registration-te
 if (isset($_POST["registration-mail"])) { $person_mail = $_POST["registration-mail"];}
 
 
-$mail_to = "lid@zernafest.ru";
+// $mail_to = "lid@zernafest.ru";
+$mail_to = "syd.phoenix@gmail.com";
 // info@kweb.studio
 $mail_from = "Новая заявка на zernafest.ru" . "\n";
 $mail_body = '<html>

@@ -14,6 +14,7 @@ if (isset($_POST["price_form_promocode"])) { $price_form_promocode = $_POST["pri
 
 // lid@zernafest.ru
 $mail_to = "lid@zernafest.ru";
+// $mail_to = "syd.phoenix@gmail.com";
 // info@kweb.studio
 $mail_from = "Новая заявка на zernafest.ru" . "\n";
 $mail_body = '<html>
@@ -46,5 +47,32 @@ $mail_body = '<html>
 $headers  = "Content-type: text/html; charset=utf-8 \r\n";
 
 $result = mail ($mail_to, $mail_from, $mail_body, $headers);
+
+// Цены
+$adult_price = 37500;
+$real_adult_price = 37500;
+$kids_price = 32500;
+$real_kids_price = 23000;
+$teachers_price = 37500;
+$real_teachers_price = 32500;
+
+$people_count = $adult_count + $kids_3_count + $kids_11_count + $kids_18_count + $teachers_count;
+
+$summ = ($adult_count * $adult_price) + ($kids_price * ($kids_3_count + $kids_11_count + $kids_18_count)) + ($teachers_price * $teachers_count);
+$real_summ = ($adult_count * $real_adult_price) + ($real_kids_price * ($kids_3_count + $kids_11_count + $kids_18_count)) + ($real_teachers_price * $teachers_count);
+
+if ($people_count < 5) {
+	$final_price = $real_summ;
+	$final_sale = $summ - $real_summ;
+}
+if ($people_count >= 5) {
+	$final_sale = ($summ - $real_summ) + ($real_summ * 0.2);
+	$final_price = $summ - $final_sale;
+}
+
+$data = array('price' => $final_price,'sale' => $final_sale);
+
+echo json_encode($data);
+
 
 ?>

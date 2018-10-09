@@ -4770,13 +4770,13 @@ p {
     .modal__text {
       font-size: 25px;
       text-align: center;
-      margin-top: 70px;
+      margin-top: 50px;
       color: #7C458f;
       display: none; 
     }
 
     .modal__inner {
-      width: 35%;
+      width: 45%;
       height: auto;
       min-height: 200px;
       background-color: #fff;
