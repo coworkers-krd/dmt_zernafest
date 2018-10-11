@@ -726,8 +726,15 @@ jQuery(function () {
 				jQuery('.registration').fadeIn(200);
 				jQuery('.registration__inner').fadeIn(200);
 				jQuery('.registration__text').fadeIn(200);
+				// jQuery('#creditform').fadeIn(200);
 				jQuery('.registration-form').fadeOut(200);
 				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.sale +'</b> рублей</span>');
+
+				jQuery('#finalprice').val(data.price);
+				jQuery('#finalprice_total').val(data.price);
+				jQuery('#customerEmail').val(data.mail);
+				jQuery('#customerPhone').val(data.tel);
+				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.count +' человек');
 
 				document.getElementById('registration-form').reset();
 			},

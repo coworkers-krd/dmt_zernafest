@@ -70,7 +70,7 @@ if ($people_count >= 5) {
 	$final_price = $summ - $final_sale;
 }
 
-$data = array('price' => $final_price,'sale' => $final_sale);
+$data = array('price' => $final_price,'sale' => $final_sale, 'mail' => $price_form_mail, 'tel' => $price_form_tel, 'count' => $people_count);
 
 echo json_encode($data);
 

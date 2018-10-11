@@ -92,6 +92,21 @@
     <input class="modal__btn" type="submit" value="оставить заявку">
     <p class="form__text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с <a class="promo-form-link" href="http://zernafest.ru/privacy_policy.pdf" target="_blank">политикой конфиденциальности и </a><a class="promo-form-link" href="http://zernafest.ru/public_offer.pdf" target="_blank">пользовательским соглашением.</a></p>
   </form>
+
+  <!-- Форма кнопки купить в кредит -->
+  <form action="https://loans-qa.tcsbank.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
+    <input name="shopId" value="test_online" type="hidden"/>
+    <input name="promoCode" value="default" type="hidden"/>
+    <input name="sum" value="99000.00" id="finalprice_total" type="hidden">
+    <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
+    <input name="itemQuantity_0" value="1" type="hidden"/>
+    <input name="itemPrice_0" value="99000.00" id="finalprice" type="hidden"/>
+    <input name="itemCategory_0" value="Участие в фестивале" type="hidden"/>
+    <input name="customerEmail" value="customer@tinkoff.ru" id="customerEmail" type="hidden"/>
+    <input name="customerPhone" value="+79031234567" id="customerPhone" type="hidden"/>
+    <input type="submit" class="submit_btn" value="Купи в кредит"/>
+  </form>
+
 </div>
 </div>
 </body>

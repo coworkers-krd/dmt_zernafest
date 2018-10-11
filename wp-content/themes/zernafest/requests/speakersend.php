@@ -8,7 +8,6 @@ if (isset($_POST["offer-speaker-speaker-social"])) { $speaker_social = $_POST["o
 
 
 $mail_to = "lid@zernafest.ru";
-// info@kweb.studio
 $mail_from = "Новая заявка на zernafest.ru" . "\n";
 $mail_body = '<html>
 <head>

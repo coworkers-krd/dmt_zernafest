@@ -4845,6 +4845,28 @@ p {
       .modal__input {
         width: 75%; 
       } 
+      .modal__text {
+        font-size: 21px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    #creditform {
+      display: none;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #creditform .submit_btn {
+      background-image: url(https://tinkoff.loans/api/v1/static/documents/templates/online/buttons/button1.png);
+      height: 45px;
+      width: 200px;
+      border: none;
+      font-size: 0;
+      background-size: contain;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
     .modal__btn {
