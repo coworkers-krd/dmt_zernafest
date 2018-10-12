@@ -1199,6 +1199,12 @@ p {
   height: 55px;
   z-index: 200; 
 }
+.header .logo {
+  margin-top: 2px;
+  height: 50px;
+  width: auto;
+  margin-right: 2%;
+}
 @media screen and (max-width: 550px) {
   .header {
     padding-top: 5px;
@@ -1261,7 +1267,7 @@ p {
 }
 
 .container_header {
-  padding-left: 11%;
+  padding-left: 3%;
   padding-right: 3%;
   width: 99%;
   margin: 0 auto;
@@ -1271,9 +1277,7 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; 
+  justify-content: flex-start;
 }
 @media screen and (max-width: 992px) {
   .container_header {
@@ -1354,7 +1358,7 @@ p {
 }
 @media screen and (max-width: 1199px) {
   .menu__link, .header__tel-link {
-    font-size: 0.75rem; 
+    font-size: 1rem; 
   } 
 }
 @media screen and (max-width: 992px) {
@@ -1395,6 +1399,7 @@ p {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  margin-left: auto;
 }
 @media screen and (max-width: 992px) {
   .header__tel {
@@ -1418,7 +1423,7 @@ p {
 }
 @media screen and (max-width: 1199px) {
   .header__tel-link {
-    font-size: 0.75rem; 
+    font-size: 1rem; 
   } 
 }
 @media screen and (max-width: 992px) {
@@ -1837,7 +1842,7 @@ p {
   .speakers__modal-bg {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(102, 50, 122, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -3991,8 +3996,8 @@ p {
     }
 
     .friends__logo {
-      width: 70%;
-      height: auto;
+      width: auto;
+      height: 90%;
       -o-object-fit: cover;
       object-fit: cover; 
     }

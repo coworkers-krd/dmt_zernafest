@@ -138,7 +138,7 @@
         <li class="speakers__item"><img class="speakers__avatar" src="<?php the_post_thumbnail_url(); ?>">
           <div class="speakers__position"><?php echo get_post_meta( get_the_id(), 'guest_type', true); ?></div>
           <h3 class="speakers__name"><?php the_title(); ?></h3><a class="speakers__fb-link" href="#"></a>
-          <div class="speakers__content"><?php the_content(); ?></div>
+          <?php the_content(); ?>
         </li>
         <?php
       endwhile;

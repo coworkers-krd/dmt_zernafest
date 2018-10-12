@@ -189,88 +189,38 @@ jQuery(window).on('resize', () => {
 });
 
 //модальное окно в спикерах
+// function modalSpeakers() {
+	jQuery('.speakers__item').on('click',function(){
+		var imgSrc = jQuery(this).find('.speakers__avatar').attr('src');
+		var position = jQuery(this).find('.speakers__position').text();
+		var name = jQuery(this).find('.speakers__name').text();
+		var descr = jQuery(this).find('.speakers__content').html();
 
-function modalSpeakers() {
-	const openModalSpeakers = document.querySelectorAll(".speakers__avatar");
-	const closeModalSpeakers = document.querySelectorAll(".js-speakers__modal-closebtn");
+		var modal = jQuery('.js-speakers__modal');
+		jQuery('.speakers__modal-bg').fadeIn(200);
+		modal.fadeIn(200);
+		modal.find('.speakers__modal-img').attr('src',imgSrc);
+		modal.find('.speakers__modal-name').text(name);
+		modal.find('.speakers__modal-position').text(position);
+		modal.find('.speakers__modal-content').html(descr);
+	});
 
-	const ModalSpeakers = document.querySelector(".js-speakers__modal");
+	jQuery('.speakers__modal-closebtn').on('click',function(){
+		jQuery('.js-speakers__modal').fadeOut(200);
+		jQuery('.speakers__modal-bg').fadeOut(200);
+	});
+	jQuery('.speakers__modal-closebtn-bottom').on('click',function(){
+		jQuery('.js-speakers__modal').fadeOut(200);
+		jQuery('.speakers__modal-bg').fadeOut(200);
+	});
+	jQuery('.speakers__modal-bg').on('click',function(){
+		jQuery('.js-speakers__modal').fadeOut(200);
+		jQuery('.speakers__modal-bg').fadeOut(200);
+	});
 
-	const ModalSpeakersBg = document.querySelector(".js-speakers__modal-bg");
-	const ModalSpeakersPos = document.querySelector(".speakers__modal-position");
-	const ModalSpeakersName = document.querySelector(".speakers__modal-name");
-	const ModalSpeakersComment = document.querySelector(".speakers__modal-content ");
-	const ModalSpeakersImg = document.querySelector(".speakers__modal-img");
+// };
 
-
-	let op = 0;
-
-	for (let i = 0; i < openModalSpeakers.length; i++) {
-		openModalSpeakers[i].addEventListener('click', function () {
-
-			const z = this;
-			const contentParent = z.parentNode;
-
-			const name = contentParent.querySelector('.speakers__name');
-			const pos = contentParent.querySelector('.speakers__position');
-			const cont = contentParent.querySelector('.speakers__content');
-			const img = contentParent.querySelector('.speakers__avatar');
-			const imgSrc = img.getAttribute('src');
-
-			ModalSpeakers.style.display = 'block';
-			ModalSpeakers.style.opacity = 0;
-
-			setTimeout(function ModalOp() {
-				if (op < 1) {
-
-					op += 0.2
-
-					ModalSpeakers.style.opacity = op;
-
-					setTimeout(ModalOp, 50);
-				}
-			}, 100);
-
-			ModalSpeakersBg.style.display = 'block';
-
-
-			ModalSpeakersPos.textContent = pos.innerHTML;
-			ModalSpeakersName.textContent = name.innerHTML;
-			ModalSpeakersComment.textContent = cont.textContent;
-			ModalSpeakersImg.setAttribute("src", imgSrc);
-
-
-
-		});
-	}
-
-
-
-	for (let cl = 0; cl < closeModalSpeakers.length; cl++) {
-		closeModalSpeakers[cl].addEventListener('click', function () {
-
-			setTimeout(function ModalCl() {
-				if (op > 0) {
-
-					op -= 0.2
-
-					ModalSpeakers.style.opacity = op;
-
-					setTimeout(ModalCl, 100);
-				} else {
-					ModalSpeakers.style.display = 'none';
-					ModalSpeakersBg.style.display = 'none';
-				}
-
-			}, 100);
-
-
-		});
-	}
-}
-
-modalSpeakers();
-
+// modalSpeakers();
 
 // СЕКЦИЯ РАСПИСАНИЕ
 

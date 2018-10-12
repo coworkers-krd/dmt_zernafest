@@ -65,6 +65,7 @@
             <div class="hamburger__item"></div>
           </button>
           <div class="container container_header js-menu">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/GP.png" alt="" class="logo">
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="#mission">миссия</a></li>
