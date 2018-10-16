@@ -94,9 +94,10 @@
   </form>
 
   <!-- Форма кнопки купить в кредит -->
-  <form action="https://loans-qa.tcsbank.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
-    <input name="shopId" value="test_online" type="hidden"/>
-    <input name="promoCode" value="default" type="hidden"/>
+<!--   <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
+    <input name="shopId" value="zernafest" type="hidden"/>
+    <input name="showcaseId" value="zernafest" type="hidden"/>
+    <input name="promoCode" value="installment_0_0_6" type="hidden"/>
     <input name="sum" value="99000.00" id="finalprice_total" type="hidden">
     <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
     <input name="itemQuantity_0" value="1" type="hidden"/>
@@ -105,7 +106,9 @@
     <input name="customerEmail" value="customer@tinkoff.ru" id="customerEmail" type="hidden"/>
     <input name="customerPhone" value="+79031234567" id="customerPhone" type="hidden"/>
     <input type="submit" class="submit_btn" value="Купи в кредит"/>
-  </form>
+  </form> -->
+
+  <p class="modal__text">Беспроцентная рассрочка на 6 месяцев</p>
 
 </div>
 </div>

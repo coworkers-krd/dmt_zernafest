@@ -173,7 +173,7 @@
     <h3 class="price__title">Мы оплатим часть билета</h3>
     <h3 class="price__title">семьям с детьми</h3>
     <h3 class="price__title">и учителям</h3>
-    <form class="price__form" id="price__form">
+    <form class="price__form" id="price__form" onchange="priceCalc()">
       <div class="price__form-row">
         <div class="price__quantity">
           <div class="price__quantity-row">
@@ -240,10 +240,32 @@
           </div>
         </div>
       </div>
-      <!-- <button class="price__btn">узнать скидку</button> -->
-      <input type="submit" value="узнать скидку" class="price__btn">
-      <label class="price__confid"><span class="price__confid-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с </span><a class="price__confid-link" href="http://zernafest.ru/privacy_policy.pdf" target="_blank">политикой конфиденциальности</a><span class="price__confid-text"> и </span><a class="price__confid-link" href="http://zernafest.ru/public_offer.pdf" target="_blank">пользовательским соглашением.</a></label>
+      <input type="hidden" name="sold_type" id="sold_type" value="За наличные">
+
+
+      <input type="submit" value="Купить" class="price__btn">
+
     </form>
+    <!-- Форма кнопки купить в кредит -->
+    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
+      <input name="shopId" value="zernafest" type="hidden"/>
+      <input name="showcaseId" value="zernafest" type="hidden"/>
+      <input name="promoCode" value="installment_0_0_6" type="hidden"/>
+      <input name="sum" value="" id="finalprice_total" type="hidden">
+      <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
+      <input name="itemQuantity_0" value="1" type="hidden"/>
+      <input name="itemPrice_0" value="" id="finalprice" type="hidden"/>
+      <input name="itemCategory_0" value="Участие в фестивале" type="hidden"/>
+      <input name="customerEmail" value="" id="customerEmail" type="hidden"/>
+      <input name="customerPhone" value="" id="customerPhone" type="hidden"/>
+      <input type="submit" class="submit_btn" value="Купи в кредит"/>
+    </form>
+
+    <p class="text_warn" style="color: #ff0000; text-align: center; font-size: 20px; margin-bottom: 20px;"></p>
+    <p class="price__confid-text" style="color: #fff; text-align: center; font-size: 20px; margin-bottom: 20px;">Беспроцентная рассрочка на 6 месяцев</p>
+
+    <label class="price__confid"><span class="price__confid-text">Нажимая кнопку, я даю свое согласие на обработку моих персональных данных в соответствии с </span><a class="price__confid-link" href="http://zernafest.ru/privacy_policy.pdf" target="_blank">политикой конфиденциальности</a><span class="price__confid-text"> и </span><a class="price__confid-link" href="http://zernafest.ru/public_offer.pdf" target="_blank">пользовательским соглашением.</a></label>
+
   </div>
 </section>
 

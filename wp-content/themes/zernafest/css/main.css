@@ -4856,22 +4856,46 @@ p {
         margin-bottom: 30px;
       }
     }
+    .btn_wrapper {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      -o-flex-direction: row;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .price__btn {
+      width: 245px !important;
+      height: 55px !important;
+      cursor: pointer;
+    }
+    .btn_wrapper .submit_btn {
+      margin-left: 1em;
+      width: 245px !important;
+      height: 55px !important;
+    }
 
     #creditform {
-      display: none;
+      /*display: none;*/
       margin-bottom: 30px;
       margin-top: 20px;
       text-align: center;
     }
     #creditform .submit_btn {
-      background-image: url(https://tinkoff.loans/api/v1/static/documents/templates/online/buttons/button1.png);
-      height: 45px;
-      width: 200px;
+      background-image: url(https://tinkoff.loans/api/v1/static/documents/templates/online/buttons/button3.png);
+      height: 55px;
+      width: 245px;
       border: none;
       font-size: 0;
       background-size: contain;
       border-radius: 5px;
       cursor: pointer;
+      background-position: center;
     }
 
     .modal__btn {

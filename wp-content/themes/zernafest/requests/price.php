@@ -1,5 +1,5 @@
 <?php
-
+if (isset($_POST["sold_type"])) { $sold_type = $_POST["sold_type"];}
 if (isset($_POST["adult_count"])) { $adult_count = $_POST["adult_count"];}
 if (isset($_POST["kids_3_count"])) { $kids_3_count = $_POST["kids_3_count"];}
 if (isset($_POST["kids_11_count"])) { $kids_11_count = $_POST["kids_11_count"];}
@@ -25,6 +25,7 @@ $mail_body = '<html>
 <body>
 	<table width="100%" cellpadding="0" cellspacing="0"><tr><td>
 		<table id="top-message" cellpadding="0" cellspacing="0" bgcolor="ffffff">
+		<tr><td></td><td><p style="margin: 5px 0; padding-left: 10px;">Тип оплаты: '. $sold_type .'</p></td></tr>
 		<tr><td></td><td><p style="margin: 5px 0; padding-left: 10px;">Количество взрослых: '. $adult_count .'</p></td></tr>
 		<tr><td></td><td><p style="margin: 5px 0; padding-left: 10px;">Количество детей до 3 лет: '. $kids_3_count .'</p></td></tr>
 		<tr><td></td><td><p style="margin: 5px 0; padding-left: 10px;">Количество детей до 11 лет: '. $kids_11_count .'</p></td></tr>
