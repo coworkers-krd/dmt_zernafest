@@ -409,6 +409,50 @@ $metabox = array(
 new trueMetaBox( $metabox );
 
 
+// Добавление спикеров
+add_action( 'init', 'prog_type_item' ); // Использовать функцию только внутри хука init
+function prog_type_item() {
+	$labels = array(
+		'name' => 'Три программы',
+		'singular_name' => 'Три программы',
+		'add_new' => 'Добавить программу',
+		'add_new_item' => 'Добавить программу',
+		'edit_item' => 'Редактировать программу',
+		'new_item' => 'Новая программа',
+		'all_items' => 'Все программы',
+		'view_item' => 'Просмотр спикеров на сайте',
+		'search_items' => 'Искать программы',
+		'not_found' => 'Прогрммм не найдено.',
+		'not_found_in_trash' => 'В корзине нет программ.',
+		'menu_name' => 'Три программы фестиваля'
+	);
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'menu_icon' => 'dashicons-images-alt',
+		'menu_position' => 2,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail')
+	);
+	register_post_type( 'prog_type', $args);
+}
+
+$metabox = array(
+	'id' =>	'prog_type',
+	'capability' => 'edit_posts',
+	'name' => 'Возрастной критерий',
+	'post_type' => array('prog_type'),
+	'priority' => 'high',
+	'args' => array(
+		array(
+			'id'	=> 'type',
+			'label' => 'Возрастной критерий',
+			'type'	=> 'text',
+			'placeholder' 	=> 'Возрастной критерий'
+		)
+	)
+);
+new trueMetaBox( $metabox );
 
 
 // Добавление гостей

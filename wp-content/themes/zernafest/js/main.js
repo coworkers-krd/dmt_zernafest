@@ -682,13 +682,7 @@ jQuery(function () {
 				jQuery('.registration__text').fadeIn(200);
 				jQuery('#creditform').fadeIn(200);
 				jQuery('.registration-form').fadeOut(200);
-				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.sale +'</b> рублей</span>');
-
-				jQuery('#finalprice').val(data.price);
-				jQuery('#finalprice_total').val(data.price);
-				jQuery('#customerEmail').val(data.mail);
-				jQuery('#customerPhone').val(data.tel);
-				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.count +' человек');
+				
 
 				document.getElementById('registration-form').reset();
 			},
@@ -713,11 +707,11 @@ jQuery('.submit_btn').on('click',function(e){
 	if((jQuery('#customerEmail').val() != '') && (jQuery('#customerPhone').val() != '') && (jQuery('#finalprice').val() != '') && (jQuery('#finalprice_total').val() != '')) {
 		jQuery('.text_warn').text('');
 		jQuery('#price__form').submit();
-		setTimeout(function() { jQuery('#creditform').submit(); }, 2000);	
+		setTimeout(function() { jQuery('#creditform').submit(); }, 2000);
 	} else {
 		jQuery('.text_warn').text('Заполните все поля!');
 	}
-	
+
 });
 
 
@@ -729,8 +723,9 @@ function priceCalc() {
 	var kids_18_count = jQuery('#kids_18_count').val();
 	var kids_11_count = jQuery('#kids_11_count').val();
 	var kids_3_count = jQuery('#kids_3_count').val();
+	var promocode = jQuery('#price_form_promocode').val();
 
-	var m_data = { 'adult_count': adult_count, 'teachers_count': teachers_count, 'kids_18_count': kids_18_count, 'kids_11_count': kids_11_count, 'kids_3_count': kids_3_count }
+	var m_data = { 'adult_count': adult_count, 'teachers_count': teachers_count, 'kids_18_count': kids_18_count, 'kids_11_count': kids_11_count, 'kids_3_count': kids_3_count, 'promocode': promocode }
 	jQuery.ajax({
 		type: "POST",
 		url: 'https://reg.odminoff.ru/fest/api/calculate/?c=10',
@@ -747,7 +742,10 @@ function priceCalc() {
 				jQuery('#customerPhone').val(jQuery('#price_form_tel').val());
 				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.people +' человек');
 				jQuery('.people_count').text('');
+				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.discount +'</b> рублей</span>');
+
 			} if (data.status == 'error') {
+				jQuery('.registration__text').html('');
 				jQuery('.people_count').text('Стоимость от 6-ти человек рассчитывается индивидуально, после заполнения формы с Вами свяжется наш менеджер!');
 				jQuery('#creditform').fadeOut(200);
 			}
@@ -761,6 +759,3 @@ jQuery('.price__quantity-number').on('click',function(){
 $('#price__form').change(function(){
 	priceCalc();
 });
-
-
-

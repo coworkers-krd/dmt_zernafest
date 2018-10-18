@@ -33,6 +33,14 @@
 
 </head>
 <body>
+<script>
+(function(w, d, s, h, id) {
+    w.roistatProjectId = id; w.roistatHost = h;
+    var p = d.location.protocol == "https:" ? "https://" : "http://";
+    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
+    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
+})(window, document, 'script', 'cloud.roistat.com', '25010881e1e54d6e7e6d98949475cf36');
+</script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXTBQD7"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -65,7 +73,6 @@
             <div class="hamburger__item"></div>
           </button>
           <div class="container container_header js-menu">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/GP.png" alt="" class="logo">
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__item"><a class="menu__link" href="#mission">миссия</a></li>

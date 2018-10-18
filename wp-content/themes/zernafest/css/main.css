@@ -1704,6 +1704,9 @@ p {
   -o-transition: 0.3s;
   transition: 0.3s; 
 }
+.speakers__list--center {
+  justify-content: center;
+}
 @media screen and (max-width: 768px) {
   .speakers__list, .guests__list {
     -webkit-box-orient: vertical;
@@ -1760,6 +1763,9 @@ p {
   margin-bottom: 10%;
   border: 6px solid transparent;
   cursor: pointer; 
+}
+.speakers__avatar--border {
+  border: 6px solid #7C458f; 
 }
 .speakers__avatar:hover {
   border: 6px solid #e45914; 
@@ -4869,7 +4875,7 @@ p {
       flex-direction: row;
       justify-content: center;
     }
-    .price__btn {
+    #price .price__btn {
       width: 245px !important;
       height: 55px !important;
       cursor: pointer;

@@ -7,6 +7,9 @@
 
 <div class="promo__content">
   <div class="logo_wrapper"><img class="promo__newlogo promo__logo-rozetka" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_rozetka.png"><img class="promo__newlogo promo__logo-text" alt="" src="<?php echo get_template_directory_uri(); ?>/img/promo/logo_text.png"></div>
+
+  <img src="<?php echo get_template_directory_uri(); ?>/img/GP.png" alt="" class="logo" style="position: absolute; top: 60px; right: 20px; width: auto; height: 120px;">
+
   <h1 class="promo__text"><?= get_option('promo_title');?></h1>
   <p class="promo__date">2-7 НОЯБРЯ 2018</p>
   <p class="promo__place"><?= get_option('promo_place');?></p>
@@ -270,40 +273,6 @@
   </div>
 </section>
 
-<!-- <section class="for-whom" id="for-whom" data-page="2">
-  <div class="container">
-    <h2 class="for-whom__title">для кого
-      <div class="for-whom__title-small">фестиваль</div>
-    </h2>
-    <div class="for-whom__video-block">
-      <ul class="for-whom__video-list">
-        <li class="for-whom__video-item">
-          <div class="for-whom__video-title">Родители, бабушки и дедушки</div>
-          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="4aeOCJqRPNM"></a></div>
-          <div class="for-whom__video-content"></div>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Родители,</span><span class="for-whom__video-text_normal"> которые хотят построить гармоничные отношения в семье, реализовать свою миссию в родительстве. Желают вырастить успешных и счастливых детей. Хотят достичь согласия в воспитании детей.</span></p>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Дедушки и бабушки</span><span class="for-whom__video-text_normal">, которые хотят лучше понимать своих детей и внуков, вносить свой вклад в процесс воспитания. Стремятся быть в курсе новаторских педагогических подходов.</span></p>
-        </li>
-        <li class="for-whom__video-item">
-          <div class="for-whom__video-title">Учителя и воспитатели</div>
-          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" href="#" data-video-id="ea9rvQy8ST0"></a></div>
-          <div class="for-whom__video-content"></div>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Учителя</span><span class="for-whom__video-text_normal">, которые стремятся реализовать свой талант и созидательный творческий потенциал вопреки существующей системе авторитарного воспитания в школе. Хотят получить эмоциональный ресурс и новый педагогический опыт.</span></p>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Воспитатели</span><span class="for-whom__video-text_normal">, которые осознают всю важность создания атмосферы радостного проживания периода детства для становления счастливого взрослого в будущем.</span></p>
-        </li>
-        <li class="for-whom__video-item">
-          <div class="for-whom__video-title">Дети и подростки</div>
-          <div class="for-whom__video"><a class="for-whom__video-link js-modal-video" data-video-id="GdXOIP9Ih14" href="#"></a></div>
-          <div class="for-whom__video-content"></div>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Дети</span><span class="for-whom__video-text_normal">, которые хотят быть важными и любимыми для своих родителей.</span></p>
-          <p class="for-whom__video-text"><span class="for-whom__video-text for-whom__video-text_bold">Подростки</span><span class="for-whom__video-text_normal">, которые жаждут понимания со стороны взрослых, уважения и веры в них.</span></p>
-          <p class="for-whom__video-text">Ребенок узнает много нового и сможет найти ответы на вопросы: «Как найти себя?», «Как ставить цели и достигать их?», «Как общаться со сверстниками?» и многое другое.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section> -->
-
 <section class="for-whom" id="for-whom" data-page="2">
   <div class="container">
     <h2 class="for-whom__title">для кого
@@ -417,6 +386,48 @@
         <div class="where-will__comment"></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="speakers" id="prog_type" data-page="0" style="display: none;">
+  <div class="container container_speakers">
+    <h2 class="speakers__title">ПРОГРАММЫ
+      <div class="speakers__subtitle">ФЕСТИВАЛЯ</div>
+    </h2>
+    <ul class="speakers__list speakers__list--center">
+
+      <?php
+      $args = array(
+        'posts_per_page' => 99,
+        'order' => 'ASC',
+        'post_type' => array( 'prog_type' ),
+      );
+      $posts = new WP_Query( $args );
+      while( $posts->have_posts() ) :
+        $posts->the_post();
+        ?>
+
+        <li class="speakers__item"><img class="speakers__avatar speakers__avatar--border" src="<?php the_post_thumbnail_url(); ?>">
+          <div class="speakers__position"><?php echo get_post_meta( get_the_id(), 'speaker_type', true); ?></div>
+          <h3 class="speakers__name"><?php the_title(); ?></h3><a class="speakers__fb-link" href="#"></a>
+          <div class="speakers__content"><?php the_content(); ?></div>
+        </li>
+        <?php
+      endwhile;
+      wp_reset_postdata();
+      ?>
+
+    </ul>
+    <button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить программу</button>
+  </div>
+  <div class="speakers__modal-bg js-speakers__modal-bg js-speakers__modal-closebtn"></div>
+  <div class="speakers__modal js-speakers__modal js-speakers__modal-closebtn"><img class="speakers__modal-img" alt="аватар">
+    <button class="speakers__modal-closebtn" type="button"></button>
+    <h3 class="speakers__modal-name"> </h3>
+    <div class="speakers__modal-position"> </div><a class="speakers__modal-fb" href="#"></a>
+    <div class="speakers__modal-content"> </div>
+    <button class="speakers__modal-closebtn-bottom" type="button"></button>
+    <div class="speakers__modal-thanks">СПАСИБО ЗА ПРОСМОТР</div>
   </div>
 </section>
 
