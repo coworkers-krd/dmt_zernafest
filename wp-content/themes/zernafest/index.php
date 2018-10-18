@@ -228,11 +228,11 @@
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">e-mail</label>
-            <input class="price__input-input" type="text" required name="price_form_mail" id="price_form_mail">
+            <input class="price__input-input" type="text" required name="price_form_mail" id="price_form_mail" oninput="priceCalc();">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">телефон</label>
-            <input class="price__input-input" type="text" required name="price_form_tel" id="price_form_tel">
+            <input class="price__input-input" type="text" required name="price_form_tel" id="price_form_tel" oninput="priceCalc();">
           </div>
           <div class="price__inputs-row">
             <label class="price__input-text">промокод</label>
@@ -242,6 +242,7 @@
       </div>
       <input type="hidden" name="sold_type" id="sold_type" value="За наличные">
 
+      <p class="people_count" style="color: #ff0000; text-align: center; font-size: 20px; margin-bottom: 20px;"></p>
 
       <input type="submit" value="Купить" class="price__btn">
 

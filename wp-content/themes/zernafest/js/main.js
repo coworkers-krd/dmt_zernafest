@@ -723,30 +723,44 @@ jQuery('.submit_btn').on('click',function(e){
 
 
 function priceCalc() {
-	var m_data = jQuery('#price__form').serialize();
+	// var m_data = jQuery('#price__form').serialize();
+	var adult_count = jQuery('#adult_count').val();
+	var teachers_count = jQuery('#teachers_count').val();
+	var kids_18_count = jQuery('#kids_18_count').val();
+	var kids_11_count = jQuery('#kids_11_count').val();
+	var kids_3_count = jQuery('#kids_3_count').val();
+
+	var m_data = { 'adult_count': adult_count, 'teachers_count': teachers_count, 'kids_18_count': kids_18_count, 'kids_11_count': kids_11_count, 'kids_3_count': kids_3_count }
 	jQuery.ajax({
 		type: "POST",
-		url: '/wp-content/themes/zernafest/requests/price_calc.php',
-		data: m_data,
+		url: 'https://reg.odminoff.ru/fest/api/calculate/?c=10',
+		data: JSON.stringify(m_data),
 		dataType: 'json',
+		crossDomain: true,
 		success: function (data) {
 			console.log(data);
-			jQuery('#finalprice').val(data.price);
-			jQuery('#finalprice_total').val(data.price);
-			jQuery('#customerEmail').val(data.mail);
-			jQuery('#customerPhone').val(data.tel);
-			jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.count +' человек');
-
-			document.getElementById('registration-form').reset();
+			if(data.status == 'ok') {
+				jQuery('#creditform').fadeIn(200);
+				jQuery('#finalprice').val(data.price);
+				jQuery('#finalprice_total').val(data.price);
+				jQuery('#customerEmail').val(jQuery('#price_form_mail').val());
+				jQuery('#customerPhone').val(jQuery('#price_form_tel').val());
+				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.people +' человек');
+				jQuery('.people_count').text('');
+			} if (data.status == 'error') {
+				jQuery('.people_count').text('Стоимость от 6-ти человек рассчитывается индивидуально, после заполнения формы с Вами свяжется наш менеджер!');
+				jQuery('#creditform').fadeOut(200);
+			}
 		},
-
 	});
 }
 
 jQuery('.price__quantity-number').on('click',function(){
 	priceCalc();
 });
-
+$('#price__form').change(function(){
+	priceCalc();
+});
 
 
 
