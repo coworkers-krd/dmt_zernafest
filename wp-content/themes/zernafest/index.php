@@ -182,7 +182,7 @@
           <div class="price__quantity-row">
             <div class="price__quantity-title">Взрослые</div>
             <button class="price__quantity-btn js-quantity-minus" type="button">-</button>
-            <input class="price__quantity-number" type="text" placeholder="0" name="adult_count" id="adult_count">
+            <input class="price__quantity-number" type="text" placeholder="0" name="adult_count" id="adult_count" required>
             <button class="price__quantity-btn js-quantity-plus" type="button">+</button>
           </div>
           <div class="price__quantity-row">
@@ -250,20 +250,57 @@
       <input type="submit" value="Купить" class="price__btn">
 
     </form>
-    <!-- Форма кнопки купить в кредит -->
-    <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
-      <input name="shopId" value="zernafest" type="hidden"/>
-      <input name="showcaseId" value="zernafest" type="hidden"/>
-      <input name="promoCode" value="installment_0_0_6" type="hidden"/>
-      <input name="sum" value="" id="finalprice_total" type="hidden">
-      <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
-      <input name="itemQuantity_0" value="1" type="hidden"/>
-      <input name="itemPrice_0" value="" id="finalprice" type="hidden"/>
-      <input name="itemCategory_0" value="Участие в фестивале" type="hidden"/>
-      <input name="customerEmail" value="" id="customerEmail" type="hidden"/>
-      <input name="customerPhone" value="" id="customerPhone" type="hidden"/>
-      <input type="submit" class="submit_btn" value="Купи в кредит"/>
-    </form>
+
+    <div class="price__btn js-credit-btn">Купить в рассрочку</div>
+
+    <div class="modal js-credit-modal"></div>
+    <div class="modal__inner js-credit-modal__inner">
+      <button class="modal__close" type="button"></button>
+      <p class="modal__title">Оплата в рассрочку</p>
+
+      <p class="modal__text-vis">К оплате - <span id="price_text"></span> руб с учетом Вашей персональной скидки в размере <span id="sale_text"></span> руб</p>
+
+      <!-- Форма кнопки купить в кредит -->
+      <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" id="creditform" method="post">
+        <input name="shopId" value="zernafest" type="hidden"/>
+        <input name="showcaseId" value="zernafest" type="hidden"/>
+        <input name="promoCode" value="installment_0_0_6" type="hidden"/>
+        <input name="sum" value="" id="finalprice_total" type="hidden">
+        <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
+        <input name="itemQuantity_0" value="1" type="hidden"/>
+        <input name="itemPrice_0" value="" id="finalprice" type="hidden"/>
+        <input name="itemCategory_0" value="Участие в фестивале" type="hidden"/>
+        <input name="customerEmail" value="" id="customerEmail" type="hidden"/>
+        <input name="customerPhone" value="" id="customerPhone" type="hidden"/>
+        <input type="submit" class="submit_btn" value="Купи в кредит"/>
+      </form>
+
+      <p class="modal__title">Рассрочка на часть суммы</p>
+
+      <div class="hor_wrapper">
+        <input type="text" id="custom_price" name="custom_price" oninput="changeSum();">
+
+        <!-- Форма кнопки купить в кредит -->
+        <form action="https://loans.tinkoff.ru/api/partners/v1/lightweight/create" id="creditformPart" method="post">
+          <input name="shopId" value="zernafest" type="hidden"/>
+          <input name="showcaseId" value="zernafest" type="hidden"/>
+          <input name="promoCode" value="installment_0_0_6" type="hidden"/>
+          <input name="sum" value="" id="finalprice_totalPart" type="hidden">
+          <input name="itemName_0" value="Участие в фестивале ZernaFest" id="itemName" type="hidden"/>
+          <input name="itemQuantity_0" value="1" type="hidden"/>
+          <input name="itemPrice_0" value="" id="finalpricePart" type="hidden"/>
+          <input name="itemCategory_0" value="Участие в фестивале" type="hidden"/>
+          <input name="customerEmail" value="" id="customerEmailPart" type="hidden"/>
+          <input name="customerPhone" value="" id="customerPhonePart" type="hidden"/>
+          <input type="submit" class="submit_btn" value="Купи в кредит"/>
+        </form>
+
+      </div> 
+
+      <p class="js-credit-modal__text modal__text"></p>
+
+    </div>
+
 
     <p class="text_warn" style="color: #ff0000; text-align: center; font-size: 20px; margin-bottom: 20px;"></p>
     <p class="price__confid-text" style="color: #fff; text-align: center; font-size: 20px; margin-bottom: 20px;">Беспроцентная рассрочка на 6 месяцев</p>

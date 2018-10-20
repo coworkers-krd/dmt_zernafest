@@ -4438,7 +4438,7 @@ p {
       width: 280px;
       text-align: center;
       color: #fff;
-      letter-spacing: 3px;
+      letter-spacing: 1px;
       font-weight: 500;
       text-transform: uppercase;
       background-color: #e45914;
@@ -4449,6 +4449,7 @@ p {
       margin-top: 2%;
       padding: 18px 0;
       font-weight: bold;
+      text-decoration: none;
       margin-bottom: 30px; 
     }
 
@@ -4785,6 +4786,52 @@ p {
       color: #7C458f;
       display: none; 
     }
+    .modal__text-vis {
+      display: block;
+      font-size: 25px;
+      text-align: center;
+      margin-top: 10px;
+      color: #7C458f;
+    }
+    .js-credit-modal__inner {
+      width: 65% !important;
+    }
+    .hor_wrapper {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      -o-flex-direction: row;
+      flex-direction: row;
+      justify-content: center;
+      -ms-align-items: center;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-top: 20px;
+    }
+    #creditformPart {
+      margin: 0 20px !important;
+    }
+
+    .modal__title {
+      font-size: 32px;
+      text-align: center;
+      margin-top: 50px;
+      color: #7C458f;
+    }
+    #custom_price {
+      height: 53px;
+      border: 1px solid #7C458f;
+      width: 245px;
+      border-radius: 5px;
+      font-size: 24px;
+      color: #7C458f;
+      padding-left: 10px;
+    }
 
     .modal__inner {
       width: 45%;
@@ -4904,6 +4951,24 @@ p {
       background-position: center;
     }
 
+    #creditformPart {
+      /*display: none;*/
+      margin-bottom: 30px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #creditformPart .submit_btn {
+      background-image: url(https://tinkoff.loans/api/v1/static/documents/templates/online/buttons/button3.png);
+      height: 55px;
+      width: 245px;
+      border: none;
+      font-size: 0;
+      background-size: contain;
+      border-radius: 5px;
+      cursor: pointer;
+      background-position: center;
+    }
+
     .modal__btn {
       font-weight: 700;
       font-size: 1.125rem;
@@ -4972,3 +5037,9 @@ p {
       -ms-transform: translate(-50%, -50%) rotate(-45deg);
       transform: translate(-50%, -50%) rotate(-45deg); 
     }
+
+
+.inactive {
+  background-color: #ccc !important;
+  cursor: auto !important;
+}

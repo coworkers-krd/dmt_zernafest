@@ -741,8 +741,33 @@ function priceCalc() {
 				jQuery('#customerEmail').val(jQuery('#price_form_mail').val());
 				jQuery('#customerPhone').val(jQuery('#price_form_tel').val());
 				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.people +' человек');
+
+				jQuery('#finalpricePart').val(data.price);
+				jQuery('#finalprice_totalPart').val(data.price);
+				jQuery('#customerEmailPart').val(jQuery('#price_form_mail').val());
+				jQuery('#customerPhonePart').val(jQuery('#price_form_tel').val());
+				jQuery('#itemName').val('Участие в фестивале ZernaFest для '+ data.people +' человек');
+
 				jQuery('.people_count').text('');
 				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.discount +'</b> рублей</span>');
+
+				if(data.price == '0') {
+					jQuery('.price__btn').addClass('inactive');
+				} else {
+					jQuery('#price_text').text(data.price);
+					jQuery('#sale_text').text(data.discount);
+
+					jQuery('#custom_price').val(data.price);
+					jQuery('#custom_price').attr('placeholder',data.price);
+
+					jQuery('.price__btn').removeClass('inactive');
+					jQuery('.js-credit-btn').on('click',function(e){
+						e.preventDefault();
+						jQuery('.js-credit-modal').fadeIn(200);
+						jQuery('.js-credit-modal__inner').fadeIn(200);
+					});
+				}
+
 
 			} if (data.status == 'error') {
 				jQuery('.registration__text').html('');
@@ -752,6 +777,15 @@ function priceCalc() {
 		},
 	});
 }
+jQuery(document).ready(priceCalc);
+
+function changeSum() {
+	jQuery('#finalprice').val(jQuery('#custom_price').val());
+	jQuery('#finalprice_total').val(jQuery('#custom_price').val());
+	
+	jQuery('#finalpricePart').val(jQuery('#custom_price').val());
+	jQuery('#finalprice_totalPart').val(jQuery('#custom_price').val());
+}
 
 jQuery('.price__quantity-number').on('click',function(){
 	priceCalc();
@@ -759,3 +793,4 @@ jQuery('.price__quantity-number').on('click',function(){
 $('#price__form').change(function(){
 	priceCalc();
 });
+
