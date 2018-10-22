@@ -57,7 +57,7 @@
     <h2 class="speakers__title">СПИКЕРЫ
       <div class="speakers__subtitle">ФЕСТИВАЛЯ</div>
     </h2>
-    <ul class="speakers__list">
+    <ul class="speakers__list js-speaker-list">
 
       <?php
       $args = array(
@@ -426,7 +426,7 @@
   </div>
 </section>
 
-<section class="speakers" id="prog_type" data-page="0" style="display: none;">
+<section class="speakers" id="prog_type" data-page="0">
   <div class="container container_speakers">
     <h2 class="speakers__title">ПРОГРАММЫ
       <div class="speakers__subtitle">ФЕСТИВАЛЯ</div>
@@ -468,8 +468,8 @@
   </div>
 </section>
 
-
-<section class="schedule" id="schedule" data-page="5">
+<!-- 
+<section class="schedule" id="schedule" data-page="5" style="display: none;">
   <div class="container container_schedule">
     <div class="schedule__days">
       <ul class="schedule__days-list">
@@ -729,7 +729,7 @@ wp_reset_postdata();
 </div>
 <button class="price__btn schedule_btn_offer js-schedule-btn" type="button">Получить полную программу</button>
 </section>
-
+ -->
 
 
 

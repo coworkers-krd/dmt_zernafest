@@ -1765,7 +1765,8 @@ p {
   cursor: pointer; 
 }
 .speakers__avatar--border {
-  border: 6px solid #7C458f; 
+  /*border: 6px solid #7C458f; */
+  border: 6px solid #fff; 
 }
 .speakers__avatar:hover {
   border: 6px solid #e45914; 
@@ -1821,7 +1822,23 @@ p {
     .speakers__name {
       width: 100%;
     } 
+    .logo {
+      display: none;
+    }
+    .speakers__btn {
+      width: 280px;
+    }
   }
+
+  #prog_type {
+    background-image: url(../img/bg-blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #prog_type .speakers__title, #prog_type .speakers__name {
+    color: #fff;
+  }
+
 
   .speakers__content {
     font-size: 0; 
@@ -1859,7 +1876,7 @@ p {
   .speakers__modal {
     position: fixed;
     left: 15%;
-    top: 30%;
+    top: 20%;
     margin: 0 auto;
     width: 70%;
     background-color: #fff;
@@ -5039,7 +5056,7 @@ p {
     }
 
 
-.inactive {
-  background-color: #ccc !important;
-  cursor: auto !important;
-}
+    .inactive {
+      background-color: #ccc !important;
+      cursor: auto !important;
+    }

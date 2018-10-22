@@ -98,7 +98,7 @@ jQuery(".js-modal-video").modalVideo();
 function openElseSpeakers() {
 	const elseBtn = jQuery('.js-speakers-btn');
 	const elseBtnClose = jQuery('.js-speakers-btn-close');
-	const speakersList = jQuery('.speakers__list');
+	const speakersList = jQuery('.js-speaker-list');
 	const speakersItem = jQuery('.speakers__item');
 	const speakersItemHeight = speakersItem.height();
 
@@ -752,7 +752,7 @@ function priceCalc() {
 				jQuery('.registration__text').html('<span>Ваша заявка успешно отправлена!</span><br><span>Сумма с учетом скидки - <b>'+ data.price +'</b> рублей</span><br><span>Ваша персональная скидка - <b>'+ data.discount +'</b> рублей</span>');
 
 				if(data.price == '0') {
-					jQuery('.price__btn').addClass('inactive');
+					jQuery('#price').find('.price__btn').addClass('inactive');
 				} else {
 					jQuery('#price_text').text(data.price);
 					jQuery('#sale_text').text(data.discount);
@@ -782,7 +782,7 @@ jQuery(document).ready(priceCalc);
 function changeSum() {
 	jQuery('#finalprice').val(jQuery('#custom_price').val());
 	jQuery('#finalprice_total').val(jQuery('#custom_price').val());
-	
+
 	jQuery('#finalpricePart').val(jQuery('#custom_price').val());
 	jQuery('#finalprice_totalPart').val(jQuery('#custom_price').val());
 }
